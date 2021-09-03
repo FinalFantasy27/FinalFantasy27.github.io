@@ -1,3 +1,10 @@
+# Welcome to Jekyll
+#
+# This config file is meant for settings that affect your whole blog.
+# If you need help with YAWL syntax, here are some quick referencess for you:
+# https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
+# https://learnxinyminuters.com/docs/yaml/
+
 title: AnduinWilde
 description: AnduinWilde's homepage
 github_username: AnduinWilde
