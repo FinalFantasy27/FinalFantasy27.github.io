@@ -1,5 +1,5 @@
 layout: post
-title: Aphorism and epigram
+title: "Aphorism and epigram"
 date: 2021-09-03 05:00:00-0000
 categories: Aphorism epigram
 
