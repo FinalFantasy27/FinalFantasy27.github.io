@@ -1,4 +1,7 @@
 ---
+# Feel free to add content and custom Front Matter to this file.
+# To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+
 layout: home
 ---
 
@@ -17,6 +20,4 @@ Interested in mathematical logic, vtuber, philosophy, film, literature, animanga
 - email: AnduinWilde@Gmail.com, Skolemtize@m.scnu.edu.cn, Skolemtize@qq.com, 3428359414@qq.com</li>
 - douban: https://www.douban.com/people/150548369/
 
-[new post](_posts/2020-07-06-strange-post.md)
-
-[about](/about.md)
+[new post](_posts/2021-09-03-Aphorism_and_epigram.md)
