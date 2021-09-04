@@ -1,5 +1,5 @@
 
-## Posts are located at https://FinalFantasy.github.io/Year/Month/Day/TITLE.html
+### Posts are located at https://FinalFantasy.github.io/Year/Month/Day/Title.html
 
 ## Welcome to GitHub Pages
 
