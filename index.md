@@ -14,4 +14,4 @@ Interested in mathematical logic, vtuber, philosophy, film, literature, animanga
 - douban: https://www.douban.com/people/150548369/
 
 [new post](_posts/2021-09-03-Aphorism_and_epigram.md)
-[new post](_posts/Hello.md)
+[new post](_posts/2021-09-04-Hello.md)
