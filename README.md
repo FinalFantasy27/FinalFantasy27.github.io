@@ -1,3 +1,5 @@
+### Posts are located at https://FinalFantasy.github.io/Year/Month/Day/Title.html
+
 # texture
 
 A configurable jekyll theme for simply beautiful blogs.
