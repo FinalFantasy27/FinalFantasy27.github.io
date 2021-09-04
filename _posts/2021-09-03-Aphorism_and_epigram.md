@@ -1,3 +1,11 @@
+---
+date: '2021-09-03'
+tags: 
+-Aphorism
+-epigram
+title: Aphorism and epigram 
+---
+
 
 . He who does crime to human beings, is a criminal; He who knows the crime but denies it much worse, is doing crime to humanity.
 
