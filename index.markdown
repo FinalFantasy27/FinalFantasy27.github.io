@@ -9,7 +9,9 @@ title: Homepage
 
 ### plan
 
-### writing
+### writing:
+- [Shepherd Boy](https://finalfantasy27.github.io/writing/Shepherd-Boy/)
+
 
 ### ideas
 
