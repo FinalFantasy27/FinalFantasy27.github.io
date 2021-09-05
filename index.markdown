@@ -10,6 +10,8 @@ title: Homepage
 ### plan
 [overview](https://github.com/FinalFantasy27/plan)
 - [Conceptual Developments of Early 20th Century Mathematical Logic](https://github.com/FinalFantasy27/plan/blob/main/Conceptual%20Developments%20of%20Early%2020th%20Century%20Mathematical%20Logic)
+- [Vision](https://github.com/FinalFantasy27/plan/blob/main/Vision%20%E5%B9%BB%E5%A2%83)
+- [白与褐](https://github.com/FinalFantasy27/plan/blob/main/%E7%99%BD%E4%B8%8E%E8%A4%90)
 - [世界末日前五天](https://github.com/FinalFantasy27/plan/blob/main/%E4%B8%96%E7%95%8C%E6%9C%AB%E6%97%A5%E5%89%8D%E4%BA%94%E5%A4%A9)
 - [小偷](https://github.com/FinalFantasy27/plan/blob/main/%E5%B0%8F%E5%81%B7)
 - [旅行·分手](https://github.com/FinalFantasy27/plan/blob/main/%E6%97%85%E8%A1%8C%C2%B7%E5%88%86%E6%89%8B)
