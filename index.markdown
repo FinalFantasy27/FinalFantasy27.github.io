@@ -8,6 +8,14 @@ title: Homepage
 ---
 
 ### plan
+[overview](https://github.com/FinalFantasy27/plan)
+- [世界末日前五天](https://github.com/FinalFantasy27/plan/blob/main/%E4%B8%96%E7%95%8C%E6%9C%AB%E6%97%A5%E5%89%8D%E4%BA%94%E5%A4%A9)
+- [小偷](https://github.com/FinalFantasy27/plan/blob/main/%E5%B0%8F%E5%81%B7)
+- [旅行·分手](https://github.com/FinalFantasy27/plan/blob/main/%E6%97%85%E8%A1%8C%C2%B7%E5%88%86%E6%89%8B)
+- [伊丹的舞女](https://github.com/FinalFantasy27/plan/blob/main/%E4%BC%8A%E4%B8%B9%E7%9A%84%E8%88%9E%E5%A5%B3)
+- [变形记](https://github.com/FinalFantasy27/plan/blob/main/%E5%8F%98%E5%BD%A2%E8%AE%B0)
+- [恋爱事务所](https://github.com/FinalFantasy27/plan/blob/main/%E6%81%8B%E7%88%B1%E4%BA%8B%E5%8A%A1%E6%89%80)
+- ......
 
 ### writing:
 - [Shepherd Boy](https://finalfantasy27.github.io/writing/adaptation/2020/05/02/Shepherd-Boy.html)
@@ -22,4 +30,4 @@ title: Homepage
 [open source project](https://github.com/FinalFantasy27/Ideas)
 <br/>
 ### photographs:
-<img src="https://img9.doubanio.com/view/photo/l/NDSDiQs1ymRzn2IdhUtqfg/150548369/x2680589626.jpg" heigt="200" width="300"> <img src="https://img9.doubanio.com/view/photo/l/drNGkd3jndeq6ArUz4MPHA/150548369/x2680589665.jpg" heigt="200" width="300"> <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/photo1.JPG" heigt="200" width="300" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/IMG_0689.JPG" heigt="200" width="300" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/0_mmexport1630249819821.jpg" heigt="300" width="200" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/1_mmexport1630249822454.jpg" heigt="300" width="200" > 
+<img src="https://img9.doubanio.com/view/photo/l/public/p2680589626.webp" heigt="200" width="300"> <img src="https://img9.doubanio.com/view/photo/l/public/p2680589665.webp" heigt="200" width="300"> <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/photo1.JPG" heigt="200" width="300" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/IMG_0689.JPG" heigt="200" width="300" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/0_mmexport1630249819821.jpg" heigt="300" width="200" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/1_mmexport1630249822454.jpg" heigt="300" width="200" > 
