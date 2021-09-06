@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Subscribe Via RSS 通过RSS订阅"
+title: "Subscribe via RSS 通过RSS订阅"
 date: 2021-09-06 20:49:31 +0800
 categories: tools cool
 
