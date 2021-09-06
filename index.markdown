@@ -45,6 +45,8 @@ at the bottom of the page
 [for more](https://www.douban.com/people/150548369/photos)
   
 <body>  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">PageView<span id="busuanzi_value_site_pv"></span>times</span>
   <div id="vcomments"></div>
     <script>
         new Valine({
