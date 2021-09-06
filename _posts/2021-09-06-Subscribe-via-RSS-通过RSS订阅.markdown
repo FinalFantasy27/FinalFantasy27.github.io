@@ -2,7 +2,7 @@
 
 layout: post
 title: "Subscribe Via RSS 通过RSS订阅"
-date: 2020-09-06 20:49:31 +0800
+date: 2021-09-06 20:49:31 +0800
 categories: tools cool
 
 ---
@@ -24,7 +24,7 @@ categories: tools cool
 
 [^1]:1963年，肯尼迪总统在西柏林发表了著名的演讲"**Ich bin ein Berliner**" ("**I am a Berliner**")，其中有这样的话语：
 
-> Two thousand years ago, the proudest boast was *civis romanus sum* ["I am a Roman citizen"]. Today, in the world of freedom, the proudest boast is "Ich bin ein Berliner!"... Freedom has many difficulties and democracy is not perfect, but we have never had to put a wall up to keep our people in, to prevent them from leaving us... All free men, wherever they may live, are citizens of Berlin, and therefore, as a free man, I take pride in the words "Ich bin ein Berliner!"（两千年前最自豪的句子是“civis Romanus sum”（我是罗马公民）。今天，在自由世界，最自豪的句子是“Ich bin ein Berliner”（我是柏林人）……自由有许多困难，民主亦非完美，然而我们从未建造一堵墙把我们的人民关在里面，不准他们离开我们。……所有自由人，无论生活在哪里，都是柏林的公民。因此，身为自由人，我以“Ich bin ein Berliner”感到自豪！）
+  > Two thousand years ago, the proudest boast was *civis romanus sum* ["I am a Roman citizen"]. Today, in the world of freedom, the proudest boast is "Ich bin ein Berliner!"... Freedom has many difficulties and democracy is not perfect, but we have never had to put a wall up to keep our people in, to prevent them from leaving us... All free men, wherever they may live, are citizens of Berlin, and therefore, as a free man, I take pride in the words "Ich bin ein Berliner!"（两千年前最自豪的句子是“civis Romanus sum”（我是罗马公民）。今天，在自由世界，最自豪的句子是“Ich bin ein Berliner”（我是柏林人）……自由有许多困难，民主亦非完美，然而我们从未建造一堵墙把我们的人民关在里面，不准他们离开我们。……所有自由人，无论生活在哪里，都是柏林的公民。因此，身为自由人，我以“Ich bin ein Berliner”感到自豪！）
 
 <br/>
 
