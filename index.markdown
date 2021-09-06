@@ -48,10 +48,11 @@ comments below
   
 <body>  
   <span id="busuanzi_container_site_pv">
-    PageView: <span id="busuanzi_value_site_pv"></span> times
+    PageView<span id="busuanzi_value_site_pv"></span>times
 </span>
+    
     <span id="busuanzi_container_site_uv">
-  UniqueVisitor: <span id="busuanzi_value_site_uv"></span>
+  UniqueVisitor<span id="busuanzi_value_site_uv"></span>
 </span>
   <div id="vcomments"></div>
     <script>
