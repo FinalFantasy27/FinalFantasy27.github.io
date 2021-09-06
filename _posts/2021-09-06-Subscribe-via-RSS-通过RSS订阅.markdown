@@ -17,7 +17,7 @@ categories: tools cool
 
 为了那些心向自由的人们1/被防火墙隔绝的人们
 
-大陆访问Github并不是很稳定，通过RSS订阅可以绕开这一点，直接浏览博客新发布的内容。
+大陆访问Github并不是很稳定（之后我可能将博客迁徙或新建一个到大陆境内网络更好访问的站点），通过RSS订阅可以绕开这一点，直接浏览博客新发布的内容。
 只要到[主页](https://finalfantasy27.github.io/)底部选取Subscribe via RSS复制链接或直接复制[此链接](https://finalfantasy27.github.io/feed.xml)到RSS浏览器（目前推荐的RSS浏览器是[Innoreader](https://www.innoreader.com/)）搜索框或添加条目选项即可通过RSS订阅博客内容。
 
 <br/>
