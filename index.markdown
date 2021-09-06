@@ -37,6 +37,7 @@ comments below
 - [read.douban](https://read.douban.com/author/63731975/)
 - WeChat Official Accounts: Broken the sea
 - [Zhihu](https://www.zhihu.com/people/sliverwhite-47/)
+- [浪花](http://www.jjwxc.net/onebook.php?novelid=3247274)
 
 ### ideas 
 [open source project](https://github.com/FinalFantasy27/Ideas)
