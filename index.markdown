@@ -10,7 +10,6 @@ title: Homepage
 <head>
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 </head>
-<body>
 
 ### plan
 [overview](https://github.com/FinalFantasy27/plan)
@@ -42,6 +41,7 @@ title: Homepage
 
 [for more](https://www.douban.com/people/150548369/photos)
   
+<body>  
   <div id="vcomments"></div>
     <script>
         new Valine({
