@@ -11,6 +11,9 @@ title: Homepage
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 </head>
 
+### post
+at the bottom of the page
+<br/>
 ### plan
 [overview](https://github.com/FinalFantasy27/plan)
 - [Conceptual Developments of Early 20th Century Mathematical Logic](https://github.com/FinalFantasy27/plan/blob/main/Conceptual%20Developments%20of%20Early%2020th%20Century%20Mathematical%20Logic)
