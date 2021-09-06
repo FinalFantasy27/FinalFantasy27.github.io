@@ -11,7 +11,7 @@ title: Homepage
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 </head>
 
-### post
+### posts
 at the bottom of the page
 
 comments below
