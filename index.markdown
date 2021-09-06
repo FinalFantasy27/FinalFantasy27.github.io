@@ -15,9 +15,12 @@ title: Homepage
 at the bottom of the page
 
 comments below
+
+[subscribe via RSS 通过RSS订阅](https://finalfantasy27.github.io/tools/cool/2021/09/06/Subscribe-via-RSS-%E9%80%9A%E8%BF%87RSS%E8%AE%A2%E9%98%85.html)
 <br/>
 ### plan
 [overview](https://github.com/FinalFantasy27/plan)
+- [共和国记录]（https://github.com/FinalFantasy27/plan/tree/main/%E5%85%B1%E5%92%8C%E5%9B%BD%E8%AE%B0%E5%BD%95）
 - [Conceptual Developments of Early 20th Century Mathematical Logic](https://github.com/FinalFantasy27/plan/blob/main/Conceptual%20Developments%20of%20Early%2020th%20Century%20Mathematical%20Logic)
 - [Vision](https://github.com/FinalFantasy27/plan/blob/main/Vision%20%E5%B9%BB%E5%A2%83)
 - [白与褐](https://github.com/FinalFantasy27/plan/blob/main/%E7%99%BD%E4%B8%8E%E8%A4%90)
