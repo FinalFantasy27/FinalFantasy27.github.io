@@ -3,7 +3,7 @@
 layout: post
 title: "HaoWang and Russell on Philosophy"
 date: 2021-09-06 20:50:31 +0800
-categories: Philosophy HaoWang Russell
+categories: Philosophy Russell
 
 ---
 
