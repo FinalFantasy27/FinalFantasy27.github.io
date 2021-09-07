@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "通过希尔伯特第十问题得出不完备性定理"
+title: "Hilbert's tenth problem, Gödel's incompleteness theorem 通过希尔伯特第十问题得出不完备性定理"
 date: 2021-07-23 20:49:31 +0800
 categories: Logic mathematics
 
