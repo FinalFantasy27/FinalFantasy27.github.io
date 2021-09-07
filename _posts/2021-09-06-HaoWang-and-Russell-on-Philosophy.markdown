@@ -18,7 +18,7 @@ Hao Wang, Beyond Analytic Philosophy
 
 <br/><br/>
 
-[![Bertrand Russell - Mankind's Future & Philosophy](https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/Russell%20on.PNG)](https://www.youtube.com/watch?v=gvOcjzQ32Fw "Bertrand Russell - Mankind's Future & Philosophy"
+[![Bertrand Russell - Mankind's Future & Philosophy](https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/Russell%20on.PNG)](https://www.youtube.com/watch?v=gvOcjzQ32Fw)
 
 <br/><br/>
 
