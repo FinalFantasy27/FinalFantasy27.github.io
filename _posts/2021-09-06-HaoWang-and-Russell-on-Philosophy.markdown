@@ -19,10 +19,10 @@ categories: Philosophy Russell
  We know more about what we know than how we know what we know. We know relatively better what we believe than what ultimate justifications of our beliefs are. (Wang Hao, 1971,1) 
  </blockquote> 
           
-        <blockquote> 
+<blockquote> 
  I would like to begin and end with a classification of what philosophy has to attend to. The guiding principle is, I believe, to do justice to what we know, what we believe, and how we feel.<br />
 Hao Wang, Beyond Analytic Philosophy
-       </blockquote> 
+</blockquote> 
 
 <br/>
 
