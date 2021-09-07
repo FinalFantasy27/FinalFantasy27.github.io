@@ -39,4 +39,4 @@ Hao Wang, Beyond Analytic Philosophy
 
 <blockquote>
  Doing justice to what we know.-Hao Wang
-</blockquote>         
+     </blockquote>         
