@@ -10,6 +10,8 @@ permalink: /Homepage/
     <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
 </head>
 
+### [posts](https://finalfantasy27.github.io/)
+
 comments below
 
 [subscribe via RSS 通过RSS订阅](https://finalfantasy27.github.io/tools/cool/2021/09/06/Subscribe-via-RSS-%E9%80%9A%E8%BF%87RSS%E8%AE%A2%E9%98%85.html)
