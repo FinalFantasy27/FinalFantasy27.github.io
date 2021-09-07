@@ -20,7 +20,7 @@ categories: Philosophy Russell
     </blockquote> 
           
  <blockquote> 
- I would like to begin and end with a classification of what philosophy has to attend to. The guiding principle is, I believe, to do justice to what we know, what we believe, and how we feel.
+ <p>I would like to begin and end with a classification of what philosophy has to attend to. The guiding principle is, I believe, to do justice to what we know, what we believe, and how we feel.<p>
 Hao Wang, Beyond Analytic Philosophy
        </blockquote> 
 
@@ -40,6 +40,3 @@ Hao Wang, Beyond Analytic Philosophy
 <blockquote>
  Doing justice to what we know.-Hao Wang
 </blockquote>         
-        </ul>
-    </div>
-</body> 
