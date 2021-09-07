@@ -7,6 +7,18 @@ categories: Logic PA
 
 ---
 
+<head>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+            tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+    </script>
+</head>
+
 **tennenbaum定理**说的是：如果$M=<N, 0, 1, +, *, < >$是一个以自然数为论域的$PA$(Peano Arithmetic)的非标准模型，那么$+^M$是非递归的。（$*^M$也是，但是在一些以自然数为论域的非标准模型里$<$可以是递归的。）
 
 考虑到一些限制性的定理，例如哥德尔定理、*Entscheidungs*问题的不可解性都可以立即从停机问题的不可解性中得出，我们会想是否Tennenbaum定理也是这样。
