@@ -58,9 +58,9 @@ $T$会否证这些真的但又不可证的语句吗？这留作一个练习。
 让$T$是一个可公理化的$ω$-一致的包含了Robinson算术的理论，那么就会存在一个$n$（根据具体的理论不同而不同），使得如下的句子在$T$中不可判定：
 
 $∃a∃b∀(i ≤ n)∃s∃w∃p∃q∀j∀v∃e∃g$
-$\{(s + w)^2 + 3w + s = 2i ∧ ([j = w ∧ v = q] ∨ [j = 3i ∧ v = p + q]$
-$∨[j = s ∧ (v = p ∨ (i = n ∧ v = q + n))] ∨ [j = 3i + l ∧ v = pq]$
-$→ a = v + e + ejb ∧ v + g = jb)\}$
+${(s + w)^2 + 3w + s = 2i ∧ ([j = w ∧ v = q] ∨ [j = 3i ∧ v = p + q]
+∨[j = s ∧ (v = p ∨ (i = n ∧ v = q + n))] ∨ [j = 3i + l ∧ v = pq]
+→ a = v + e + ejb ∧ v + g = jb)}$
 
 哇……
 
@@ -75,4 +75,4 @@ Matiyasevich定理联系了两个领域，一个是递归论，一个是数论�
 
 [PeterSmith关于MRDP定理的note](https://www.logicmatters.net/resources/pdfs/MRDP.pdf)
 
-https://en.jinzhao.wiki/wiki/Hilbert%27s_tenth_problem#Diophantine_sets
+[Wiki: Hilbert's tenth problem](https://en.jinzhao.wiki/wiki/Hilbert%27s_tenth_problem)
