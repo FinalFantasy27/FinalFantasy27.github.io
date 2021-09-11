@@ -44,6 +44,16 @@ categories: Logic PA
 
 [Peter Smith关于tennenbaum定理的note](https://logicmatters.net/resources/pdfs/tennenbaum_new.pdf)
 
+
+
+<br/>
+
+<br/>
+
+<br/>
+
+
+
 <body>  
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <span id="busuanzi_container_site_pv">PageView: <span id="busuanzi_value_site_pv"></span> times</span>
