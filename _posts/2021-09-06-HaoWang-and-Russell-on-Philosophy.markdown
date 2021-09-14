@@ -27,6 +27,10 @@ Hao Wang, Beyond Analytic Philosophy
 <br/>
 
 <p>王浩的那句话其实和孔子的“知之为知之，不知为不知，是知也”是一样的，一直以来人们都太过于强调这句话的后一半了。<p>
+    
+<br/>            
+            
+> To say of what is that it is not, or of what is not that it is, is false, while to say of what is that it is, or of what is not that it is not, is true.
 
 <br/><br/>
   
