@@ -34,6 +34,7 @@ comments below
 ### writing:
 - [Shepherd Boy](https://finalfantasy27.github.io/writing/adaptation/2020/05/02/Shepherd-Boy.html)
 - [Academia](https://scnu.academia.edu/AnduinWilde)
+- [Researchgate](https://www.researchgate.net/profile/Anduin-Wilde)
 - [AllPoetry](https://allpoetry.com/AnduinWilde)
 - [douban](https://www.douban.com/people/150548369/)
 - [read.douban](https://read.douban.com/author/63731975/)
