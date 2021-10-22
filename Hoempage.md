@@ -33,14 +33,13 @@ comments below
 ### writing:
 - [Shepherd Boy](https://finalfantasy27.github.io/writing/adaptation/2020/05/02/Shepherd-Boy.html)
 - [共和国记录](https://github.com/FinalFantasy27/plan/tree/main/%E5%85%B1%E5%92%8C%E5%9B%BD%E8%AE%B0%E5%BD%95)
-- [Academia](https://scnu.academia.edu/AnduinWilde)
 - [Researchgate](https://www.researchgate.net/profile/Anduin-Wilde)
-- [AllPoetry](https://allpoetry.com/AnduinWilde)
 - [douban](https://www.douban.com/people/150548369/)
 - [read.douban](https://read.douban.com/author/63731975/)
-- WeChat Official Accounts: Broken the sea
 - [Zhihu](https://www.zhihu.com/people/sliverwhite-47/)
 - [Vihara de Uchicago](https://www.zhihu.com/column/c_1418720410104373248)
+- WeChat Official Accounts: Broken the sea
+- [Academia](https://scnu.academia.edu/AnduinWilde)
 - [浪花](http://www.jjwxc.net/onebook.php?novelid=3247274)
 
 ### ideas 
