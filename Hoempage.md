@@ -33,7 +33,7 @@ comments below
 ### writing:
 - [贝克特](https://finalfantasy27.github.io/writing/poems/2019/07/18/Beckett.html)
 - [莫泊桑](https://finalfantasy27.github.io/writing/poems/2019/07/18/Maupassant.html)
-- [行奇迹一篇·在告解室]https://finalfantasy27.github.io/writing/vision/2020/01/31/Miracle-I-In-the-Confessional.html()
+- [行奇迹一篇·在告解室](https://finalfantasy27.github.io/writing/vision/2020/01/31/Miracle-I-In-the-Confessional.html)
 - [Shepherd Boy](https://finalfantasy27.github.io/writing/adaptation/2020/05/02/Shepherd-Boy.html)
 - [共和国记录](https://github.com/FinalFantasy27/plan/tree/main/%E5%85%B1%E5%92%8C%E5%9B%BD%E8%AE%B0%E5%BD%95)
 - [Researchgate](https://www.researchgate.net/profile/Anduin-Wilde)
