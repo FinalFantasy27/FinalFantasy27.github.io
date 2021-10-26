@@ -1,0 +1,68 @@
+---
+
+layout: post
+title: "Miracle I - In the Confessional"
+date: 2020-01-31 20:49:31 +0800
+categories: writing vision
+
+---
+
+<html>
+<head>
+<meta charset="utf-8"> 
+    <title> 行奇迹一篇·在告解室</title>
+</head>
+<body>
+    <div>
+        <h2><p>行奇迹一篇·在告解室</p></h2>
+    </div>
+    <div style="text-indent:2em;">
+        <ul>
+
+<p>“奚美昂本出身于武士之家，世代侍奉大名。身材伟岸出众，性情勇猛刚烈。教堂每遇异教徒投石滋事，神父常命他挺身抵御，也非一次两次。”——芥川龙之介《基督徒之死》</p>
+
+<p>“米拉斯”“哈桑·甘”——《魔术》</p>
+
+ <br/>
+
+<p>行奇迹一篇·在告解室</p>
+
+  <br/>
+
+<p>“神父，请听我忏悔：我——我不信神！”</p>
+
+<p>一阵沉默。<p/>
+
+<p>“我有一个朋友，他名叫米拉斯，和我几乎是一个模子印出来的，只不过稍黑一些。他也不信神。他偕同我甚至还往教堂投石滋事！可是他是个热心人！我们经常结伴而行。他时常帮老妇们采摘果子，还带孩子们到树上玩······（作支吾状）</p>
+
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;（和我想要的形式还是有出入，我原想要的是较简短的对话体）</p?
+
+<p>“那是一个······我们这些不信者和异教徒不知怎的就来到教堂前，开始往教堂扔石头······在一片大草地上，那有一块斜坡，一阵轰隆声传来，米拉斯扑了过去···他是救了那老奶奶了···怎么会有这种事，救了人自己却奄奄一息。难道这是上帝在对我开玩笑吗？···”</p>
+
+<p>“······”</p>
+
+<p>“我们什么都找过了！医生、巫医······可是都没有用——他已经死了！死马当活马医吧······”</p>
+
+<p>“你在找巫医之前，为什么不先来找我？”</p>
+
+<p>“我···我·······”</p>
+
+<p>“你相信上帝的开玩笑似的爱吗？”</p>
+
+<p>“上帝的开玩笑似的爱？”</p.
+
+<p>“是的。”</p>
+
+<p> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;奚美昂</p>
+
+<p>那扇窄门一开，在面前的那|白的、白发的、矮小的/不太高的面目和善的少年|可不就是米拉斯吗？*</p>
+  
+<img src="https://github.com/FinalFantasy27/FinalFantasy27/blob/main/images/p69659082.jpg?raw=true" alt="">  
+  
+<br/>  
+  
+*《废都物语》男性主角的形象之一.
+  
+        </ul>
+    </div>
+</body>
