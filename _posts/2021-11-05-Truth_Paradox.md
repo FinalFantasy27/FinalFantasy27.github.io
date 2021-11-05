@@ -130,3 +130,19 @@ We noted that it is possible to augment systems by adding quantification of logi
 [5] Prior, A.N., 1971, Objects of thought, P.T. Geach and A.J.P. Kenny (eds.), Oxford: Clarendon Press.
 
 [6] Simons, Peter, "Stanisław Leśniewski", The Stanford Encyclopedia of Philosophy (Fall 2020 Edition), Edward N. Zalta (ed.), URL = <https://plato.stanford.edu/archives/fall2020/entries/lesniewski/>.
+
+<br/><br/>
+
+ <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<span id="busuanzi_container_site_pv">PageView: <span id="busuanzi_value_site_pv"></span> times</span>
+    
+    <span id="busuanzi_container_site_uv">UniqueVisitor: <span id="busuanzi_value_site_uv"></span></span>
+    
+  <div id="vcomments"></div>
+    <script>
+        new Valine({
+            el: '#vcomments',
+            appId: 'Rl0XrPgpK2Dfhp1ffLTvcrsD-gzGzoHsz',
+            appKey: '6fXawARU0PuxwAYgRUP9gPMl'
+        })
+    </script>
