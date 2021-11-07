@@ -111,7 +111,7 @@ Alfred Tarski found the solution to eliminate the connective of conjunction in t
 
 **(Def. ∧)**. $\forall pq┌p \wedge q \leftrightarrow \forall f┌p \leftrightarrow (f(p) \leftrightarrow f(q))┐┐$
  
-*in this case, quantifying one-place connectives. Assuming there are just four of these connectives, assertion, negation, Verum (tautology) and Falsum (contradiction), it is straightforward to show that the right-hand side is equivalent to the conjunction of p and q. Tarski’s doctoral dissertation centres around this result.*(Thanks for [Conifold](https://philosophy.stackexchange.com/users/9148/conifold) mentioned that)
+*in this case, quantifying one-place connectives. Assuming there are just four of these connectives, assertion, negation, Verum (tautology) and Falsum (contradiction), it is straightforward to show that the right-hand side is equivalent to the conjunction of p and q. Tarski’s doctoral dissertation centres around this result.*(Thanks for [Conifold](https://philosophy.stackexchange.com/users/9148/conifold) mentioning that)
 
 We noted that it is possible to augment systems by adding quantification of logical constants(connectives, boolean, intensional, modality....).
  
@@ -133,7 +133,8 @@ We noted that it is possible to augment systems by adding quantification of logi
 
 <br/><br/>
 
- <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<body>  
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <span id="busuanzi_container_site_pv">PageView: <span id="busuanzi_value_site_pv"></span> times</span>
     
     <span id="busuanzi_container_site_uv">UniqueVisitor: <span id="busuanzi_value_site_uv"></span></span>
@@ -146,3 +147,5 @@ We noted that it is possible to augment systems by adding quantification of logi
             appKey: '6fXawARU0PuxwAYgRUP9gPMl'
         })
     </script>
+</body>
+
