@@ -31,7 +31,7 @@ comments below
 - ......
 
 ### writing:
-- [everyday](https://finalfantasy27.github.io/2021/11/21/Everyday.html)
+- [everyday](https://finalfantasy27.github.io/aphorism/epigram/2021/09/03/Aphorism-and-epigram.html)
 - [mathematics]
 - [贝克特](https://finalfantasy27.github.io/writing/poems/2019/07/18/Beckett.html)
 - [莫泊桑](https://finalfantasy27.github.io/writing/poems/2019/07/18/Maupassant.html)
