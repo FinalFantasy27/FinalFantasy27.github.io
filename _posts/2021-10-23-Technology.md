@@ -9,7 +9,7 @@ categories: Modernity writing
 
 <br/>
 
-	我们问，什么是启蒙？启蒙是对理性的信任，是乐观，以及最著名的，”就是人类脱离自己所加之于自己的不成熟状态……Sapere aude!要有勇气运用你自己的理智！这就是启蒙运动的口号。“^[1]
+  我们问，什么是启蒙？启蒙是对理性的信任，是乐观，以及最著名的，”就是人类脱离自己所加之于自己的不成熟状态……Sapere aude!要有勇气运用你自己的理智！这就是启蒙运动的口号。“^[1]
 	
   乔姆斯基（Noam Chomsky）说道：“I am a Child of the Enlightenment.”^[2]可是，我们想到"A Child of  the Enlightenment"要经历什么：水俣病、切尔诺贝利、环境问题……
 	
