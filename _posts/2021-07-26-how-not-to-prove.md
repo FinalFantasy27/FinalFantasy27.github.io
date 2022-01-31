@@ -25,9 +25,9 @@ categories: Logic PA
 
 考虑到一些限制性的定理，例如哥德尔定理、*Entscheidungs*问题的不可解性都可以立即从停机问题的不可解性中得出，我们会想是否Tennenbaum定理也是这样。
 
-自停机关系$(e, t)$是一个当且仅当在一个standard enumeration下numbered $e$的图灵机，在输入了代表$e$的numeral作为输入后，在computational clock的第$t$个刻度停机下成立的关系。
+自停机关系$H(e, t)$是一个当且仅当在一个standard enumeration下numbered $e$的图灵机，在输入了代表$e$的numeral作为输入后，在computational clock的第$t$个刻度停机下成立的关系。
 
-我们已经有了一些背景结果：给定一个非标准模型$M$，在模型中会有一个元素$c$，对于每个$n$来说，使得，$M \models ∃tH(\overline{n}, t)$，这里$\overline{n}$是代表$n$的numeral，当且仅当模型中的第$n$个素数能够被$c$整除。
+我们已经有了一些背景结果：给定一个非标准模型$M$，在模型中会有一个元素$c$，使得对于每个$n$来说，$M \models ∃tH(\overline{n}, t)$（这里$\overline{n}$是代表$n$的numeral）当且仅当模型中的第$n$个素数能够被$c$整除。
 
 函数$f(n, c)$是一个找到模型中第$n$个素数后判断它能否被$c$整除的函数。
 
