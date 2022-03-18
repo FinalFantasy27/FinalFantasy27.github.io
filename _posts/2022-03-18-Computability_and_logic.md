@@ -170,14 +170,14 @@ Show that the class of generic sets is nonenumerable.
 
 Lemma 10. (Abusing the notation) The two conditions are equivalent:
 
-1. $M[G] \models \phi \Leftrightarrow \exists p \in G M \models (p\Vdash\phi)$
+1. $M[G] \models \phi \Leftrightarrow \exists p \in G \ M \models (p\Vdash\phi)$
    
 2. For all $\phi$ in $SenL^G$, $\exists p \in G \ M \models (p \Vdash \phi) \lor \exists p \in G \ M \models (p \Vdash \lnot \phi)$
 
 
 Prof. 2 to 1 is just the lemma 23.7;
 
-1 to 2: Suppose not 2, then exists a sentence $B$ of $L^G$ such that $$
+1 to 2: Suppose not 2, then exists a sentence $B$ of $L^G$ such that $A\not\Vdash B$ and $A \not\Vdash \lnot B$, i.e. $\forall p\Vdash A \ p\not\Vdash B \land p \not\Vdash \lnot B$. $M[G] \not\models \lnot B$, if $M[G] \models B \Leftrightarrow \exists p \in G \ M \models (p\Vdash\phi)$, contradiction; if not, we are done.
 
 "It is generally desirable for generics not to be definable. In countable models, this is guaranteed if the notion of forcing is perfect, where P is defined to be perfect if each condition in P has two incompatible extensions. The full binary tree B is an obvious example of a perfect notion of forcing.
 
