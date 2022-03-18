@@ -2,7 +2,7 @@
 
 layout: post
 title: "solution of some exercises of Computability and Logic (4th edition) cha.23 arithmetical definability and forcing"
-date: 2021-07-23 20:49:31 +0800
+date: 2022-03-18 20:49:31 +0800
 categories: Logic mathematics
 
 ---
@@ -28,7 +28,7 @@ We write $L^c$ for the expansion of $L$ by adding a constant $c$, and $N^c_a$ fo
 A family of sets of naturals $B \in P(\omega)$ is arithmetically
 definable if there is some formula $\phi(X)$ in the expanded language $L^G$ such that:
 $G \in B \Leftrightarrow N[G] \models \phi( \overset{.}G )$.
-e.g. $(x = 0 \lor x =1) \rightarrow Gx$ defines $\{\{0,1\},\{0,1,2\},\dots\}$.
+e.g. $(x = 0 \lor x =1) \rightarrow Gx$ defines $\lbrace\lbrace0,1\rbrace,\lbrace 0,1,2\rbrace,\dots\rbrace$.
 
 <br/>
 
@@ -36,12 +36,16 @@ Definition 2. a condition is a finite, consistent set of sentences of the langua
 
 <br/>
 
-Definition 3. Forcing is a relation between certain conditions and certain sentences of $L^G$. We write $p \Vdash S$ to mean that condition p forces sentence S. The relation of forcing is
-inductively defined by the following five stipulations:
+Definition 3. Forcing is a relation between certain conditions and certain sentences of $L^G$. We write $p \Vdash S$ to mean that condition p forces sentence S. The relation of forcing is inductively defined by the following five stipulations:
+
 (1) If $S$ is an atomic sentence of $L$, then $p \Vdash S$ if and only if $N \models S$.
+
 (2) If $t$ is a term of $L$ and $m$ is the denotation of $t$ in $N$, then if $S$ is the sentence $Gt$, then $p \Vdash S$ if and only if $Gm$ is in $p$.
+
 (3) If $S$ is a disjunction $(B ∨ C)$, then $p \Vdash S$ if and only if either $p \Vdash B$ or $p \Vdash B$.
+
 (4) If $S$ is an existential quantification $∃xB(x)$, then $p \Vdash S$ if and only if, for some $n$, $p \Vdash B(n)$.
+
 (5) If $S$ is a negation $∼B$, then $p \Vdash S$ if and only if, for every $q$ that extends $p$, it is not the case that $q \Vdash S$.
 
 <br/>
@@ -92,7 +96,7 @@ For example, in recursion theoretic Cohen forcing over a model of PA to construc
 
 Some modern accounts also incorporate classical logic into the definition of forcing by beginning with a limited set of connectives (e.g. including ¬, ∧, and ∀, but not ∃ and not ∨), and then assuming the other connectives are given by their classical definitions, which are not intuitionistically correct.
 
-Strong forcing: $\sim, c \Vdash \lor: c \vdash p \lor c\Vdash q, c \Vdash \exists: \exists x c||-$ (boolos)
+strong forcing: $\sim, c \Vdash \lor: c \vdash p \lor c\Vdash q, c \Vdash \exists: \exists x c \Vdash$ (boolos)
 
 weak forcing: $\sim, \land, \forall$ （obvious analogous stipulation）
 
@@ -104,7 +108,7 @@ Lemma 5. $p \Vdash \phi \rightarrow \psi \ iff \ \lnot\exists q \le p (q \Vdash 
 
 Lemma 6. $p\Vdash \phi \ iff \ \forall q \le p (q\Vdash \ \lnot\phi)$.
 
-"Then the relationship between the two versions is that our $d \Vdash P$ is equivalent to $d \Vdash^C \sim\sim P$, but weaker than $d \Vdash^C P$. So the forward direction of Exercise 7(a) fails for Cohen's forcing. (The reverse direction still holds, because Proposition 6.9 is still true for Cohen's forcing.) Because of this, Cohen's forcing was called strong forcing and what we have presented was called weak forcing. Since Exercise 7(a) is not correct for strong forcing, it is clear that Theorem 6.12 ($\{\}\Vdash P$ for each axiom $P$ of $ZF$; $\{\}\Vdash P$ and $\{\}\Vdash P \rightarrow Q$, then $\{\}\Vdash Q$; $\{\}\Vdash GCH \land V\not=L$) cannot hold for strong forcing either. Cohen used strong forcing as his primary notion, but then essentially used weak forcing (by inserting $\sim\sim$ before every formula) to state his main results. Eventually, weak forcing became the standard way to define forcing, so I have conformed to this usage." (A TOUR THROUGH MATHEMATICAL LOGIC, ROBERT S, WOLF, THE MATHEMATICAL ASSOCIATION OF AMERICA, 2005, p.242)
+"Then the relationship between the two versions is that our $d \Vdash P$ is equivalent to $d \Vdash^C \sim\sim P$, but weaker than $d \Vdash^C P$. So the forward direction of Exercise 7(a) fails for Cohen's forcing. (The reverse direction still holds, because Proposition 6.9 is still true for Cohen's forcing.) Because of this, Cohen's forcing was called strong forcing and what we have presented was called weak forcing. Since Exercise 7(a) is not correct for strong forcing, it is clear that Theorem 6.12 ($⟨⟩\Vdash P$ for each axiom $P$ of $ZF$; $⟨⟩Vdash P$ and $⟨⟩Vdash P \rightarrow Q$, then $⟨⟩Vdash Q$; $⟨⟩Vdash GCH \land V\not=L$) cannot hold for strong forcing either. Cohen used strong forcing as his primary notion, but then essentially used weak forcing (by inserting $\sim\sim$ before every formula) to state his main results. Eventually, weak forcing became the standard way to define forcing, so I have conformed to this usage." (A TOUR THROUGH MATHEMATICAL LOGIC, ROBERT S, WOLF, THE MATHEMATICAL ASSOCIATION OF AMERICA, 2005, p.242)
 
 <br/>
 
