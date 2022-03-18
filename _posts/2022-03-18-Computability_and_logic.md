@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "solution of some exercises of Computability and Logic (4th edition) cha.23 arithmetical definability and forcing"
+title: "solution to some exercises of cha.23 arithmetical definability and forcing, Computability and Logic (4th edition) "
 date: 2022-03-18 20:49:31 +0800
 categories: Logic mathematics
 
