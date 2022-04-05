@@ -24,20 +24,13 @@ comments below
 - ......
 
 ### writing:
-- [everyday](https://finalfantasy27.github.io/aphorism/epigram/2021/09/03/Aphorism-and-epigram.html)
-- [mathematics]
 - [贝克特](https://finalfantasy27.github.io/writing/poems/2019/07/18/Beckett.html)
 - [莫泊桑](https://finalfantasy27.github.io/writing/poems/2019/07/18/Maupassant.html)
 - [行奇迹一篇·在告解室](https://finalfantasy27.github.io/writing/vision/2020/01/31/Miracle-I-In-the-Confessional.html)
 - [Shepherd Boy](https://finalfantasy27.github.io/writing/adaptation/2020/05/02/Shepherd-Boy.html)
-- [Researchgate](https://www.researchgate.net/profile/Anduin-Wilde)
 - [douban](https://www.douban.com/people/150548369/)
 - [read.douban](https://read.douban.com/author/63731975/)
 - [Zhihu](https://www.zhihu.com/people/sliverwhite-47/)
-- [Vihara de Uchicago](https://www.zhihu.com/column/c_1418720410104373248)
-- WeChat Official Accounts: Broken the sea
-- [Academia](https://scnu.academia.edu/AnduinWilde)
-- [浪花](http://www.jjwxc.net/onebook.php?novelid=3247274)
 
 ### ideas 
 [open source project](https://github.com/FinalFantasy27/Ideas)
