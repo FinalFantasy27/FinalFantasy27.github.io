@@ -59,7 +59,7 @@ we use $\Box$ to represent the provability predicate.
 
 corollary of godel and Rosser's:
 
-For any theories $T$ satisfying the coditions of incompleteness theorem, 
+For any theory $T$ satisfying the coditions of incompleteness theorem, 
 
 if $T\vdash G\rightarrow \lnot \Box G$, then $T\not\vdash G$.
 
@@ -79,7 +79,7 @@ a generalization of Lob's:
 
 For a theory that proves Lob's theorem and a given finite set of sentences $A_1,A_2,\cdots,A_n$, we draw its represented graph as follows: whenever $T\vdash\Box A_i \to A_k$ for some $1\le i, k \le n$  , there is  an arrow from $A_i$ to $A_k$. 
 
-let $(A_{k_1},A_{k_2},\cdots,A_{k_m},A_{k_1})$ be a finite cycle in it, then $T\vdash \{A_{k_1},A_{k_2},\cdots,A_{k_m},A_{k_1}\}$.
+let $(A_{k_1},A_{k_2},\cdots,A_{k_m},A_{k_1})$ be a finite cycle in it, then $T\vdash \{A_{k_1},A_{k_2},\cdots,A_{k_m}\}$.
 
 e.g. variations on Lob:
 
