@@ -87,7 +87,7 @@ e.g. variations on Lob:
 2. $T\vdash \Box A \to C$, $T\vdash\Box B \to C$, $T\vdash \Box C\to A$ and $T\vdash \Box C\to B$, then $A,B,C$ are all provable in $T$.
 3. $T\vdash \Box(A\land B) \to C$, $T\vdash \Box C\to A$ and $T\vdash \Box C\to B$, then $T\vdash A, B ,C$. 
 
-![3.]([https://img9.doubanio.com/view/photo/l/public/p2875662172.webp](https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/3.png))
+![3.]([https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/3.png])
 
 <br>
 
@@ -95,7 +95,11 @@ Generalized digonal lemma(cf.熊明，2017，p.54):
 
 Suppose $x_1,\cdots,x_m,y_1,\cdots,y_m$ are variables different from each other. Given formulae $A_1(\overset{\rightarrow}x,y_1,\cdots,y_n),\cdots,A_n(\overset{\rightarrow}x,y_1,\cdots,y_n)$, there exists formulae $\delta_1(\overset{\rightarrow}x),\cdots,\delta_n(\overset{\rightarrow}x)$ s.t.
 
-$\mathrm{Th}^{+}(\mathfrak{N})\models\delta_1(\overset{\rightarrow}x)\leftrightarrow A_1(\overset{\rightarrow}x,\overline{\ulcorner\delta_1(\overset{\to}x)\urcorner},\cdots,\overline{\ulcorner\delta_n(\overset{\to}x)\urcorner})\\\cdots\\\mathrm{Th}^{+}(\mathfrak{N})\models\delta_n(\overset{\rightarrow}x)\leftrightarrow A_n(\overset{\rightarrow}x,\overline{\ulcorner\delta_1(\overset{\to}x)\urcorner},\cdots,\overline{\ulcorner\delta_n(\overset{\to}x)\urcorner})$
+$\mathrm{Th}^{+}(\mathfrak{N})\models\delta_1(\overset{\rightarrow}x)\leftrightarrow A_1(\overset{\rightarrow}x,\overline{\ulcorner\delta_1(\overset{\to}x)\urcorner},\cdots,\overline{\ulcorner\delta_n(\overset{\to}x)\urcorner})$
+
+$\cdots$
+
+$\mathrm{Th}^{+}(\mathfrak{N})\models\delta_n(\overset{\rightarrow}x)\leftrightarrow A_n(\overset{\rightarrow}x,\overline{\ulcorner\delta_1(\overset{\to}x)\urcorner},\cdots,\overline{\ulcorner\delta_n(\overset{\to}x)\urcorner})$
 
 e.g. 
 
