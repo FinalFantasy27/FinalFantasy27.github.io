@@ -87,7 +87,7 @@ e.g. variations on Lob:
 2. $T\vdash \Box A \to C$, $T\vdash\Box B \to C$, $T\vdash \Box C\to A$ and $T\vdash \Box C\to B$, then $A,B,C$ are all provable in $T$.
 3. $T\vdash \Box(A\land B) \to C$, $T\vdash \Box C\to A$ and $T\vdash \Box C\to B$, then $T\vdash A, B ,C$. 
 
-![3.](https://img9.doubanio.com/view/photo/l/public/p2875662172.webp)
+![3.]([https://img9.doubanio.com/view/photo/l/public/p2875662172.webp](https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/3.png))
 
 <br>
 
