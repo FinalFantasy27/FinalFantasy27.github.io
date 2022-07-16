@@ -8,7 +8,7 @@ If you are enjoying this, please consider making a donation to support it, I wil
 
 <br/>
 
-<img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/1.jpg" height=250 width=200> <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/2.jpg" height=250 width=200>
+; <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/1.jpg" height=250 width=200> <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/2.jpg" height=250 width=200>
 
 <br/>
 
