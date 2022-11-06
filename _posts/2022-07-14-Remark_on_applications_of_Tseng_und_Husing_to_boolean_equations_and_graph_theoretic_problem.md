@@ -25,18 +25,21 @@ Remark on applications of Tseng und Husing to boolean equations and graph theore
 
 <br/>
 
-Consider boolean equations $x_1(t+1)=f(x_1(t),x_2(t),\cdots,x_n(t)),x_2(t+1)=f(x_1(t),\cdots,x_n(t)),\cdots,x_n(t+1)=f(x_1(t),\cdots,x_n(t))$,in which $x_i(t)$ represents the value that the valuation $t$ assigns to $x_i$. 
+For further information, please see https://zhuanlan.zhihu.com/p/575591863
+
+Consider a boolean system $x_1(t+1)=f(x_1(t),x_2(t),\cdots,x_n(t)),x_2(t+1)=f(x_1(t),\cdots,x_n(t)),\cdots,x_n(t+1)=f(x_1(t),\cdots,x_n(t))$,in which $x_i(t)$ represents the value that the valuation $t$ assigns to $x_i$. 
 
 e.g. $x_1(t+1)=\lnot x_3(t),x_2(t+1)=x_1(t)\lor x_3(t),x_3(t+1)=x_3(t)$.
 
 ![example_1_of_boolean_equation](https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/example1ofBooleanequation.png),
 
-For a boolean equations, if for a valuation $t$, $x_i(t+n)=x_i(t)$, then $n$ is a period $x_i$. The periods of the boolean equations are the periods of $x_1,\cdots,x_n$. A period $p$ is said to be primary, if $p$ is not divisible by $m$ for any period $m$ of the boolean equations with $m \not= p$.
+For a boolean system, if for a valuation $t$, $x_i(t+n)=x_i(t)$, then $n$ is a period $x_i$. The periods of the boolean equations are the periods of $x_1,\cdots,x_n$. A period $p$ is said to be primary, if $p$ is not divisible by $m$ for any period $m$ of the boolean equations with $m \not= p$.
 
 A result of Tseng und Husing is, for any boolean equations with $n$ variables $x_1,x_2,\cdots,x_n$, we can construct a system of boolean equations with $mn$ variables s.t. for any $x_i$, the value of $x_i$ does not depend on its value in the previous stage，and the set of primary periods of the system of boolean equation is the same as the former.
 
-Boolean equations can be used to represent 
-circuits, in which the value of $x_i$ (0 or 1) represents the state of $x_i$ (off or on). Thus the above result can be seen as a result saying that for any boolean circuit, we can construct a boolean circuit s.t. for any $x_i$ in the circut, the state of $x_i$ does not depend on its state in the previous stage, and the ways of change of the states of the later boolean circuit is similar to the former.
+Boolean network has been used in biology, e.g. NK model.
+
+Boolean systems can be used to represent circuits, in which the value of $x_i$ (0 or 1) represents the state of $x_i$ (off or on). Thus the above result can be seen as a result saying that for any boolean circuit, we can construct a boolean circuit s.t. for any $x_i$ in the circut, the state of $x_i$ does not depend on its state in the previous stage, and the ways of change of the states of the later boolean circuit is similar to the former.
 
 <br/>
 
@@ -66,6 +69,8 @@ At last, we certainly can ask the similar questions for 2^n girls of n different
 
 <br/>
 
+详情请见：https://zhuanlan.zhihu.com/p/575591863
+
 考虑布尔方程组$x_1(t+1)=f(x_1(t),x_2(t),\cdots,x_n(t)),x_2(t+1)=f(x_1(t),\cdots,x_n(t)),\cdots,x_n(t+1)=f(x_1(t),\cdots,x_n(t))$,其中$x_i(t)$代表$x_i$在赋值$t$下的值, 取值为$0,1$, $f$为一真值函数. 
 
 如$x_1(t+1)=\lnot x_3(t),x_2(t+1)=x_1(t)\lor x_3(t),x_3(t+1)=x_3(t)$.
@@ -81,6 +86,8 @@ At last, we certainly can ask the similar questions for 2^n girls of n different
 我们如下定义布尔方程的主周期：某布尔方程组,若对某赋值$t$, $x_i(t+n)=x_i(t)$,我们称$n$为$x_i$的一个周期.布尔方程组的周期集为为$x_1,\cdots,x_n$的周期.而一个周期被称为主周期当且仅当它不为该方程组的任何其它周期整除.
 
 Tseng und Husing的一个结果是：对于任何一个有$n$个变量$x_1,x_2,\cdots,x_n$布尔方程组,我们都可以构造出一个有$mn$个变量的布尔方程组使得在后者，对于任何$x_i$,其值都并不依赖于上一阶段$x_i$的值，并且其主周期和前面的布尔方程组一样.
+
+布尔网络已经用于生物学中，例如NK模型。
 
 我们可以看出，布尔方程可以用来表示电路,其中$x_i$的值$0,1$可以用来表示$x_i$在该阶段是激活还是关闭.因此,上面的结果可以看作对于某一布尔电路，我们都可以构造出另一个布尔电路, 使得其中所有机关都并不依赖自身在上一阶段的值,而变换方式仍大体与前者相同.
 
