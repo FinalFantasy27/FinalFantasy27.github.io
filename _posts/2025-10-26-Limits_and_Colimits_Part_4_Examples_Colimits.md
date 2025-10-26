@@ -141,17 +141,31 @@ Step 1: Disjoint Union: Take the coproduct $B \sqcup C$. This is a space consist
 
 Step 2: Quotient: Define an equivalence relation $\sim$ on $B \sqcup C$. For any point $a \in A$, we declare its image in $B$ to be equivalent to its image in $C$. That is, for every $a \in S¹$, we enforce $f(a) \sim g(a)$. This is the "gluing" instruction.
 
-The Result: The pushout $P$ is the quotient space $(B \sqcup C) / \sim$. $P$ is homeomorphic to the 2-sphere, $S²$, is formally the set of points in $\mathbb{R}³$ equidistant from the origin, defined as: $S² = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \}$, because the quotient map effectively "glues" two hemispheres along their equators. 
+The Result: The pushout $P$ is the quotient space $(B \sqcup C) / \sim$. $P$ is homeomorphic to the 2-sphere, $S²$, is formally the set of points in $\mathbb{R}³$ equidistant from the origin, defined as: 
+
+$$S² = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \},$$
+
+because the quotient map effectively "glues" two hemispheres along their equators. 
 
 $S²$ is a subspace of Euclidean 3-space $\mathbb{R}³$. It inherits its topology as a subspace of $\mathbb{R}³$.
 
-Define the spaces: $B = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \text{ and } z ≥ 0 \}$ (the closed northern hemisphere).
+Define the spaces: 
 
-$C = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \text{ and } z ≤ 0 \}$ (the closed southern hemisphere).
+$$B = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \text{ and } z ≥ 0 \}$$ 
+
+(the closed northern hemisphere).
+
+$$C = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \text{ and } z ≤ 0 \}$$ 
+
+(the closed southern hemisphere).
 
 Both $B$ and $C$ are homeomorphic to the disk $D²$.
 
-The intersection $A = B \cap C = \{ (x, y, 0) \in \mathbb{R}³ | x² + y² = 1 \}$ is the equator, which is homeomorphic to the circle $S¹$.
+The intersection 
+
+$$A = B \cap C = \{ (x, y, 0) \in \mathbb{R}³ | x² + y² = 1 \}$$
+
+is the equator, which is homeomorphic to the circle $S¹$.
 
 Define the pushout: Let $f: A → B$ and $g: A → C$ be the standard inclusion maps.
 
