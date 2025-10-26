@@ -283,9 +283,7 @@ The normal closure $N$ consists of all elements that can be formed by multiplyin
 Because the kernel of any homomorphism $\phi: G → K$ is always a normal subgroup of $G$, the coequalizer construction $q: F(S) → G$ must have a normal subgroup as its kernel. By taking the normal closure of the relations as the kernel, we are creating the most general (or "freest") group that satisfies the relations, which is the essence of the coequalizer's universal property.
 
 
-####
-
-Coequalizers in Top: In topology, the coequalizer is also a "gluing" construction.
+#### Coequalizers in Top: In topology, the coequalizer is also a "gluing" construction.
 
 Example: Making a Circle: 
 
