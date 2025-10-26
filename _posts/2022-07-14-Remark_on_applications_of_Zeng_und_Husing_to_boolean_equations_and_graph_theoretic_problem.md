@@ -25,8 +25,6 @@ Remark on applications of Zeng und Husing to boolean equations and graph theoret
 
 <br/>
 
-For further information, please see https://zhuanlan.zhihu.com/p/575591863
-
 Consider a boolean system $x_1(t+1)=f(x_1(t),x_2(t),\cdots,x_n(t)),x_2(t+1)=f(x_1(t),\cdots,x_n(t)),\cdots,x_n(t+1)=f(x_1(t),\cdots,x_n(t))$,in which $x_i(t)$ represents the value that the valuation $t$ assigns to $x_i$. 
 
 e.g. $x_1(t+1)=\lnot x_3(t),x_2(t+1)=x_1(t)\lor x_3(t),x_3(t+1)=x_3(t)$.
