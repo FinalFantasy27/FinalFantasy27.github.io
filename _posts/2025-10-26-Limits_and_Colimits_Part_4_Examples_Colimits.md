@@ -222,7 +222,7 @@ is the coequalizer of maps from the free group on relations $R$ to the free grou
 
 A group presentation 
 
-$$⟨S | R⟩$$
+$$\langle S \mid R\rangle.$$
 
 is a way to define a group by specifying its generators ($S$) and the relations the generators must satisfy ($R$). Let's use a concrete example: the dihedral group $D₃$ (the symmetries of an equilateral triangle), which has the presentation
 
@@ -252,7 +252,7 @@ Therefore, the map $q$ must "kill" the relations; it must send $r³$, $s²$, and
 
 The most universal way to do this is to let $G$ be the quotient group of $F(S)$ by the normal closure of the relations. This is exactly the definition of the group given by the presentation 
 
-$$⟨S | R⟩.$$ 
+$$\langle S \mid R\rangle.$$ 
 
 The normal closure is necessary in group presentations because the kernel of any group homomorphism must be a normal subgroup, and the normal closure is the smallest normal subgroup containing the relations.
 
@@ -291,7 +291,7 @@ Example: Making a Circle:
 
 Let $A$ be a single-point space $\{*\}$ and $B$ be the interval $\[0, 1\]$. 
 
-Let $f, g: A → B$ be two maps where $f(*) = 0$ and $g(*) = 1$. The coequalizer identifies the images of $f$ and $g$. It quotients the interval $\[0,1\]$ by the relation $0 \sim 1$. 
+Let $f, g: A → B$ be two maps where $f(\*) = 0$ and $g(\*) = 1$. The coequalizer identifies the images of $f$ and $g$. It quotients the interval $\[0,1\]$ by the relation $0 \sim 1$. 
 
 The result is a line segment whose two endpoints have been glued together: a circle, $S¹$.
 
