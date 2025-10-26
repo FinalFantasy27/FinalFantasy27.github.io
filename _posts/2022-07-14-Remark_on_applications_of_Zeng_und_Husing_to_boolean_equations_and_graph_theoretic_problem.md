@@ -1,7 +1,7 @@
 ---
 
 layout: post
-title: "Remark on applications of Tseng und Husing to boolean equations and graph theoretic problem"
+title: "Remark on applications of Zeng und Husing to boolean equations and graph theoretic problem"
 date: 2022-07-14 20:49:31 +0800
 categories: Logic mathematics
 
@@ -21,7 +21,7 @@ categories: Logic mathematics
     </script>
 </head>
 
-Remark on applications of Tseng und Husing to boolean equations and graph theoretic problem
+Remark on applications of Zeng und Husing to boolean equations and graph theoretic problem
 
 <br/>
 
