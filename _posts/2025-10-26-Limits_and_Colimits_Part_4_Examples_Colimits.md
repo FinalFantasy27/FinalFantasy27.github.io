@@ -263,9 +263,7 @@ A subgroup $N$ of $G$ is normal if for every $g \in G$ and $n \in N$, the conjug
 
 This ensures that the left coset $gN$ is the same as the right coset $Ng$.
 
-Now, consider a group presentation 
-
-$$⟨S | R⟩.$$
+Now, consider a group presentation $\langle S \mid R\rangle.$
 
 We start with the free group $F(S)$ and a set of relations $R' = \{r₁, r₂, ...\}$ which are elements of $F(S)$. We want to force all these relations to become the identity element.
 
@@ -289,7 +287,13 @@ Because the kernel of any homomorphism $\phi: G → K$ is always a normal subgro
 
 Coequalizers in Top: In topology, the coequalizer is also a "gluing" construction.
 
-Example: Making a Circle: Let $A$ be a single-point space $\{*\}$ and $B$ be the interval $[0, 1]$. Let $f, g: A → B$ be two maps where $f(*) = 0$ and $g(*) = 1$. The coequalizer identifies the images of $f$ and $g$. It quotients the interval $[0, 1]$ by the relation $0 \sim 1$. The result is a line segment whose two endpoints have been glued together: a circle, $S¹$.
+Example: Making a Circle: 
+
+Let $A$ be a single-point space $\{*\}$ and $B$ be the interval $\[0, 1\]$. 
+
+Let $f, g: A → B$ be two maps where $f(*) = 0$ and $g(*) = 1$. The coequalizer identifies the images of $f$ and $g$. It quotients the interval $\[0,1\]$ by the relation $0 \sim 1$. 
+
+The result is a line segment whose two endpoints have been glued together: a circle, $S¹$.
 
 Coequalizers in Vect: In vector spaces, the coequalizer is a quotient space.
 
@@ -303,9 +307,9 @@ The coequalizer is a space $Q$ with a map $q: W → Q$ such that $q(f(x)) = q(g(
 
 This means $q(x, x) = q(x, -x)$. By linearity, $q((x, x) - (x, -x)) = 0$, which simplifies to $q(0, 2x) = 0$ for all $x$.
 
-This tells us that the entire 
+This tells us that the entire $y$-axis 
 
-$$y$-axis $\{(0, y) | y \in \mathbb{R}\}$$
+$$\{(0, y) | y \in \mathbb{R}\}$$
 
 must be in the kernel of $q$.
 
