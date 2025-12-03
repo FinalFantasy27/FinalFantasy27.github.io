@@ -13,32 +13,9 @@ permalink: /Homepage/
 
 ### [posts](https://finalfantasy27.github.io/)
 
-comments below
-
-[subscribe via RSS 通过RSS订阅](https://finalfantasy27.github.io/tools/cool/2021/09/06/Subscribe-via-RSS-%E9%80%9A%E8%BF%87RSS%E8%AE%A2%E9%98%85.html)
-<br/>
-### plan
-[overview1](https://github.com/FinalFantasy27/plan)
-
-[overview2](https://github.com/FinalFantasy27/VitaNuova)
-- ......
-
-### writing:
-- [贝克特](https://finalfantasy27.github.io/writing/poems/2019/07/18/Beckett.html)
-- [莫泊桑](https://finalfantasy27.github.io/writing/poems/2019/07/18/Maupassant.html)
-- [行奇迹一篇·在告解室](https://finalfantasy27.github.io/writing/vision/2020/01/31/Miracle-I-In-the-Confessional.html)
-- [Shepherd Boy](https://finalfantasy27.github.io/writing/adaptation/2020/05/02/Shepherd-Boy.html)
-- [douban](https://www.douban.com/people/150548369/)
-- [read.douban](https://read.douban.com/author/63731975/)
-- [Zhihu](https://www.zhihu.com/people/sliverwhite-47/)
-
-### ideas 
-[open source project](https://github.com/FinalFantasy27/Ideas)
 <br/>
 ### photographs:
 <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/photo1.JPG" heigt="200" width="300" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/photo4.JPG" heigt="200" width="300" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/photo2.jpg" heigt="300" width="200" > <img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/photo3.jpg" heigt="300" width="200" > 
-
-[for more](https://www.douban.com/people/150548369/photos)
   
 <body>  
     <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
