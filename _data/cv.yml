@@ -1,0 +1,69 @@
+cv:
+  name: Qianli Zeng
+  label: PhD Student in Philosophy
+  email: Skolemization@163.com
+  location: St Andrews, United Kingdom
+  summary: >
+    PhD student working in philosophical logic, modal logic, formal epistemology, metaphysics, and philosophy of science.
+
+  social_networks:
+    - network: GitHub
+      username: FinalFantasy27
+
+  sections:
+    Education:
+      - institution: University of St Andrews
+        location: St Andrews, United Kingdom
+        studyType: PhD in Philosophy
+        start_date: 2026
+        end_date: 2030
+        highlights:
+          - Supervisor: Prof. Franz Berto
+
+      - institution: Ludwig-Maximilians-Universität München
+        location: Munich, Germany
+        studyType: MA in Logic and Philosophy of Science
+        start_date: 2024
+        end_date: 2026
+        highlights:
+          - Thesis: Bundled Fragments of Propositional Modal Logic
+          - Supervisor: Dr. Levin Hornischer
+
+      - institution: South China Normal University
+        location: Guangzhou, China
+        studyType: Bachelor of Philosophy
+        start_date: 2020
+        end_date: 2024
+        highlights:
+          - Thesis: The Elimination of Direct Self-Reference
+          - Outstanding Bachelor's Thesis Award
+
+    Awards:
+      - title: Outstanding Graduate
+        date: 2024
+        awarder: South China Normal University
+      - title: Outstanding Bachelor's Thesis Award
+        date: 2024
+        awarder: South China Normal University
+      - title: First Prize, Undergraduate Innovation Award
+        date: 2023
+        awarder: South China Normal University
+
+    Publications:
+      - title: The Elimination of Direct Self-Reference
+        authors:
+          - Qianli Zeng
+          - Ming Hsiung
+        releaseDate: 2023
+        publisher: Studia Logica, 111(4)
+        summary: This paper investigates the elimination of direct self-reference.
+
+    Languages:
+      - name: Mandarin Chinese
+        summary: Native
+      - name: English
+        summary: Professional
+      - name: Cantonese
+        summary: Conversational
+      - name: German
+        summary: Beginner

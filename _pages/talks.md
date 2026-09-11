@@ -1,0 +1,32 @@
+---
+layout: page
+title: talks
+permalink: /talks/
+nav: true
+nav_order: 3
+---
+
+{% assign talks = site.talks | sort: "date" | reverse %}
+
+{% for talk in talks %}
+## {{ talk.title }}
+
+<p>
+  <strong>{{ talk.event }}</strong><br>
+  {{ talk.location }} · {{ talk.date | date: "%B %Y" }}
+</p>
+
+{% if talk.abstract %}
+<details>
+<summary>Abstract</summary>
+
+{{ talk.abstract | markdownify }}
+
+</details>
+{% endif %}
+
+{% if talk.slides %}
+<a href="{{ talk.slides | relative_url }}">Slides</a>
+{% endif %}
+
+{% endfor %}
