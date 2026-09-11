@@ -13,7 +13,8 @@
 - file: 2024-8-3-leuven-vredesmonument-img-5805.jpg
   caption: "Leuven Vredesmonument · 3 August 2024"
 - file: 2024-8-3-img-5818.jpg
-  caption: "Xuhongming hotel · 3 August 2024 · 感谢正哥摄影"
+  caption: "感谢正哥摄影"
+  show_caption: true
 - file: 2024-8-3-leuven-guided-walk-img-5791.jpg
   caption: "St Peter's Church, Leuven · 3 August 2024"
 - file: 2024-8-4-cyyi8494.jpg
@@ -28,11 +29,14 @@
 - file: 2024-8-9-img-6063-pauscollege.jpg
   caption: "Pauscollege · 9 August 2024"
 - file: 2026-6-26-img-4725.jpg
-  caption: "Photograph · 26 June 2026"
+  caption: "English Garden"
+  show_caption: true
 - file: 2026-6-26-img-4731.jpg
-  caption: "Photograph · 26 June 2026"
+  caption: "English Garden"
+  show_caption: true
 - file: 7c84190d22aa690964d66c7fc0afa651.jpg
-  caption: "Photograph"
+  caption: "感谢正哥摄影"
+  show_caption: true
 - file: 1.jpg
   caption: "Art class"
 - file: 5.jpg

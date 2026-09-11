@@ -27,9 +27,9 @@ I am a PhD student in Philosophy at the University of St Andrews. Before beginni
 
 My primary philosophical interests are logic (especially mathematical and philosophical logic), formal epistemology, and metaphysics. I also have general interests in philosophy of science. My current work focuses on modal logic, especially bundled fragments of modal logic, e.g., noncontingency logic, together with their algebra, representation, and model theory, as well as on the philosophical applications of formal methods.
 
-I am also mainly interested in logic, VTubers (especially Nijisanji), philosophy, cinema (especially film history), anime and manga, literature, and Japanese comedy (manzai and conte). I warmly welcome conversations on these topics.
+I am also mainly interested in VTubers (especially Nijisanji), cinema (especially film history), anime and manga, literature, and Japanese comedy (manzai and conte). I warmly welcome conversations on these topics.
 
-我的兴趣包括数理逻辑和哲学逻辑、虚拟主播（尤其是彩虹社）、哲学、电影（尤其是电影史）、动漫与漫画、文学，以及日本喜剧（漫才、短剧等）。欢迎交流 🥹
+我的兴趣包括数理逻辑和哲学逻辑、虚拟主播（尤其是彩虹社）、哲学、电影（尤其是电影史）、动漫与漫画、文学，以及日本喜剧（漫才、短剧等）。交流大欢迎 🥹
 
 > *Doing justice to what we know.*
 > — Hao Wang
