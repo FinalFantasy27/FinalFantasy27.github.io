@@ -1,10 +1,10 @@
 cv:
   name: Qianli Zeng
-  label: PhD Student in Philosophy
+  headline: PhD Student in Philosophy
   email: Skolemization@163.com
   location: St Andrews, United Kingdom
   summary: >
-    PhD student working in philosophical logic, modal logic, formal epistemology, metaphysics, and philosophy of science.
+    My primary philosophical interests are logic (especially mathematical and philosophical logic), formal epistemology, and metaphysics. I also have general interests in philosophy of science.
 
   social_networks:
     - network: GitHub
@@ -13,40 +13,43 @@ cv:
   sections:
     Education:
       - institution: University of St Andrews
-        location: St Andrews, United Kingdom
-        studyType: PhD in Philosophy
-        start_date: 2026
-        end_date: 2030
+        location: St Andrews
+        area: Philosophy
+        studyType: PhD
+        start_date: "2026-09"
+        end_date: "2030-09"
         highlights:
-          - Supervisor: Prof. Franz Berto
+          - "Supervisor: Prof. Franz Berto"
 
       - institution: Ludwig-Maximilians-Universität München
-        location: Munich, Germany
+        location: Munich
+        area: Logic and Philosophy of Science
         studyType: MA in Logic and Philosophy of Science
-        start_date: 2024
-        end_date: 2026
+        start_date: "2024-10"
+        end_date: "2026-07"
         highlights:
-          - Thesis: Bundled Fragments of Propositional Modal Logic
-          - Supervisor: Dr. Levin Hornischer
+          - "Thesis: Bundled Fragments of Propositional Modal Logic"
+          - "Supervisor: Dr. Levin Hornischer"
 
       - institution: South China Normal University
-        location: Guangzhou, China
+        location: Guangzhou
+        area: Philosophy
         studyType: Bachelor of Philosophy
-        start_date: 2020
-        end_date: 2024
+        start_date: "2020-09"
+        end_date: "2024-06"
         highlights:
-          - Thesis: The Elimination of Direct Self-Reference
-          - Outstanding Bachelor's Thesis Award
+          - "Thesis: The Elimination of Direct Self-Reference"
+          - "Outstanding Bachelor's Thesis Award"
 
     Awards:
       - title: Outstanding Graduate
-        date: 2024
+        date: "2024-06"
         awarder: South China Normal University
       - title: Outstanding Bachelor's Thesis Award
-        date: 2024
+        date: "2024-06"
         awarder: South China Normal University
       - title: First Prize, Undergraduate Innovation Award
-        date: 2023
+        date: "2023-12"
         awarder: South China Normal University
 
     Publications:
@@ -54,8 +57,8 @@ cv:
         authors:
           - Qianli Zeng
           - Ming Hsiung
-        releaseDate: 2023
-        publisher: Studia Logica, 111(4)
+        date: "2023"
+        journal: Studia Logica, 111(4)
         summary: This paper investigates the elimination of direct self-reference.
 
     Languages:
@@ -64,6 +67,6 @@ cv:
       - name: English
         summary: Professional
       - name: Cantonese
-        summary: Conversational
+        summary: "Understands spoken Cantonese but does not speak it (识听唔识讲)"
       - name: German
         summary: Beginner

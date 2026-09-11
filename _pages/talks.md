@@ -23,6 +23,8 @@ nav_order: 3
 {{ talk.abstract | markdownify }}
 
 </details>
+{% else %}
+{{ talk.content }}
 {% endif %}
 
 {% if talk.slides %}
