@@ -57,10 +57,14 @@ $T$会否证这些真的但又不可证的语句吗？这留作一个练习。
 *Verena Dyson, James Jones and John Sheperdson在Archiv Math. Logik 22 (1982) 51–60*中证明了一个结果：
 让$T$是一个可公理化的$ω$-一致的包含了Robinson算术的理论，那么就会存在一个$n$（根据具体的理论不同而不同），使得如下的句子在$T$中不可判定：
 
-$∃a∃b∀(i ≤ n)∃s∃w∃p∃q∀j∀v∃e∃g$
-$\\{(s + w)^2 + 3w + s = 2i ∧ ([j = w ∧ v = q] ∨ [j = 3i ∧ v = p + q]
-∨[j = s ∧ (v = p ∨ (i = n ∧ v = q + n))] ∨ [j = 3i + l ∧ v = pq]
-→ a = v + e + ejb ∧ v + g = jb)\\}$
+$$
+\begin{aligned}
+&\exists a\exists b\forall(i\le n)\exists s\exists w\exists p\exists q\forall j\forall v\exists e\exists g \\
+&\quad \{(s+w)^2+3w+s=2i \land ([j=w\land v=q]\lor[j=3i\land v=p+q] \\
+&\qquad \lor[j=s\land(v=p\lor(i=n\land v=q+n))]\lor[j=3i+l\land v=pq] \\
+&\qquad \to a=v+e+ejb\land v+g=jb)\}.
+\end{aligned}
+$$
 
 哇……
 

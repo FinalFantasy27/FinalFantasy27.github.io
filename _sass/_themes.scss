@@ -55,6 +55,11 @@ a:focus {
   text-decoration: underline;
 }
 
+.post-external-link {
+  color: #06c !important;
+  text-decoration: underline;
+}
+
 .photo-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));

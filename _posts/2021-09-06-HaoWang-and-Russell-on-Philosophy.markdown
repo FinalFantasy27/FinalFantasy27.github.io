@@ -26,16 +26,18 @@ Hao Wang, Beyond Analytic Philosophy
 
 <br/>
 
-<p>王浩的那句话其实和孔子的“知之为知之，不知为不知，是知也”是一样的，一直以来人们都太过于强调这句话的后一半了。<p>
+<p>王浩的这句话其实和孔子的“知之为知之，不知为不知，是知也”是一样的，一直以来人们都太过于强调这句话的后一半了。<p>
     
 <br/>            
             
-> To say of what is that it is not, or of what is not that it is, is false, while to say of what is that it is, or of what is not that it is not, is true.
+<blockquote>
+To say of what is that it is not, or of what is not that it is, is false, while to say of what is that it is, or of what is not that it is not, is true.
+</blockquote>
 
 <br/><br/>
   
-<a href="https://www.youtube.com/watch?v=gvOcjzQ32Fw "><img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/Russell%20on.PNG" width=600/></a>
-<p>Bertrand Russell - Mankind's Future & Philosophy<p>
+<a href="https://www.youtube.com/watch?v=gvOcjzQ32Fw"><img src="https://raw.githubusercontent.com/FinalFantasy27/FinalFantasy27/main/images/Russell%20on.PNG" width=600/></a>
+<p><a class="post-external-link" href="https://www.youtube.com/watch?v=gvOcjzQ32Fw">Bertrand Russell - Mankind's Future &amp; Philosophy</a></p>
   
 
 
