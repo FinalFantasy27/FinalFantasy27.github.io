@@ -13,8 +13,16 @@ nav_order: 3
 
 <p>
   <strong>{{ talk.event }}</strong><br>
-  {{ talk.location }} · {{ talk.date | date: "%B %Y" }}
+  {{ talk.location }} · {{ talk.date | date: "%-d %B %Y" }}
 </p>
+
+{% if talk.event_url %}
+<a href="{{ talk.event_url }}">Event page</a>
+{% endif %}
+
+{% if talk.program_url %}
+<a href="{{ talk.program_url }}">Programme</a>
+{% endif %}
 
 {% if talk.abstract %}
 <details>

@@ -6,5 +6,3 @@ event: "Undergraduate Forum of the School of Philosophy and Social Development"
 location: "South China Normal University"
 type: conference
 ---
-
-This presentation received the First Prize at the undergraduate forum.

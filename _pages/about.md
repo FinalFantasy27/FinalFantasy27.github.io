@@ -8,8 +8,6 @@ profile:
   align: right
   image: profile.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>University of St Andrews</p>
 
 selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
@@ -27,7 +25,7 @@ latest_posts:
 
 I am a PhD student in Philosophy at the University of St Andrews. Before beginning my PhD at the University of St Andrews, I completed an MA in Logic and Philosophy of Science at the Munich Center for Mathematical Philosophy, Ludwig-Maximilians-Universität München.
 
-My primary philosophical interests are logic (especially mathematical and philosophical logic), formal epistemology, and metaphysics. I also have general interests in philosophy of science. My current work focuses on modal logic, especially bundled fragments of modal logic, such as noncontingency logic, together with their algebra, representation theory, model theory, and philosophical applications.
+My primary philosophical interests are logic (especially mathematical and philosophical logic), formal epistemology, and metaphysics. I also have general interests in philosophy of science. My current work focuses on modal logic, especially bundled fragments of modal logic, e.g., noncontingency logic, together with their algebra, representation, and model theory, as well as on the philosophical applications of formal methods.
 
 I am also mainly interested in logic, VTubers (especially Nijisanji), philosophy, cinema (especially film history), anime and manga, literature, and Japanese comedy (manzai and conte). I warmly welcome conversations on these topics.
 
