@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.4.1">Jekyll</generator><link href="https://finalfantasy27.github.io/feed.xml" rel="self" type="application/atom+xml"/><link href="https://finalfantasy27.github.io/" rel="alternate" type="text/html" hreflang="en"/><updated>2026-09-11T01:47:49+00:00</updated><id>https://finalfantasy27.github.io/feed.xml</id><title type="html">Qianli Zeng</title><subtitle>PhD student in Philosophy at the University of St Andrews working in philosophical logic, modal logic, formal epistemology, and metaphysics. </subtitle><entry><title type="html">Limits and Colimits, Part 4 Colimits</title><link href="https://finalfantasy27.github.io/blog/2025/Limits_and_Colimits_Part_4_Examples_Colimits/" rel="alternate" type="text/html" title="Limits and Colimits, Part 4 Colimits"/><published>2025-10-25T12:49:31+00:00</published><updated>2025-10-25T12:49:31+00:00</updated><id>https://finalfantasy27.github.io/blog/2025/Limits_and_Colimits_Part_4_Examples_Colimits</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2025/Limits_and_Colimits_Part_4_Examples_Colimits/"><![CDATA[<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> <script src="//unpkg.com/valine/dist/Valine.min.js"></script> <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+</script> <p><em>Math3ma has provided one of the most accessible and insightful introductions to category theory, especially in its excellent <a href="https://www.math3ma.com/blog/limits-and-colimits-part-1">series on Limits and Colimits</a>. However, the promised and long-awaited Part 4 on examples of colimits was never released. In this post, I use Gemini 2.5 for an attempt to to reconstruct what could have been Part 4 of the series.</em></p> <p>Welcome back to our series on limits and colimits! In the last post, we took a deep dive into some of the most common examples of limits: terminal objects, products, pullbacks, inverse limits, and equalizers. Today, we’re going to flip the script entirely. We’ll look at the duals of the examples we saw in Part 3.</p> <h3 id="example-1-the-initial-object-dual-of-the-terminal-object">Example 1: The Initial Object (Dual of the Terminal Object)</h3> <p>The simplest limit is the limit of the empty diagram, which we called the terminal object. So, the simplest colimit must be the colimit of the empty diagram. This is called the initial object.</p> <p>Diagram: The empty category, with no objects and no morphisms.</p> <p>Cocone: A cocone under the empty diagram is just… an object! There are no diagrams to draw and no conditions to satisfy. So every object in the category C is a cocone.</p> <p>Colimit: The colimit is the initial object among all these cocones. An initial object, often denoted $0$ or $\emptyset$, is an object with a unique morphism to every other object in the category.</p> <p>For example, in the category of sets Set, the initial object is the empty set $\emptyset$. There is exactly one function from the empty set to any other set (the “empty function”).</p> <h3 id="example-2-the-coproduct-dual-of-the-product">Example 2: The Coproduct (Dual of the Product)</h3> <p>The dual of the product is the coproduct. While a product combines objects with maps pointing to the factors, a coproduct combines objects with maps coming from the factors.</p> <p>Diagram: A discrete category with two objects, $A$ and $B$.</p> <p>Cocone: A cocone consists of an object $M$ and two morphisms $i₁: A → M$ and $i₂: B → M$.</p> <p>Colimit (Coproduct): The colimit is the object $A \sqcup B$ (or $A + B$) along with two “inclusion” maps $i₁: A → A \sqcup B$ and $i₂: B → A \sqcup B$. It has the universal property that for any other cocone ($M$, $f$, $g$), there is a unique morphism $u: A \sqcup B → M$ such that $u \circ i₁ = f$ and $u \circ i₂ = g$.</p> <p>In Set, the coproduct is the disjoint union. If you have two sets $A$ and $B$, their disjoint union $A \sqcup B$ is the set containing all elements of $A$ and all elements of $B$, where we treat the elements from $A$ and $B$ as distinct even if they look the same. The unique map $u$ is defined by saying “if an element came from $A$, apply $f$ to it; if it came from $B$, apply $g$ to it.”</p> <p>In the category of groups Grp, the coproduct is the free product of groups. Let’s consider two simple groups:</p> <p>$G = \mathbb{Z}₂ = {e, a}$ where $a² = e$.</p> <p>$H = \mathbb{Z}₃ = {e, b, b²}$ where $b³ = e$.</p> <p>The coproduct $\mathbb{Z}₂ \sqcup \mathbb{Z}₃$ is the free product $\mathbb{Z}₂ * \mathbb{Z}₃$. Its elements are all finite “words” you can make by alternating elements from $G$ and $H$, like $aba$, $b²ab$, etc. There are no relations between $a$ and $b$ (e.g., $ab ≠ ba$).</p> <p>The inclusion maps are:</p> <p>$i₁: \mathbb{Z}₂ → \mathbb{Z}₂ * \mathbb{Z}₃$ sends $a$ to the word “a”.</p> <p>$i₂: \mathbb{Z}₃ → \mathbb{Z}₂ * \mathbb{Z}₃$ sends $b$ to the word “b”.</p> <p>Now, let’s test the universal property. Suppose we have another group, $K$, and two homomorphisms:</p> <p>$f: \mathbb{Z}₂ → K$</p> <p>$g: \mathbb{Z}₃ → K$</p> <p>We need to show there is a unique homomorphism $u: \mathbb{Z}₂ * \mathbb{Z}₃ → K$ that makes the diagram commute.</p> <p>How do we define $u$? We have no choice! For any word in $\mathbb{Z}₂ * \mathbb{Z}₃$, we define $u$ by applying $f$ and $g$ to its letters. For example:</p> <p>$u(“ab”)$ must equal $u(i₁(a) * i₂(b)) = u(i₁(a)) * u(i₂(b)) = f(a) * g(b)$.</p> <p>$u(“b²a”)$ must equal $u(i₂(b²)) * u(i₁(a)) = g(b²) * f(a)$.</p> <p>This definition is forced upon us by the diagram, which guarantees its uniqueness. It also turns out to be a valid homomorphism.</p> <p>Why isn’t the direct product $\mathbb{Z}₂ × \mathbb{Z}₃$ the coproduct? The direct product imposes the relation that elements from $G$ commute with elements from $H$. That is, $(a, e) * (e, b) = (a, b) = (e, b) * (a, e)$. If we chose $\mathbb{Z}₂ × \mathbb{Z}₃$ as our coproduct, we could only construct maps $u$ into groups $K$ where the images of $G$ and $H$ commute. This isn’t universal enough! The free product is more “free” because it imposes no extra relations.</p> <h4 id="in-vect-direct-sum">In Vect (direct sum)</h4> <p>In the category of vector spaces (Vect), the coproduct of two vector spaces $V$ and $W$ is their direct sum, $V \oplus W$. Let’s see why it satisfies the universal property, which is the defining feature of a coproduct.</p> <p>Let $V = \mathbb{R}²$ and $W = \mathbb{R}$ over the field $k = \mathbb{R}$. Their direct sum is $V \oplus W = \mathbb{R}³$, where we can think of elements as pairs $(v, w)$ with $v \in V$ and $w \in W$.</p> <p>Inclusion Morphisms: We have two canonical linear maps (the “inclusions”) into the direct sum:</p> <p>$iᵥ: V → V \oplus W$ defined by $v \mapsto (v, 0)$. For example, $(x, y) \mapsto (x, y, 0)$.</p> <p>$iᵥ: W → V \oplus W$ defined by $w \mapsto (0, w)$. For example, $z \mapsto (0, 0, z)$.</p> <p>Universal Property Test: Now, suppose we have any other vector space $Z$ and two arbitrary linear maps into it:</p> <p>$f: V → Z$</p> <p>$g: W → Z$</p> <p>The universal property demands that there exists a unique linear map $u: V \oplus W → Z$ such that $u \circ iᵥ = f$ and $u \circ iᵥ = g$.</p> <p>How do we construct this unique map $u$? Any element in $V \oplus W$ can be uniquely written as $(v, w) = (v, 0) + (0, w)$. Since $u$ must be a linear map: $u(v, w) = u((v, 0) + (0, w)) = u(v, 0) + u(0, w)$</p> <p>For the diagram to commute, we need $u(v, 0)$ to be $f(v)$ and $u(0, w)$ to be $g(w)$. Therefore, the map $u$ is uniquely defined as: $u(v, w) = f(v) + g(w)$</p> <p>This construction always yields a valid linear map, and its definition is forced by the conditions, guaranteeing it is unique. Because the direct sum satisfies this property for any $V, W, Z, f$, and $g$, it is the categorical coproduct in Vect.</p> <p>In the category of vector spaces (Vect), the coproduct is the direct sum ($V \oplus W$), while the product is the direct product ($V × W$). For finite-dimensional vector spaces, these two are isomorphic, which can be confusing. Why isn’t the direct product $V × W$ the coproduct?</p> <p>Let’s try to use $V × W$ in the coproduct role. The “inclusion” maps would be $v \mapsto (v, 0)$ and $w \mapsto (0, w)$. Now, consider two maps $f: V → Z$ and $g: W → Z$. We need to find a unique map $u: V × W → Z$ such that $u(v, 0) = f(v)$ and $u(0, w) = g(w)$. </p> <p>Since any element $(v, w)$ in $V × W$ can be written as $(v, 0) + (0, w)$, linearity forces the definition $u(v, w) = u(v, 0) + u(0, w) = f(v) + g(w)$. This works perfectly and seems to satisfy the property. So, where is the problem? The issue arises with infinite dimensions. For infinite-dimensional spaces, the direct sum $V \oplus W$ consists of pairs $(v, w)$ where only a finite number of components are non-zero, while the direct product $V × W$ allows infinitely many non-zero components. The direct sum is a subspace of the direct product. The map $u(v, w) = f(v) + g(w)$ is well-defined for the direct sum, but it may not be for the direct product if the sums become infinite. The direct sum is the correct, most general construction that always works.</p> <h3 id="example-3-the-pushout-dual-of-the-pullback">Example 3: The Pushout (Dual of the Pullback)</h3> <p>The dual of the pullback is the pushout. A pullback found the “best” way to complete a square of maps pointing to a common object. A pushout finds the “best” way to complete a square of maps originating from a common object.</p> <p>Diagram: A “span” of objects $B ← A → C$.</p> <p>Cocone: A cocone is an object $P$ that completes the square, making it commute:</p> <p>Colimit (Pushout): The pushout is the object $P$ that satisfies the universal property: for any other object $Q$ that makes the diagram commute, there is a unique morphism $u: P → Q$ that preserves the whole structure.</p> <p>In Set, the pushout can be thought of as “gluing” sets together along a common subset. Imagine $A$ is a subset of both $B$ and $C$. The pushout $B \sqcupₐ C$ is the disjoint union of $B$ and $C$, but where we “identify” or “merge” the corresponding elements from $A$. This is a fundamental construction in topology, where we glue topological spaces together.</p> <h4 id="pushout-example-in-top-making-a-sphere-">Pushout Example in Top: Making a Sphere ⚪</h4> <p>Let’s build a 2-sphere $S²$ using a pushout.</p> <p>Let $A$ be the circle $S¹$. Think of it as the set of points $(x, y)$ in $\mathbb{R}²$ with $x² + y² = 1$.</p> <p>Let $B$ and $C$ both be the 2-disk $D²$. The set of points $(x, y)$ in $\mathbb{R}²$ with $x² + y² ≤ 1$. Let’s call this disk $B$ the “northern hemisphere.” We’ll call $C$ the “southern hemisphere.”</p> <p>The maps $f: A → B$ and $g: A → C$ are the inclusion maps of the boundary circle $S¹$ into each disk.</p> <p>The diagram is $D² ← S¹ → D²$. The pushout “glues” the two disks together along their common boundary circle. The result is the sphere $S²$. This is a fundamental construction in algebraic topology.</p> <p>Let’s break down the construction of a 2-sphere $S²$ from two 2-disks $D²$ by gluing their boundaries. This is a pushout in the category of topological spaces (Top).</p> <p>The Construction: The pushout $P$ is constructed in two steps:</p> <p>Step 1: Disjoint Union: Take the coproduct $B \sqcup C$. This is a space consisting of two separate, non-touching disks.</p> <p>Step 2: Quotient: Define an equivalence relation $\sim$ on $B \sqcup C$. For any point $a \in A$, we declare its image in $B$ to be equivalent to its image in $C$. That is, for every $a \in S¹$, we enforce $f(a) \sim g(a)$. This is the “gluing” instruction.</p> <p>The Result: The pushout $P$ is the quotient space $(B \sqcup C) / \sim$. $P$ is homeomorphic to the 2-sphere, $S²$, is formally the set of points in $\mathbb{R}³$ equidistant from the origin, defined as:</p> \[S² = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \},\] <p>because the quotient map effectively “glues” two hemispheres along their equators. </p> <p>$S²$ is a subspace of Euclidean 3-space $\mathbb{R}³$. It inherits its topology as a subspace of $\mathbb{R}³$.</p> <p>Define the spaces:</p> \[B = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \text{ and } z ≥ 0 \}\] <p>(the closed northern hemisphere).</p> \[C = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \text{ and } z ≤ 0 \}\] <p>(the closed southern hemisphere).</p> <p>Both $B$ and $C$ are homeomorphic to the disk $D²$.</p> <p>The intersection</p> \[A = B \cap C = \{ (x, y, 0) \in \mathbb{R}³ | x² + y² = 1 \}\] <p>is the equator, which is homeomorphic to the circle $S¹$.</p> <p>Define the pushout: Let $f: A → B$ and $g: A → C$ be the standard inclusion maps.</p> <p>The pushout is the quotient space $P = (B \sqcup C) / \sim$, where $(b, 1) \sim (c, 2)$ if and only if $b = c$ and $b, c \in A$. This formally identifies the points on the equator of $B$ with the corresponding points on the equator of $C$.</p> <p>Define the Homeomorphism: We need a continuous map $h: P → S²$ with a continuous inverse.</p> <p>Let $q: B \sqcup C → P$ be the quotient map.</p> <p>Define a map $ĥ: B \sqcup C → S²$ that acts as the identity on each hemisphere. This map is continuous.</p> <p>Because $ĥ$ identifies the same points as the equivalence relation $\sim$ (i.e., if $x \sim y$, then $ĥ(x) = ĥ(y)$), the universal property of quotient spaces guarantees that there is a unique continuous map $h: P → S²$ such that $h \circ q = ĥ$.</p> <p>This map $h$ is a bijection because it maps the two identified hemispheres to the whole sphere. Since $B \sqcup C$ is compact (as the union of two compact sets) and $S²$ is Hausdorff, the continuous bijection $h$ is a homeomorphism.</p> <p>Therefore, the abstract pushout construction formally yields a space that is topologically identical to $S²$. The maps from $B$ and $C$ into $S²$ are just the natural projections from the disjoint union into the quotient space.</p> <h3 id="colimits-in-different-categories">Colimits in Different Categories</h3> <table> <thead> <tr> <th style="text-align: left">Category</th> <th style="text-align: left">Initial Object</th> <th style="text-align: left">Coproduct ($A \sqcup B$)</th> <th style="text-align: left">Pushout ($B \sqcup_A C$)</th> </tr> </thead> <tbody> <tr> <td style="text-align: left"><strong>Set</strong> (Sets)</td> <td style="text-align: left">Empty set $\emptyset$</td> <td style="text-align: left"><strong>Disjoint Union</strong>: $A$ and $B$ combined, keeping elements distinct.</td> <td style="text-align: left"><strong>Gluing Sets</strong>: The disjoint union of $B$ and $C$, where for each $a \in A$, we identify its image in $B$ with its image in $C$.</td> </tr> <tr> <td style="text-align: left"><strong>Grp</strong> (Groups)</td> <td style="text-align: left">Trivial group ${e}$</td> <td style="text-align: left"><strong>Free Product</strong>: $A * B$, words of alternating elements.</td> <td style="text-align: left"><strong>Amalgamated Product</strong>: $B *_A C$, the free product $B * C$ quotiented by relations identifying the images of $A$.</td> </tr> <tr> <td style="text-align: left"><strong>Top</strong> (Spaces)</td> <td style="text-align: left">Empty space $\emptyset$</td> <td style="text-align: left"><strong>Disjoint Union</strong>: The disjoint union of the sets with a topology where a set is open if its intersection with $A$ and $B$ is open.</td> <td style="text-align: left"><strong>Gluing Spaces</strong>: The most intuitive pushout. $B$ and $C$ are “glued together” along $A$.</td> </tr> <tr> <td style="text-align: left"><strong>Vect</strong> (Vector Spaces)</td> <td style="text-align: left">Zero space ${0}$</td> <td style="text-align: left"><strong>Direct Sum</strong>: $A \oplus B$. Its elements are pairs (a, b).</td> <td style="text-align: left"><strong>Gluing Vector Spaces</strong>: The direct sum $B \oplus C$ quotiented by the subspace of elements $(f(a), -g(a))$ for $a \in A$.</td> </tr> </tbody> </table> <h3 id="example-4-coequalizers">Example 4: Coequalizers</h3> <p>The coequalizer is the dual of the equalizer. It takes two parallel arrows and “forces” them to be equal in the most efficient way.</p> <p>Definition: The coequalizer of two morphisms $f, g: A → B$ is an object $Q$ with a morphism $q: B → Q$ such that $q \circ f = q \circ g$. Furthermore, for any other object $Q’$ with a map $q’: B → Q’$ where $q’ \circ f = q’ \circ g$, there’s a unique map $u: Q → Q’$ making the diagram commute.</p> <p>Example in Set: Let $A = {a}$ and $B = {1, 2, 3}$.</p> <p>Let $f: A → B$ be the function $f(a) = 1$.</p> <p>Let $g: A → B$ be the function $g(a) = 2$.</p> <p>The coequalizer $q: B → Q$ must make $q(f(a)) = q(g(a))$, which means $q(1) = q(2)$. The most general way to do this is to take the quotient of $B$ by the equivalence relation generated by $1 \sim 2$.</p> <p>The equivalence classes are ${[1] = {1, 2}, [3] = {3}}$.</p> <p>The coequalizer object is the quotient set $Q = {{1, 2}, {3}}$.</p> <p>The map $q$ sends each element of $B$ to its equivalence class: $q(1) = {1, 2}$, $q(2) = {1, 2}$, and $q(3) = {3}$.</p> <h4 id="in-grp-group-presentation">In Grp: Group Presentation</h4> <p>In group theory, coequalizers are used to define groups via presentations. The group defined by</p> \[⟨S | R⟩\] <p>is the coequalizer of maps from the free group on relations $R$ to the free group on generators $S$.</p> <p>A group presentation</p> \[\langle S \mid R\rangle.\] <p>is a way to define a group by specifying its generators ($S$) and the relations the generators must satisfy ($R$). Let’s use a concrete example: the dihedral group $D₃$ (the symmetries of an equilateral triangle), which has the presentation</p> \[⟨r, s | r³ = e, s² = e, srs = r⁻¹⟩.\] <p>The last relation is equivalent to $srsr = e$.</p> <p>The Objects and Maps:</p> <p>Let $F(S)$ be the free group on the set of generators $S = {r, s}$. Its elements are all possible strings of $r, s, r⁻¹, s⁻¹$, like $rsr⁻¹s$, with no relations other than $rr⁻¹ = e$, etc.</p> <p>Let $F(R)$ be the free group on the set of “relations” $R = {r³, s², srsr}$. (We treat the relations themselves as generators of another free group).</p> <p>Now we define two homomorphisms, $f$ and $g$, from $F(R)$ to $F(S)$:</p> <p>$f: F(R) → F(S)$ is the map that formally includes the relations. $f(r³) = r³$, $f(s²) = s²$, $f(srsr) = srsr$.</p> <p>$g: F(R) → F(S)$ is the map that sends every generator of $F(R)$ to the identity element $e$ in $F(S)$. $g(r³) = e$, $g(s²) = e$, $g(srsr) = e$.</p> <p>The Coequalizer: The group $D₃$ is the coequalizer of $f$ and $g$. This is a group $G$ with a homomorphism $q: F(S) → G$ such that $q \circ f = q \circ g$.</p> <p>The condition $q(f(x)) = q(g(x))$ for all $x \in F(R)$ means that $q(r³) = q(e)$, $q(s²) = q(e)$, and $q(srsr) = q(e)$.</p> <p>In a group homomorphism, $q(e)$ must be the identity element in $G$.</p> <p>Therefore, the map $q$ must “kill” the relations; it must send $r³$, $s²$, and $srsr$ to the identity.</p> <p>The most universal way to do this is to let $G$ be the quotient group of $F(S)$ by the normal closure of the relations. This is exactly the definition of the group given by the presentation</p> <p>\(\langle S \mid R\rangle.\) </p> <p>The normal closure is necessary in group presentations because the kernel of any group homomorphism must be a normal subgroup, and the normal closure is the smallest normal subgroup containing the relations.</p> <p>Why the Normal Closure? When we form a quotient group $G / N$, the denominator $N$ must be a normal subgroup. This is a fundamental requirement for the set of cosets $G / N$ to have a well-defined group structure.</p> <p>A subgroup $N$ of $G$ is normal if for every $g \in G$ and $n \in N$, the conjugate $gng⁻¹$ is also in $N$.</p> <p>This ensures that the left coset $gN$ is the same as the right coset $Ng$.</p> <p>Now, consider a group presentation $\langle S \mid R\rangle.$</p> <p>We start with the free group $F(S)$ and a set of relations $R’ = {r₁, r₂, …}$ which are elements of $F(S)$. We want to force all these relations to become the identity element.</p> <p>The Problem: The subgroup generated by $R’$, let’s call it $H$, is generally not normal. For example, in</p> \[D₃ = ⟨r, s | r³ = e, ...⟩,\] <p>the subgroup generated by $r³$ is</p> \[\{e, r³, r⁶, ...\}.\] <p>But its conjugate $s(r³)s⁻¹$ is not in that subgroup. If we only quotiented by $H$, the resulting structure wouldn’t be a group.</p> <p>The Solution: We need to quotient $F(S)$ by the smallest normal subgroup that contains all our relations. This is precisely the normal closure of $R’$, denoted $N = ⟨⟨R’⟩⟩$. The normal closure $N$ consists of all elements that can be formed by multiplying conjugates of the relations. For example, it contains $r³$, $s(r³)s⁻¹$, $(rs)(r³) (rs)⁻¹$, and all products of such elements. By construction, $N$ is normal.</p> <p>Because the kernel of any homomorphism $\phi: G → K$ is always a normal subgroup of $G$, the coequalizer construction $q: F(S) → G$ must have a normal subgroup as its kernel. By taking the normal closure of the relations as the kernel, we are creating the most general (or “freest”) group that satisfies the relations, which is the essence of the coequalizer’s universal property.</p> <h4 id="coequalizers-in-top-in-topology-the-coequalizer-is-also-a-gluing-construction">Coequalizers in Top: In topology, the coequalizer is also a “gluing” construction.</h4> <p>Example: Making a Circle:</p> <p>Let $A$ be a single-point space ${*}$ and $B$ be the interval $[0, 1]$.</p> <p>Let $f, g: A → B$ be two maps where $f(*) = 0$ and $g(*) = 1$. The coequalizer identifies the images of $f$ and $g$. It quotients the interval $[0,1]$ by the relation $0 \sim 1$.</p> <p>The result is a line segment whose two endpoints have been glued together: a circle, $S¹$.</p> <p>Coequalizers in Vect: In vector spaces, the coequalizer is a quotient space.</p> <p>Example: Let $V = \mathbb{R}$ and $W = \mathbb{R}²$. Consider two linear maps $f, g: V → W$.</p> <p>$f(x) = (x, x)$</p> <p>$g(x) = (x, -x)$</p> <p>The coequalizer is a space $Q$ with a map $q: W → Q$ such that $q(f(x)) = q(g(x))$ for all $x$.</p> <p>This means $q(x, x) = q(x, -x)$. By linearity, $q((x, x) - (x, -x)) = 0$, which simplifies to $q(0, 2x) = 0$ for all $x$.</p> <p>This tells us that the entire $y$-axis</p> \[\{(0, y) | y \in \mathbb{R}\}\] <p>must be in the kernel of $q$.</p> <p>The universal solution is to let $Q$ be the quotient space $W / U$, where $U$ is the subspace spanned by all vectors of the form $f(x) - g(x)$. In our case, $U$ is the $y$-axis.</p> <p>The quotient $\mathbb{R}² / U$ is the space of cosets $(a, b) + U$, which are the horizontal lines in the plane. This space is isomorphic to $\mathbb{R}$, where each horizontal line is identified with its $x$-intercept.</p> <h3 id="example-5-direct-limits">Example 5: Direct Limits</h3> <p>The dual of an inverse limit is a direct limit (or inductive limit). While inverse limits deal with maps going “inward” (like $… → X₂ → X₁$), direct limits deal with maps going “outward.”</p> <p>Definition: A direct system is a diagram $X₀ → X₁ → X₂ → ….$ The direct limit, $\lim→ Xᵢ$, is an object that receives maps from all $Xᵢ$ in a consistent way.</p> <p>Construction: The direct limit is often constructed as the disjoint union of all the $Xᵢ$, quotiented by an equivalence relation where we identify $xᵢ \in Xᵢ$ with its image $fᵢ(xᵢ) \in Xᵢ₊₁$.</p> <p>Example in Top: Let’s build the real line $\mathbb{R}$.</p> <p>Let $Xₙ$ be the closed interval $[-n, n]$ for $n = 1, 2, 3, ….$</p> <p>Let the maps $fₙ: Xₙ → Xₙ₊₁$ be the standard inclusion maps, e.g., mapping $[-1, 1]$ into $[-2, 2]$.</p> <p>Our direct system is $[-1, 1] \hookrightarrow [-2, 2] \hookrightarrow [-3, 3] \hookrightarrow ….$ The direct limit is the union of all these sets: $\bigcup [-n, n] = \mathbb{R}$. Intuitively, the limit of this expanding sequence of intervals is the entire real line. Each interval is included in the final object $\mathbb{R}$ in a way that respects all the intermediate inclusion maps.</p> <p><br/><br/></p> <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <p><span id="busuanzi_container_site_pv">PageView: <span id="busuanzi_value_site_pv"></span> times</span>      <span id="busuanzi_container_site_uv">UniqueVisitor: <span id="busuanzi_value_site_uv"></span></span>     </p> <div id="vcomments"></div> <script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'Rl0XrPgpK2Dfhp1ffLTvcrsD-gzGzoHsz',
+        appKey: '6fXawARU0PuxwAYgRUP9gPMl'
+    })
+</script>]]></content><author><name></name></author><category term="mathematics"/><category term="category"/><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">a post with marimo snippets</title><link href="https://finalfantasy27.github.io/blog/2025/marimo/" rel="alternate" type="text/html" title="a post with marimo snippets"/><published>2025-04-28T12:00:00+00:00</published><updated>2025-04-28T12:00:00+00:00</updated><id>https://finalfantasy27.github.io/blog/2025/marimo</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2025/marimo/"><![CDATA[<p><a href="https://marimo.io">marimo</a> notebooks can run Python directly in the reader’s browser. Opt a page in from its front matter:</p> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s">a post with marimo snippets</span>
+<span class="na">marimo</span><span class="pi">:</span> <span class="kc">true</span>
+<span class="nn">---</span>
+</code></pre></div></div> <p>Nothing is loaded on pages without that flag, so bundling the plugin costs nothing site-wide.</p> <h2 id="runnable-snippets">Runnable snippets</h2> <p>Wrap fenced Python blocks in a container and the runtime turns them into an interactive notebook after the page loads:</p> <div class="al-marimo-inline"> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="n">marimo</span> <span class="k">as</span> <span class="n">mo</span>
+
+<span class="n">slider</span> <span class="o">=</span> <span class="n">mo</span><span class="p">.</span><span class="n">ui</span><span class="p">.</span><span class="nf">slider</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">value</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="sh">"</span><span class="s">n</span><span class="sh">"</span><span class="p">)</span>
+<span class="n">slider</span>
+</code></pre></div> </div> <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">mo</span><span class="p">.</span><span class="nf">md</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">The first </span><span class="si">{</span><span class="n">slider</span><span class="p">.</span><span class="n">value</span><span class="si">}</span><span class="s"> squares: </span><span class="si">{</span><span class="p">[</span><span class="n">i</span><span class="o">**</span><span class="mi">2</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nf">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">slider</span><span class="p">.</span><span class="n">value</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)]</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+</code></pre></div> </div> </div> <p>Until the runtime has moved those blocks into place the container stays hidden, so readers never see the raw source flash before it becomes a notebook.</p> <h2 id="embedding-a-hosted-notebook">Embedding a hosted notebook</h2> <p>If you already publish a notebook — on <code class="language-plaintext highlighter-rouge">marimo.app</code> or your own WASM host — embed it instead:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">al_marimo_embed</span><span class="w"> </span><span class="na">src</span><span class="o">=</span><span class="s2">"https://marimo.app/l/your-notebook"</span><span class="w"> </span><span class="na">height</span><span class="o">=</span><span class="s2">"700px"</span><span class="w"> </span><span class="na">caption</span><span class="o">=</span><span class="s2">"Sampling demo"</span><span class="w"> </span><span class="cp">%}</span>
+</code></pre></div></div> <p>The frame is sandboxed <strong>without</strong> <code class="language-plaintext highlighter-rouge">allow-same-origin</code>, so the embedded notebook cannot reach this page’s storage or cookies.</p> <h2 id="a-note-on-what-this-loads">A note on what this loads</h2> <p>The <code class="language-plaintext highlighter-rouge">marimo-snippets</code> runtime is vendored into the plugin at a pinned version and served from your own site, rather than pulled from a CDN — so no third-party origin executes script in your readers’ pages. Running a notebook does contact marimo’s host, which is worth knowing before you opt a page in.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="code"/><category term="formatting"/><summary type="html"><![CDATA[running Python in the browser with marimo]]></summary></entry><entry><title type="html">a post with plotly.js</title><link href="https://finalfantasy27.github.io/blog/2025/plotly/" rel="alternate" type="text/html" title="a post with plotly.js"/><published>2025-03-26T14:24:00+00:00</published><updated>2025-03-26T14:24:00+00:00</updated><id>https://finalfantasy27.github.io/blog/2025/plotly</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2025/plotly/"><![CDATA[<p>This is an example post with some <a href="https://plotly.com/javascript/">plotly</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
+</span><span class="sb">{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [10, 15, 13, 17],
+      "type": "scatter"
+    },
+    {
+      "x": [1, 2, 3, 4],
+      "y": [16, 5, 11, 9],
+      "type": "scatter"
+    }
+  ]
+}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-plotly">{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [10, 15, 13, 17],
+      "type": "scatter"
+    },
+    {
+      "x": [1, 2, 3, 4],
+      "y": [16, 5, 11, 9],
+      "type": "scatter"
+    }
+  ]
+}
+</code></pre> <p>Also another example chart.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">plotly
+</span><span class="sb">{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [10, 15, 13, 17],
+      "mode": "markers"
+    },
+    {
+      "x": [2, 3, 4, 5],
+      "y": [16, 5, 11, 9],
+      "mode": "lines"
+    },
+    {
+      "x": [1, 2, 3, 4],
+      "y": [12, 9, 15, 12],
+      "mode": "lines+markers"
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "Line and Scatter Plot"
+    }
+  }
+}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>This is how it looks like:</p> <pre><code class="language-plotly">{
+  "data": [
+    {
+      "x": [1, 2, 3, 4],
+      "y": [10, 15, 13, 17],
+      "mode": "markers"
+    },
+    {
+      "x": [2, 3, 4, 5],
+      "y": [16, 5, 11, 9],
+      "mode": "lines"
+    },
+    {
+      "x": [1, 2, 3, 4],
+      "y": [12, 9, 15, 12],
+      "mode": "lines+markers"
+    }
+  ],
+  "layout": {
+    "title": {
+      "text": "Line and Scatter Plot"
+    }
+  }
+}
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="charts"/><summary type="html"><![CDATA[this is what included plotly.js code could look like]]></summary></entry><entry><title type="html">a post with image galleries</title><link href="https://finalfantasy27.github.io/blog/2024/photo-gallery/" rel="alternate" type="text/html" title="a post with image galleries"/><published>2024-12-04T01:59:00+00:00</published><updated>2024-12-04T01:59:00+00:00</updated><id>https://finalfantasy27.github.io/blog/2024/photo-gallery</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2024/photo-gallery/"><![CDATA[<p>The images in this post are all zoomable, arranged into different mini-galleries using different libraries.</p> <h2 id="lightbox2">Lightbox2</h2> <p><a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/></a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/></a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-lightbox="roadtrip"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/></a></p> <hr/> <h2 id="photoswipe"><a href="https://photoswipe.com/">PhotoSwipe</a></h2> <div class="pswp-gallery pswp-gallery--single-column" id="gallery--getting-started"> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg" data-pswp-width="1669" data-pswp-height="2500" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg" alt=""/> </a> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-2500.jpg" data-pswp-width="1875" data-pswp-height="2500" data-cropped="true" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/7/img-200.jpg" alt=""/> </a> <a href="https://unsplash.com" data-pswp-src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1666" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg" alt=""/> </a> <div> <a href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg" data-pswp-width="2500" data-pswp-height="1667" target="_blank"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg" alt=""/> </a> </div> </div> <hr/> <h2 id="spotlight-js"><a href="https://nextapps-de.github.io/spotlight/">Spotlight JS</a></h2> <div class="spotlight-group"> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/> </a> </div> <div class="spotlight-group"> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/4/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/5/img-200.jpg"/> </a> <a class="spotlight" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-2500.jpg"> <img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/6/img-200.jpg"/> </a> </div> <hr/> <h2 id="venobox"><a href="https://veno.es/venobox/">Venobox</a></h2> <p><a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/1/img-200.jpg"/></a> <a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/2/img-200.jpg"/></a> <a class="venobox" data-gall="myGallery" href="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-2500.jpg"><img src="https://cdn.photoswipe.com/photoswipe-demo-images/photos/3/img-200.jpg"/></a></p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="images"/><summary type="html"><![CDATA[this is what included image galleries could look like]]></summary></entry><entry><title type="html">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</title><link href="https://finalfantasy27.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/" rel="alternate" type="text/html" title="Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra"/><published>2024-05-14T00:00:00+00:00</published><updated>2024-05-14T00:00:00+00:00</updated><id>https://finalfantasy27.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2024/google-gemini-updates-flash-15-gemma-2-and-project-astra/"><![CDATA[<p>Gemini breaks new ground with a faster model, longer context, AI agents and moreLearn more:Learn more:Learn more:Models &amp; ResearchProductsInfrastructure &amp; cloudTechnology Learn more: ProductsPlatformsDevices Learn more: Outreach &amp; initiativesLeadershipInside Google Learn more: May 14, 2024 We’re introducing a series of updates across the Gemini family of models, including the new 1.5 Flash, our lightweight model for speed and efficiency, and Project Astra, our vision for the future of AI assistants. Demis HassabisCEO of Google DeepMind, on behalf of the Gemini teamIn December, we launched our first natively multimodal model Gemini 1.0 in three sizes: Ultra, Pro and Nano. Just a few months later we released 1.5 Pro, with enhanced performance and a breakthrough long context window of 1 million tokens.Developers and enterprise customers have been putting 1.5 Pro to use in incredible ways and finding its long context window, multimodal reasoning capabilities and impressive overall performance incredibly useful.We know from user feedback that some applications need lower latency and a lower cost to serve. This inspired us to keep innovating, so today, we’re introducing Gemini 1.5 Flash: a model that’s lighter-weight than 1.5 Pro, and designed to be fast and efficient to serve at scale.Both 1.5 Pro and 1.5 Flash are available in public preview with a 1 million token context window in Google AI Studio and Vertex AI. And now, 1.5 Pro is also available with a 2 million token context window via waitlist to developers using the API and to Google Cloud customers.We’re also introducing updates across the Gemini family of models, announcing our next generation of open models, Gemma 2, and sharing progress on the future of AI assistants, with Project Astra.Context lengths of leading foundation models compared with Gemini 1.5’s 2 million token capability1.5 Flash is the newest addition to the Gemini model family and the fastest Gemini model served in the API. It’s optimized for high-volume, high-frequency tasks at scale, is more cost-efficient to serve and features our breakthrough long context window.While it’s a lighter weight model than 1.5 Pro, it’s highly capable of multimodal reasoning across vast amounts of information and delivers impressive quality for its size.The new Gemini 1.5 Flash model is optimized for speed and efficiency, is highly capable of multimodal reasoning and features our breakthrough long context window.1.5 Flash excels at summarization, chat applications, image and video captioning, data extraction from long documents and tables, and more. This is because it’s been trained by 1.5 Pro through a process called “distillation,” where the most essential knowledge and skills from a larger model are transferred to a smaller, more efficient model.Read more about 1.5 Flash in our updated Gemini 1.5 technical report, on the Gemini technology page, and learn about 1.5 Flash’s availability and pricing.Over the last few months, we’ve significantly improved 1.5 Pro, our best model for general performance across a wide range of tasks.Beyond extending its context window to 2 million tokens, we’ve enhanced its code generation, logical reasoning and planning, multi-turn conversation, and audio and image understanding through data and algorithmic advances. We see strong improvements on public and internal benchmarks for each of these tasks.1.5 Pro can now follow increasingly complex and nuanced instructions, including ones that specify product-level behavior involving role, format and style. We’ve improved control over the model’s responses for specific use cases, like crafting the persona and response style of a chat agent or automating workflows through multiple function calls. And we’ve enabled users to steer model behavior by setting system instructions.We added audio understanding in the Gemini API and Google AI Studio, so 1.5 Pro can now reason across image and audio for videos uploaded in Google AI Studio. And we’re now integrating 1.5 Pro into Google products, including Gemini Advanced and in Workspace apps.Read more about 1.5 Pro in our updated Gemini 1.5 technical report and on the Gemini technology page.Gemini Nano is expanding beyond text-only inputs to include images as well. Starting with Pixel, applications using Gemini Nano with Multimodality will be able to understand the world the way people do — not just through text, but also through sight, sound and spoken language.Read more about Gemini 1.0 Nano on Android.Today, we’re also sharing a series of updates to Gemma, our family of open models built from the same research and technology used to create the Gemini models.We’re announcing Gemma 2, our next generation of open models for responsible AI innovation. Gemma 2 has a new architecture designed for breakthrough performance and efficiency, and will be available in new sizes.The Gemma family is also expanding with PaliGemma, our first vision-language model inspired by PaLI-3. And we’ve upgraded our Responsible Generative AI Toolkit with LLM Comparator for evaluating the quality of model responses.Read more on the Developer blog.As part of Google DeepMind’s mission to build AI responsibly to benefit humanity, we’ve always wanted to develop universal AI agents that can be helpful in everyday life. That’s why today, we’re sharing our progress in building the future of AI assistants with Project Astra (advanced seeing and talking responsive agent).To be truly useful, an agent needs to understand and respond to the complex and dynamic world just like people do — and take in and remember what it sees and hears to understand context and take action. It also needs to be proactive, teachable and personal, so users can talk to it naturally and without lag or delay.While we’ve made incredible progress developing AI systems that can understand multimodal information, getting response time down to something conversational is a difficult engineering challenge. Over the past few years, we’ve been working to improve how our models perceive, reason and converse to make the pace and quality of interaction feel more natural.Building on Gemini, we’ve developed prototype agents that can process information faster by continuously encoding video frames, combining the video and speech input into a timeline of events, and caching this information for efficient recall.By leveraging our leading speech models, we also enhanced how they sound, giving the agents a wider range of intonations. These agents can better understand the context they’re being used in, and respond quickly, in conversation.With technology like this, it’s easy to envision a future where people could have an expert AI assistant by their side, through a phone or glasses. And some of these capabilities are coming to Google products, like the Gemini app and web experience, later this year.We’ve made incredible progress so far with our family of Gemini models, and we’re always striving to advance the state-of-the-art even further. By investing in a relentless production line of innovation, we’re able to explore new ideas at the frontier, while also unlocking the possibility of new and exciting Gemini use cases.Learn more about Gemini and its capabilities.Collection Sign up for our newsletters with product updates, event information, special offers, and more. Done. Just one step more. Check your inbox to confirm your subscription.</p> <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>You can also subscribe with a different email address.
+  
+        Your information will be used in accordance with Google's privacy policy. You may opt out at any time.
+</code></pre></div></div>]]></content><author><name></name></author><category term="external-posts"/><category term="google"/><summary type="html"><![CDATA[We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.]]></summary></entry><entry><title type="html">a post with tabs</title><link href="https://finalfantasy27.github.io/blog/2024/tabs/" rel="alternate" type="text/html" title="a post with tabs"/><published>2024-05-01T00:32:13+00:00</published><updated>2024-05-01T00:32:13+00:00</updated><id>https://finalfantasy27.github.io/blog/2024/tabs</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2024/tabs/"><![CDATA[<p>This is how a post with <a href="https://github.com/Ovski4/jekyll-tabs">tabs</a> looks like. Note that the tabs could be used for different purposes, not only for code.</p> <h2 id="first-tabs">First tabs</h2> <p>To add tabs, use the following syntax:</p> <div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">{%</span><span class="w"> </span><span class="nt">tabs</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="cp">%}</span>
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-1</span><span class="w"> </span><span class="cp">%}</span>
+
+Content 1
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">tab</span><span class="w"> </span><span class="nv">group-name</span><span class="w"> </span><span class="nv">tab-name-2</span><span class="w"> </span><span class="cp">%}</span>
+
+Content 2
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endtab</span><span class="w"> </span><span class="cp">%}</span>
+
+<span class="cp">{%</span><span class="w"> </span><span class="nt">endtabs</span><span class="w"> </span><span class="cp">%}</span>
+</code></pre></div></div> <p>With this you can generate visualizations like:</p> <ul id="log" class="tab" data-tab="95a258f6-5bec-4826-a99a-bf665dd0ed88" data-name="log"> <li class="active" id="log-php"> <a href="#">php </a> </li> <li id="log-js"> <a href="#">js </a> </li> <li id="log-ruby"> <a href="#">ruby </a> </li> </ul> <ul class="tab-content" id="95a258f6-5bec-4826-a99a-bf665dd0ed88" data-name="log"> <li class="active"> <div class="language-php highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">var_dump</span><span class="p">(</span><span class="s1">'hello'</span><span class="p">);</span>
+</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">hello</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div> </li> <li> <div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">pputs</span> <span class="dl">'</span><span class="s1">hello</span><span class="dl">'</span>
+</code></pre></div></div> </li> </ul> <h2 id="another-example">Another example</h2> <ul id="data-struct" class="tab" data-tab="d78a7d0e-4d3d-45ea-87a3-85ce79181f37" data-name="data-struct"> <li class="active" id="data-struct-yaml"> <a href="#">yaml </a> </li> <li id="data-struct-json"> <a href="#">json </a> </li> </ul> <ul class="tab-content" id="d78a7d0e-4d3d-45ea-87a3-85ce79181f37" data-name="data-struct"> <li class="active"> <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">hello</span><span class="pi">:</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">whatsup"</span>
+  <span class="pi">-</span> <span class="s2">"</span><span class="s">hi"</span>
+</code></pre></div></div> </li> <li> <div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"hello"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"whatsup"</span><span class="p">,</span><span class="w"> </span><span class="s2">"hi"</span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div> </li> </ul> <h2 id="tabs-for-something-else">Tabs for something else</h2> <ul id="something-else" class="tab" data-tab="6b218ea1-b552-4174-87ed-0ed2eca4abda" data-name="something-else"> <li class="active" id="something-else-text"> <a href="#">text </a> </li> <li id="something-else-quote"> <a href="#">quote </a> </li> <li id="something-else-list"> <a href="#">list </a> </li> </ul> <ul class="tab-content" id="6b218ea1-b552-4174-87ed-0ed2eca4abda" data-name="something-else"> <li class="active"> <p>Regular text</p> </li> <li> <blockquote> <p>A quote</p> </blockquote> </li> <li> <p>Hipster list</p> <ul> <li>brunch</li> <li>fixie</li> <li>raybans</li> <li>messenger bag</li> </ul> </li> </ul>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included tabs in a post could look like]]></summary></entry><entry><title type="html">a post with typograms</title><link href="https://finalfantasy27.github.io/blog/2024/typograms/" rel="alternate" type="text/html" title="a post with typograms"/><published>2024-04-29T23:36:10+00:00</published><updated>2024-04-29T23:36:10+00:00</updated><id>https://finalfantasy27.github.io/blog/2024/typograms</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2024/typograms/"><![CDATA[<p>This is an example post with some <a href="https://github.com/google/typograms/">typograms</a> code.</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
+</span><span class="sb">+----+
+|    |---&gt; My first diagram!
++----+</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>Which generates:</p> <pre><code class="language-typograms">+----+
+|    |---&gt; My first diagram!
++----+
+</code></pre> <p>Another example:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">typograms
+</span><span class="sb">.------------------------.
+|.----------------------.|
+||"https://example.com" ||
+|'----------------------'|
+| ______________________ |
+||                      ||
+||   Welcome!           ||
+||                      ||
+||                      ||
+||  .----------------.  ||
+||  | username       |  ||
+||  '----------------'  ||
+||  .----------------.  ||
+||  |"*******"       |  ||
+||  '----------------'  ||
+||                      ||
+||  .----------------.  ||
+||  |   "Sign-up"    |  ||
+||  '----------------'  ||
+||                      ||
+|+----------------------+|
+.------------------------.</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>which generates:</p> <pre><code class="language-typograms">.------------------------.
+|.----------------------.|
+||"https://example.com" ||
+|'----------------------'|
+| ______________________ |
+||                      ||
+||   Welcome!           ||
+||                      ||
+||                      ||
+||  .----------------.  ||
+||  | username       |  ||
+||  '----------------'  ||
+||  .----------------.  ||
+||  |"*******"       |  ||
+||  '----------------'  ||
+||                      ||
+||  .----------------.  ||
+||  |   "Sign-up"    |  ||
+||  '----------------'  ||
+||                      ||
+|+----------------------+|
+.------------------------.
+</code></pre> <p>For more examples, check out the <a href="https://google.github.io/typograms/#examples">typograms documentation</a>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="diagrams"/><summary type="html"><![CDATA[this is what included typograms code could look like]]></summary></entry><entry><title type="html">a post that can be cited</title><link href="https://finalfantasy27.github.io/blog/2024/post-citation/" rel="alternate" type="text/html" title="a post that can be cited"/><published>2024-04-28T15:06:00+00:00</published><updated>2024-04-28T15:06:00+00:00</updated><id>https://finalfantasy27.github.io/blog/2024/post-citation</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2024/post-citation/"><![CDATA[<p>This is an example post that can be cited. The content of the post ends here, while the citation information is automatically provided below. The only thing needed is for you to set the <code class="language-plaintext highlighter-rouge">citation</code> key in the front matter to <code class="language-plaintext highlighter-rouge">true</code>.</p>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="citation"/><summary type="html"><![CDATA[this is what a post that can be cited looks like]]></summary></entry><entry><title type="html">a post with pseudo code</title><link href="https://finalfantasy27.github.io/blog/2024/pseudocode/" rel="alternate" type="text/html" title="a post with pseudo code"/><published>2024-04-15T00:01:00+00:00</published><updated>2024-04-15T00:01:00+00:00</updated><id>https://finalfantasy27.github.io/blog/2024/pseudocode</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2024/pseudocode/"><![CDATA[<p>This is an example post with some pseudo code rendered by <a href="https://github.com/SaswatPadhi/pseudocode.js">pseudocode</a>. The example presented here is the same as the one in the <a href="https://saswat.padhi.me/pseudocode.js/">pseudocode.js</a> documentation, with only one simple but important change: everytime you would use <code class="language-plaintext highlighter-rouge">$</code>, you should use <code class="language-plaintext highlighter-rouge">$$</code> instead. Also, note that the <code class="language-plaintext highlighter-rouge">pseudocode</code> key in the front matter is set to <code class="language-plaintext highlighter-rouge">true</code> to enable the rendering of pseudo code. As an example, using this code:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">pseudocode
+</span><span class="sb">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
+\begin{algorithm}
+\caption{Quicksort}
+\begin{algorithmic}
+\PROCEDURE{Quicksort}{$$A, p, r$$}
+    \IF{$$p &lt; r$$}
+        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
+        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
+        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
+    \ENDIF
+\ENDPROCEDURE
+\PROCEDURE{Partition}{$$A, p, r$$}
+    \STATE $$x = A[r]$$
+    \STATE $$i = p - 1$$
+    \FOR{$$j = p$$ \TO $$r - 1$$}
+        \IF{$$A[j] &lt; x$$}
+            \STATE $$i = i + 1$$
+            \STATE exchange
+            $$A[i]$$ with $$A[j]$$
+        \ENDIF
+        \STATE exchange $$A[i]$$ with $$A[r]$$
+    \ENDFOR
+\ENDPROCEDURE
+\end{algorithmic}
+\end{algorithm}</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>Generates:</p> <pre><code class="language-pseudocode">% This quicksort algorithm is extracted from Chapter 7, Introduction to Algorithms (3rd edition)
+\begin{algorithm}
+\caption{Quicksort}
+\begin{algorithmic}
+\PROCEDURE{Quicksort}{$$A, p, r$$}
+    \IF{$$p &lt; r$$}
+        \STATE $$q = $$ \CALL{Partition}{$$A, p, r$$}
+        \STATE \CALL{Quicksort}{$$A, p, q - 1$$}
+        \STATE \CALL{Quicksort}{$$A, q + 1, r$$}
+    \ENDIF
+\ENDPROCEDURE
+\PROCEDURE{Partition}{$$A, p, r$$}
+    \STATE $$x = A[r]$$
+    \STATE $$i = p - 1$$
+    \FOR{$$j = p$$ \TO $$r - 1$$}
+        \IF{$$A[j] &lt; x$$}
+            \STATE $$i = i + 1$$
+            \STATE exchange
+            $$A[i]$$ with $$A[j]$$
+        \ENDIF
+        \STATE exchange $$A[i]$$ with $$A[r]$$
+    \ENDFOR
+\ENDPROCEDURE
+\end{algorithmic}
+\end{algorithm}
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is what included pseudo code could look like]]></summary></entry><entry><title type="html">a post with code diff</title><link href="https://finalfantasy27.github.io/blog/2024/code-diff/" rel="alternate" type="text/html" title="a post with code diff"/><published>2024-01-27T19:22:00+00:00</published><updated>2024-01-27T19:22:00+00:00</updated><id>https://finalfantasy27.github.io/blog/2024/code-diff</id><content type="html" xml:base="https://finalfantasy27.github.io/blog/2024/code-diff/"><![CDATA[<p>You can display diff code by using the regular markdown syntax:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff
+</span><span class="gh">diff --git a/sample.js b/sample.js
+index 0000001..0ddf2ba
+</span><span class="gd">--- a/sample.js
+</span><span class="gi">+++ b/sample.js
+</span><span class="p">@@ -1 +1 @@</span>
+<span class="gd">-console.log("Hello World!")
+</span><span class="gi">+console.log("Hello from Diff2Html!")</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>Which generates:</p> <div class="language-diff highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="gh">diff --git a/sample.js b/sample.js
+index 0000001..0ddf2ba
+</span><span class="gd">--- a/sample.js
+</span><span class="gi">+++ b/sample.js
+</span><span class="p">@@ -1 +1 @@</span>
+<span class="gd">-console.log("Hello World!")
+</span><span class="gi">+console.log("Hello from Diff2Html!")
+</span></code></pre></div></div> <p>But this is difficult to read, specially if you have a large diff. You can use <a href="https://diff2html.xyz/">diff2html</a> to display a more readable version of the diff. For this, just use <code class="language-plaintext highlighter-rouge">diff2html</code> instead of <code class="language-plaintext highlighter-rouge">diff</code> for the code block language:</p> <div class="language-markdown highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">```</span><span class="nl">diff2html
+</span><span class="sb">diff --git a/sample.js b/sample.js
+index 0000001..0ddf2ba
+--- a/sample.js
++++ b/sample.js
+@@ -1 +1 @@
+-console.log("Hello World!")
++console.log("Hello from Diff2Html!")</span>
+<span class="p">```</span>
+</code></pre></div></div> <p>If we use a longer example, for example <a href="https://github.com/rtfpessoa/diff2html/commit/c2c253d3e3f8b8b267f551e659f72b44ca2ac927">this commit from diff2html</a>, it will generate the following output:</p> <pre><code class="language-diff2html">From 2aaae31cc2a37bfff83430c2c914b140bee59b6a Mon Sep 17 00:00:00 2001
+From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
+Date: Sun, 9 Oct 2016 16:41:54 +0100
+Subject: [PATCH 1/2] Initial template override support
+
+---
+ scripts/hulk.js                    |  4 ++--
+ src/diff2html.js                   |  3 +--
+ src/file-list-printer.js           | 11 ++++++++---
+ src/hoganjs-utils.js               | 29 +++++++++++++++++------------
+ src/html-printer.js                |  6 ++++++
+ src/line-by-line-printer.js        |  6 +++++-
+ src/side-by-side-printer.js        |  6 +++++-
+ test/file-list-printer-tests.js    |  2 +-
+ test/hogan-cache-tests.js          | 18 +++++++++++++++---
+ test/line-by-line-tests.js         |  3 +--
+ test/side-by-side-printer-tests.js |  3 +--
+ 11 files changed, 62 insertions(+), 29 deletions(-)
+
+diff --git a/scripts/hulk.js b/scripts/hulk.js
+index 5a793c18..a4b1a4d5 100755
+--- a/scripts/hulk.js
++++ b/scripts/hulk.js
+@@ -173,11 +173,11 @@ function namespace(name) {
+ // write a template foreach file that matches template extension
+ templates = extractFiles(options.argv.remain)
+   .map(function(file) {
+-    var openedFile = fs.readFileSync(file, 'utf-8');
++    var openedFile = fs.readFileSync(file, 'utf-8').trim();
+     var name;
+     if (!openedFile) return;
+     name = namespace(path.basename(file).replace(/\..*$/, ''));
+-    openedFile = removeByteOrderMark(openedFile.trim());
++    openedFile = removeByteOrderMark(openedFile);
+     openedFile = wrap(file, name, openedFile);
+     if (!options.outputdir) return openedFile;
+     fs.writeFileSync(path.join(options.outputdir, name + '.js')
+diff --git a/src/diff2html.js b/src/diff2html.js
+index 21b0119e..64e138f5 100644
+--- a/src/diff2html.js
++++ b/src/diff2html.js
+@@ -7,7 +7,6 @@
+
+ (function() {
+   var diffParser = require('./diff-parser.js').DiffParser;
+-  var fileLister = require('./file-list-printer.js').FileListPrinter;
+   var htmlPrinter = require('./html-printer.js').HtmlPrinter;
+
+   function Diff2Html() {
+@@ -43,7 +42,7 @@
+
+     var fileList = '';
+     if (configOrEmpty.showFiles === true) {
+-      fileList = fileLister.generateFileList(diffJson, configOrEmpty);
++      fileList = htmlPrinter.generateFileListSummary(diffJson, configOrEmpty);
+     }
+
+     var diffOutput = '';
+diff --git a/src/file-list-printer.js b/src/file-list-printer.js
+index e408d9b2..1e0a2c61 100644
+--- a/src/file-list-printer.js
++++ b/src/file-list-printer.js
+@@ -8,11 +8,16 @@
+ (function() {
+   var printerUtils = require('./printer-utils.js').PrinterUtils;
+
+-  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
++  var hoganUtils;
++
+   var baseTemplatesPath = 'file-summary';
+   var iconsBaseTemplatesPath = 'icon';
+
+-  function FileListPrinter() {
++  function FileListPrinter(config) {
++    this.config = config;
++
++    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
++    hoganUtils = new HoganJsUtils(config);
+   }
+
+   FileListPrinter.prototype.generateFileList = function(diffFiles) {
+@@ -38,5 +43,5 @@
+     });
+   };
+
+-  module.exports.FileListPrinter = new FileListPrinter();
++  module.exports.FileListPrinter = FileListPrinter;
+ })();
+diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
+index 9949e5fa..0dda08d7 100644
+--- a/src/hoganjs-utils.js
++++ b/src/hoganjs-utils.js
+@@ -8,18 +8,19 @@
+ (function() {
+   var fs = require('fs');
+   var path = require('path');
+-
+   var hogan = require('hogan.js');
+
+   var hoganTemplates = require('./templates/diff2html-templates.js');
+
+-  var templatesPath = path.resolve(__dirname, 'templates');
++  var extraTemplates;
+
+-  function HoganJsUtils() {
++  function HoganJsUtils(configuration) {
++    this.config = configuration || {};
++    extraTemplates = this.config.templates || {};
+   }
+
+-  HoganJsUtils.prototype.render = function(namespace, view, params, configuration) {
+-    var template = this.template(namespace, view, configuration);
++  HoganJsUtils.prototype.render = function(namespace, view, params) {
++    var template = this.template(namespace, view);
+     if (template) {
+       return template.render(params);
+     }
+@@ -27,17 +28,16 @@
+     return null;
+   };
+
+-  HoganJsUtils.prototype.template = function(namespace, view, configuration) {
+-    var config = configuration || {};
++  HoganJsUtils.prototype.template = function(namespace, view) {
+     var templateKey = this._templateKey(namespace, view);
+
+-    return this._getTemplate(templateKey, config);
++    return this._getTemplate(templateKey);
+   };
+
+-  HoganJsUtils.prototype._getTemplate = function(templateKey, config) {
++  HoganJsUtils.prototype._getTemplate = function(templateKey) {
+     var template;
+
+-    if (!config.noCache) {
++    if (!this.config.noCache) {
+       template = this._readFromCache(templateKey);
+     }
+
+@@ -53,6 +53,7 @@
+
+     try {
+       if (fs.readFileSync) {
++        var templatesPath = path.resolve(__dirname, 'templates');
+         var templatePath = path.join(templatesPath, templateKey);
+         var templateContent = fs.readFileSync(templatePath + '.mustache', 'utf8');
+         template = hogan.compile(templateContent);
+@@ -66,12 +67,16 @@
+   };
+
+   HoganJsUtils.prototype._readFromCache = function(templateKey) {
+-    return hoganTemplates[templateKey];
++    return extraTemplates[templateKey] || hoganTemplates[templateKey];
+   };
+
+   HoganJsUtils.prototype._templateKey = function(namespace, view) {
+     return namespace + '-' + view;
+   };
+
+-  module.exports.HoganJsUtils = new HoganJsUtils();
++  HoganJsUtils.prototype.compile = function(templateStr) {
++    return hogan.compile(templateStr);
++  };
++
++  module.exports.HoganJsUtils = HoganJsUtils;
+ })();
+diff --git a/src/html-printer.js b/src/html-printer.js
+index 585d5b66..13f83047 100644
+--- a/src/html-printer.js
++++ b/src/html-printer.js
+@@ -8,6 +8,7 @@
+ (function() {
+   var LineByLinePrinter = require('./line-by-line-printer.js').LineByLinePrinter;
+   var SideBySidePrinter = require('./side-by-side-printer.js').SideBySidePrinter;
++  var FileListPrinter = require('./file-list-printer.js').FileListPrinter;
+
+   function HtmlPrinter() {
+   }
+@@ -22,5 +23,10 @@
+     return sideBySidePrinter.generateSideBySideJsonHtml(diffFiles);
+   };
+
++  HtmlPrinter.prototype.generateFileListSummary = function(diffJson, config) {
++    var fileListPrinter = new FileListPrinter(config);
++    return fileListPrinter.generateFileList(diffJson);
++  };
++
+   module.exports.HtmlPrinter = new HtmlPrinter();
+ })();
+diff --git a/src/line-by-line-printer.js b/src/line-by-line-printer.js
+index b07eb53c..d230bedd 100644
+--- a/src/line-by-line-printer.js
++++ b/src/line-by-line-printer.js
+@@ -11,7 +11,8 @@
+   var utils = require('./utils.js').Utils;
+   var Rematch = require('./rematch.js').Rematch;
+
+-  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
++  var hoganUtils;
++
+   var genericTemplatesPath = 'generic';
+   var baseTemplatesPath = 'line-by-line';
+   var iconsBaseTemplatesPath = 'icon';
+@@ -19,6 +20,9 @@
+
+   function LineByLinePrinter(config) {
+     this.config = config;
++
++    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
++    hoganUtils = new HoganJsUtils(config);
+   }
+
+   LineByLinePrinter.prototype.makeFileDiffHtml = function(file, diffs) {
+diff --git a/src/side-by-side-printer.js b/src/side-by-side-printer.js
+index bbf1dc8d..5e3033b3 100644
+--- a/src/side-by-side-printer.js
++++ b/src/side-by-side-printer.js
+@@ -11,7 +11,8 @@
+   var utils = require('./utils.js').Utils;
+   var Rematch = require('./rematch.js').Rematch;
+
+-  var hoganUtils = require('./hoganjs-utils.js').HoganJsUtils;
++  var hoganUtils;
++
+   var genericTemplatesPath = 'generic';
+   var baseTemplatesPath = 'side-by-side';
+   var iconsBaseTemplatesPath = 'icon';
+@@ -26,6 +27,9 @@
+
+   function SideBySidePrinter(config) {
+     this.config = config;
++
++    var HoganJsUtils = require('./hoganjs-utils.js').HoganJsUtils;
++    hoganUtils = new HoganJsUtils(config);
+   }
+
+   SideBySidePrinter.prototype.makeDiffHtml = function(file, diffs) {
+diff --git a/test/file-list-printer-tests.js b/test/file-list-printer-tests.js
+index a502a46f..60ea3208 100644
+--- a/test/file-list-printer-tests.js
++++ b/test/file-list-printer-tests.js
+@@ -1,6 +1,6 @@
+ var assert = require('assert');
+
+-var fileListPrinter = require('../src/file-list-printer.js').FileListPrinter;
++var fileListPrinter = new (require('../src/file-list-printer.js').FileListPrinter)();
+
+ describe('FileListPrinter', function() {
+   describe('generateFileList', function() {
+diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
+index 190bf6f8..3bb754ac 100644
+--- a/test/hogan-cache-tests.js
++++ b/test/hogan-cache-tests.js
+@@ -1,6 +1,6 @@
+ var assert = require('assert');
+
+-var HoganJsUtils = require('../src/hoganjs-utils.js').HoganJsUtils;
++var HoganJsUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)();
+ var diffParser = require('../src/diff-parser.js').DiffParser;
+
+ describe('HoganJsUtils', function() {
+@@ -21,16 +21,28 @@ describe('HoganJsUtils', function() {
+       });
+       assert.equal(emptyDiffHtml, result);
+     });
++
+     it('should render view without cache', function() {
+       var result = HoganJsUtils.render('generic', 'empty-diff', {
+         contentClass: 'd2h-code-line',
+         diffParser: diffParser
+       }, {noCache: true});
+-      assert.equal(emptyDiffHtml + '\n', result);
++      assert.equal(emptyDiffHtml, result);
+     });
++
+     it('should return null if template is missing', function() {
+-      var result = HoganJsUtils.render('generic', 'missing-template', {}, {noCache: true});
++      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)({noCache: true});
++      var result = hoganUtils.render('generic', 'missing-template', {});
+       assert.equal(null, result);
+     });
++
++    it('should allow templates to be overridden', function() {
++      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
++
++      var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
++      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
++      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
++      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
++    });
+   });
+ });
+diff --git a/test/line-by-line-tests.js b/test/line-by-line-tests.js
+index 1cd92073..8869b3df 100644
+--- a/test/line-by-line-tests.js
++++ b/test/line-by-line-tests.js
+@@ -14,7 +14,7 @@ describe('LineByLinePrinter', function() {
+         '            File without changes\n' +
+         '        &lt;/div&gt;\n' +
+         '    &lt;/td&gt;\n' +
+-        '&lt;/tr&gt;\n';
++        '&lt;/tr&gt;';
+
+       assert.equal(expected, fileHtml);
+     });
+@@ -422,7 +422,6 @@ describe('LineByLinePrinter', function() {
+         '        &lt;/div&gt;\n' +
+         '    &lt;/td&gt;\n' +
+         '&lt;/tr&gt;\n' +
+-        '\n' +
+         '                &lt;/tbody&gt;\n' +
+         '            &lt;/table&gt;\n' +
+         '        &lt;/div&gt;\n' +
+diff --git a/test/side-by-side-printer-tests.js b/test/side-by-side-printer-tests.js
+index 76625f8e..771daaa5 100644
+--- a/test/side-by-side-printer-tests.js
++++ b/test/side-by-side-printer-tests.js
+@@ -14,7 +14,7 @@ describe('SideBySidePrinter', function() {
+         '            File without changes\n' +
+         '        &lt;/div&gt;\n' +
+         '    &lt;/td&gt;\n' +
+-        '&lt;/tr&gt;\n';
++        '&lt;/tr&gt;';
+
+       assert.equal(expectedRight, fileHtml.right);
+       assert.equal(expectedLeft, fileHtml.left);
+@@ -324,7 +324,6 @@ describe('SideBySidePrinter', function() {
+         '        &lt;/div&gt;\n' +
+         '    &lt;/td&gt;\n' +
+         '&lt;/tr&gt;\n' +
+-        '\n' +
+         '                    &lt;/tbody&gt;\n' +
+         '                &lt;/table&gt;\n' +
+         '            &lt;/div&gt;\n' +
+
+From f3cadb96677d0eb82fc2752dc3ffbf35ca9b5bdb Mon Sep 17 00:00:00 2001
+From: Rodrigo Fernandes &lt;rtfrodrigo@gmail.com&gt;
+Date: Sat, 15 Oct 2016 13:21:22 +0100
+Subject: [PATCH 2/2] Allow uncompiled templates
+
+---
+ README.md                 |  3 +++
+ src/hoganjs-utils.js      |  7 +++++++
+ test/hogan-cache-tests.js | 24 +++++++++++++++++++++++-
+ 3 files changed, 33 insertions(+), 1 deletion(-)
+
+diff --git a/README.md b/README.md
+index 132c8a28..46909f25 100644
+--- a/README.md
++++ b/README.md
+@@ -98,6 +98,9 @@ The HTML output accepts a Javascript object with configuration. Possible options
+   - `synchronisedScroll`: scroll both panes in side-by-side mode: `true` or `false`, default is `false`
+   - `matchWordsThreshold`: similarity threshold for word matching, default is 0.25
+   - `matchingMaxComparisons`: perform at most this much comparisons for line matching a block of changes, default is `2500`
++  - `templates`: object with previously compiled templates to replace parts of the html
++  - `rawTemplates`: object with raw not compiled templates to replace parts of the html
++  &gt; For more information regarding the possible templates look into [src/templates](https://github.com/rtfpessoa/diff2html/tree/master/src/templates)
+
+ ## Diff2HtmlUI Helper
+
+diff --git a/src/hoganjs-utils.js b/src/hoganjs-utils.js
+index 0dda08d7..b2e9c275 100644
+--- a/src/hoganjs-utils.js
++++ b/src/hoganjs-utils.js
+@@ -17,6 +17,13 @@
+   function HoganJsUtils(configuration) {
+     this.config = configuration || {};
+     extraTemplates = this.config.templates || {};
++
++    var rawTemplates = this.config.rawTemplates || {};
++    for (var templateName in rawTemplates) {
++      if (rawTemplates.hasOwnProperty(templateName)) {
++        if (!extraTemplates[templateName]) extraTemplates[templateName] = this.compile(rawTemplates[templateName]);
++      }
++    }
+   }
+
+   HoganJsUtils.prototype.render = function(namespace, view, params) {
+diff --git a/test/hogan-cache-tests.js b/test/hogan-cache-tests.js
+index 3bb754ac..a34839c0 100644
+--- a/test/hogan-cache-tests.js
++++ b/test/hogan-cache-tests.js
+@@ -36,7 +36,7 @@ describe('HoganJsUtils', function() {
+       assert.equal(null, result);
+     });
+
+-    it('should allow templates to be overridden', function() {
++    it('should allow templates to be overridden with compiled templates', function() {
+       var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
+
+       var config = {templates: {'generic-empty-diff': emptyDiffTemplate}};
+@@ -44,5 +44,27 @@ describe('HoganJsUtils', function() {
+       var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
+       assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
+     });
++
++    it('should allow templates to be overridden with uncompiled templates', function() {
++      var emptyDiffTemplate = '&lt;p&gt;&lt;/p&gt;';
++
++      var config = {rawTemplates: {'generic-empty-diff': emptyDiffTemplate}};
++      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
++      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
++      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
++    });
++
++    it('should allow templates to be overridden giving priority to compiled templates', function() {
++      var emptyDiffTemplate = HoganJsUtils.compile('&lt;p&gt;&lt;/p&gt;');
++      var emptyDiffTemplateUncompiled = '&lt;p&gt;Not used!&lt;/p&gt;';
++
++      var config = {
++        templates: {'generic-empty-diff': emptyDiffTemplate},
++        rawTemplates: {'generic-empty-diff': emptyDiffTemplateUncompiled}
++      };
++      var hoganUtils = new (require('../src/hoganjs-utils.js').HoganJsUtils)(config);
++      var result = hoganUtils.render('generic', 'empty-diff', {myName: 'Rodrigo Fernandes'});
++      assert.equal('&lt;p&gt;Rodrigo Fernandes&lt;/p&gt;', result);
++    });
+   });
+ });
+</code></pre>]]></content><author><name></name></author><category term="sample-posts"/><category term="formatting"/><category term="code"/><summary type="html"><![CDATA[this is how you can display code diffs]]></summary></entry></feed>

@@ -1,0 +1,740 @@
+<!DOCTYPE html> <html lang="en"> <head> <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <title> Limits and Colimits, Part 4 Colimits | Qianli Zeng </title> <meta name="author" content="Qianli Zeng"> <meta name="description" content="PhD student in Philosophy at the University of St Andrews working in philosophical logic, modal logic, formal epistemology, and metaphysics. "> <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website"> <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; img-src 'self' data: https:; font-src 'self' data: https:; media-src 'self' https:; frame-src 'self' https:; connect-src 'self' https:;"> <style>
+  :root {
+    --max-content-width: 930px;
+  }
+</style> <link rel="stylesheet" href="/assets/css/tailwind.css?v=50c64c15cbb9fd1ce6056fdb8bcb4b62"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css" integrity="sha256-MVopmdyC2tYTiJ8wlktf0uh0v4NgT+vNdyVFepi7Q0c=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css" integrity="sha256-SzrCOBJbGVFMahewkgjwnApaV2+av1DwMAA+/QGLyZw=" crossorigin="anonymous"> <link defer rel="stylesheet" href="https://cdn.jsdelivr.net/npm/scholar-icons@1.0.3/css/scholar-icons.css" integrity="sha256-VY3hHVj/hNX3fYG6wtbA6TcKJQl7+FthzGSyIB64klY=" crossorigin="anonymous"> <link defer rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700|Material+Icons&amp;display=swap"> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-github.css?v=591dab5a4e56573bf4ef7fd332894c99" media="" id="highlight_theme_light"> <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;"> <link rel="stylesheet" href="/assets/css/main.css?v=3116ba77db9ee1581d05bb3e86fbf7f1"> <link rel="canonical" href="https://finalfantasy27.github.io/blog/2025/Limits_and_Colimits_Part_4_Examples_Colimits/"> <script src="/assets/js/theme.js?v=5286c3e4c334d0ecb8fc0c40ff4fa7ec"></script> <link defer rel="stylesheet" href="/assets/css/jekyll-pygments-themes-native.css?v=5847e5ed4a4568527aa6cfab446049ca" media="none" id="highlight_theme_dark"> <script>
+    initTheme();
+  </script> </head> <body class="fixed-top-nav "> <header> <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation"> <div class="container"> <a class="navbar-brand title font-weight-lighter" href="/"> Qianli Zeng </a> <button class="navbar-toggler collapsed navbar-toggler-main" type="button" data-nav-toggle="navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar top-bar"></span> <span class="icon-bar middle-bar"></span> <span class="icon-bar bottom-bar"></span> </button> <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav"> <ul class="navbar-nav navbar-menu-list flex-nowrap"> <li class="nav-item "> <a class="nav-link" href="/">about </a> </li> <li class="nav-item active"> <a class="nav-link" href="/blog/">blog </a> </li> <li class="nav-item "> <a class="nav-link" href="/publications/">publications </a> </li> <li class="nav-item "> <a class="nav-link" href="/talks/">talks </a> </li> <li class="nav-item "> <a class="nav-link" href="/cv/">CV </a> </li> <li class="nav-item "> <a class="nav-link" href="/service/">academic service </a> </li> <li class="nav-item"> <button id="search-toggle" type="button" title="Search" aria-label="Open search"> <span class="nav-link">ctrl k <i class="fa-solid fa-magnifying-glass"></i></span> </button> </li> <li class="toggle-container"> <button id="light-toggle" type="button" title="Change theme" aria-label="Change color theme"> <i class="fa-half-sun-moon" id="light-toggle-system"></i> <i class="fa-solid fa-moon" id="light-toggle-dark"></i> <i class="fa-solid fa-sun" id="light-toggle-light"></i> </button> </li> </ul> </div> </div> </nav> <progress id="progress" value="0"> <div class="progress-container"> <span class="progress-bar"></span> </div> </progress> </header> <div class="container mt-5" role="main"> <div class="post"> <header class="post-header"> <h1 class="post-title">Limits and Colimits, Part 4 Colimits</h1> <p class="post-meta"> Created on October 25, 2025 </p> <p class="post-tags"> <a href="/blog/2025"> <i class="fa-solid fa-calendar fa-sm"></i> 2025 </a>   ·   <a href="/blog/category/mathematics"> <i class="fa-solid fa-tag fa-sm"></i> mathematics</a>   <a href="/blog/category/category"> <i class="fa-solid fa-tag fa-sm"></i> category</a> </p> </header> <article class="post-content"> <div id="markdown-content"> <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script> <script src="//unpkg.com/valine/dist/Valine.min.js"></script> <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+            inlineMath: [['$','$']]
+            }
+        });
+</script> <p><em>Math3ma has provided one of the most accessible and insightful introductions to category theory, especially in its excellent <a href="https://www.math3ma.com/blog/limits-and-colimits-part-1" rel="external nofollow noopener" target="_blank">series on Limits and Colimits</a>. However, the promised and long-awaited Part 4 on examples of colimits was never released. In this post, I use Gemini 2.5 for an attempt to to reconstruct what could have been Part 4 of the series.</em></p> <p>Welcome back to our series on limits and colimits! In the last post, we took a deep dive into some of the most common examples of limits: terminal objects, products, pullbacks, inverse limits, and equalizers. Today, we’re going to flip the script entirely. We’ll look at the duals of the examples we saw in Part 3.</p> <h3 id="example-1-the-initial-object-dual-of-the-terminal-object">Example 1: The Initial Object (Dual of the Terminal Object)</h3> <p>The simplest limit is the limit of the empty diagram, which we called the terminal object. So, the simplest colimit must be the colimit of the empty diagram. This is called the initial object.</p> <p>Diagram: The empty category, with no objects and no morphisms.</p> <p>Cocone: A cocone under the empty diagram is just… an object! There are no diagrams to draw and no conditions to satisfy. So every object in the category C is a cocone.</p> <p>Colimit: The colimit is the initial object among all these cocones. An initial object, often denoted $0$ or $\emptyset$, is an object with a unique morphism to every other object in the category.</p> <p>For example, in the category of sets Set, the initial object is the empty set $\emptyset$. There is exactly one function from the empty set to any other set (the “empty function”).</p> <h3 id="example-2-the-coproduct-dual-of-the-product">Example 2: The Coproduct (Dual of the Product)</h3> <p>The dual of the product is the coproduct. While a product combines objects with maps pointing to the factors, a coproduct combines objects with maps coming from the factors.</p> <p>Diagram: A discrete category with two objects, $A$ and $B$.</p> <p>Cocone: A cocone consists of an object $M$ and two morphisms $i₁: A → M$ and $i₂: B → M$.</p> <p>Colimit (Coproduct): The colimit is the object $A \sqcup B$ (or $A + B$) along with two “inclusion” maps $i₁: A → A \sqcup B$ and $i₂: B → A \sqcup B$. It has the universal property that for any other cocone ($M$, $f$, $g$), there is a unique morphism $u: A \sqcup B → M$ such that $u \circ i₁ = f$ and $u \circ i₂ = g$.</p> <p>In Set, the coproduct is the disjoint union. If you have two sets $A$ and $B$, their disjoint union $A \sqcup B$ is the set containing all elements of $A$ and all elements of $B$, where we treat the elements from $A$ and $B$ as distinct even if they look the same. The unique map $u$ is defined by saying “if an element came from $A$, apply $f$ to it; if it came from $B$, apply $g$ to it.”</p> <p>In the category of groups Grp, the coproduct is the free product of groups. Let’s consider two simple groups:</p> <p>$G = \mathbb{Z}₂ = {e, a}$ where $a² = e$.</p> <p>$H = \mathbb{Z}₃ = {e, b, b²}$ where $b³ = e$.</p> <p>The coproduct $\mathbb{Z}₂ \sqcup \mathbb{Z}₃$ is the free product $\mathbb{Z}₂ * \mathbb{Z}₃$. Its elements are all finite “words” you can make by alternating elements from $G$ and $H$, like $aba$, $b²ab$, etc. There are no relations between $a$ and $b$ (e.g., $ab ≠ ba$).</p> <p>The inclusion maps are:</p> <p>$i₁: \mathbb{Z}₂ → \mathbb{Z}₂ * \mathbb{Z}₃$ sends $a$ to the word “a”.</p> <p>$i₂: \mathbb{Z}₃ → \mathbb{Z}₂ * \mathbb{Z}₃$ sends $b$ to the word “b”.</p> <p>Now, let’s test the universal property. Suppose we have another group, $K$, and two homomorphisms:</p> <p>$f: \mathbb{Z}₂ → K$</p> <p>$g: \mathbb{Z}₃ → K$</p> <p>We need to show there is a unique homomorphism $u: \mathbb{Z}₂ * \mathbb{Z}₃ → K$ that makes the diagram commute.</p> <p>How do we define $u$? We have no choice! For any word in $\mathbb{Z}₂ * \mathbb{Z}₃$, we define $u$ by applying $f$ and $g$ to its letters. For example:</p> <p>$u(“ab”)$ must equal $u(i₁(a) * i₂(b)) = u(i₁(a)) * u(i₂(b)) = f(a) * g(b)$.</p> <p>$u(“b²a”)$ must equal $u(i₂(b²)) * u(i₁(a)) = g(b²) * f(a)$.</p> <p>This definition is forced upon us by the diagram, which guarantees its uniqueness. It also turns out to be a valid homomorphism.</p> <p>Why isn’t the direct product $\mathbb{Z}₂ × \mathbb{Z}₃$ the coproduct? The direct product imposes the relation that elements from $G$ commute with elements from $H$. That is, $(a, e) * (e, b) = (a, b) = (e, b) * (a, e)$. If we chose $\mathbb{Z}₂ × \mathbb{Z}₃$ as our coproduct, we could only construct maps $u$ into groups $K$ where the images of $G$ and $H$ commute. This isn’t universal enough! The free product is more “free” because it imposes no extra relations.</p> <h4 id="in-vect-direct-sum">In Vect (direct sum)</h4> <p>In the category of vector spaces (Vect), the coproduct of two vector spaces $V$ and $W$ is their direct sum, $V \oplus W$. Let’s see why it satisfies the universal property, which is the defining feature of a coproduct.</p> <p>Let $V = \mathbb{R}²$ and $W = \mathbb{R}$ over the field $k = \mathbb{R}$. Their direct sum is $V \oplus W = \mathbb{R}³$, where we can think of elements as pairs $(v, w)$ with $v \in V$ and $w \in W$.</p> <p>Inclusion Morphisms: We have two canonical linear maps (the “inclusions”) into the direct sum:</p> <p>$iᵥ: V → V \oplus W$ defined by $v \mapsto (v, 0)$. For example, $(x, y) \mapsto (x, y, 0)$.</p> <p>$iᵥ: W → V \oplus W$ defined by $w \mapsto (0, w)$. For example, $z \mapsto (0, 0, z)$.</p> <p>Universal Property Test: Now, suppose we have any other vector space $Z$ and two arbitrary linear maps into it:</p> <p>$f: V → Z$</p> <p>$g: W → Z$</p> <p>The universal property demands that there exists a unique linear map $u: V \oplus W → Z$ such that $u \circ iᵥ = f$ and $u \circ iᵥ = g$.</p> <p>How do we construct this unique map $u$? Any element in $V \oplus W$ can be uniquely written as $(v, w) = (v, 0) + (0, w)$. Since $u$ must be a linear map: $u(v, w) = u((v, 0) + (0, w)) = u(v, 0) + u(0, w)$</p> <p>For the diagram to commute, we need $u(v, 0)$ to be $f(v)$ and $u(0, w)$ to be $g(w)$. Therefore, the map $u$ is uniquely defined as: $u(v, w) = f(v) + g(w)$</p> <p>This construction always yields a valid linear map, and its definition is forced by the conditions, guaranteeing it is unique. Because the direct sum satisfies this property for any $V, W, Z, f$, and $g$, it is the categorical coproduct in Vect.</p> <p>In the category of vector spaces (Vect), the coproduct is the direct sum ($V \oplus W$), while the product is the direct product ($V × W$). For finite-dimensional vector spaces, these two are isomorphic, which can be confusing. Why isn’t the direct product $V × W$ the coproduct?</p> <p>Let’s try to use $V × W$ in the coproduct role. The “inclusion” maps would be $v \mapsto (v, 0)$ and $w \mapsto (0, w)$. Now, consider two maps $f: V → Z$ and $g: W → Z$. We need to find a unique map $u: V × W → Z$ such that $u(v, 0) = f(v)$ and $u(0, w) = g(w)$. </p> <p>Since any element $(v, w)$ in $V × W$ can be written as $(v, 0) + (0, w)$, linearity forces the definition $u(v, w) = u(v, 0) + u(0, w) = f(v) + g(w)$. This works perfectly and seems to satisfy the property. So, where is the problem? The issue arises with infinite dimensions. For infinite-dimensional spaces, the direct sum $V \oplus W$ consists of pairs $(v, w)$ where only a finite number of components are non-zero, while the direct product $V × W$ allows infinitely many non-zero components. The direct sum is a subspace of the direct product. The map $u(v, w) = f(v) + g(w)$ is well-defined for the direct sum, but it may not be for the direct product if the sums become infinite. The direct sum is the correct, most general construction that always works.</p> <h3 id="example-3-the-pushout-dual-of-the-pullback">Example 3: The Pushout (Dual of the Pullback)</h3> <p>The dual of the pullback is the pushout. A pullback found the “best” way to complete a square of maps pointing to a common object. A pushout finds the “best” way to complete a square of maps originating from a common object.</p> <p>Diagram: A “span” of objects $B ← A → C$.</p> <p>Cocone: A cocone is an object $P$ that completes the square, making it commute:</p> <p>Colimit (Pushout): The pushout is the object $P$ that satisfies the universal property: for any other object $Q$ that makes the diagram commute, there is a unique morphism $u: P → Q$ that preserves the whole structure.</p> <p>In Set, the pushout can be thought of as “gluing” sets together along a common subset. Imagine $A$ is a subset of both $B$ and $C$. The pushout $B \sqcupₐ C$ is the disjoint union of $B$ and $C$, but where we “identify” or “merge” the corresponding elements from $A$. This is a fundamental construction in topology, where we glue topological spaces together.</p> <h4 id="pushout-example-in-top-making-a-sphere-">Pushout Example in Top: Making a Sphere ⚪</h4> <p>Let’s build a 2-sphere $S²$ using a pushout.</p> <p>Let $A$ be the circle $S¹$. Think of it as the set of points $(x, y)$ in $\mathbb{R}²$ with $x² + y² = 1$.</p> <p>Let $B$ and $C$ both be the 2-disk $D²$. The set of points $(x, y)$ in $\mathbb{R}²$ with $x² + y² ≤ 1$. Let’s call this disk $B$ the “northern hemisphere.” We’ll call $C$ the “southern hemisphere.”</p> <p>The maps $f: A → B$ and $g: A → C$ are the inclusion maps of the boundary circle $S¹$ into each disk.</p> <p>The diagram is $D² ← S¹ → D²$. The pushout “glues” the two disks together along their common boundary circle. The result is the sphere $S²$. This is a fundamental construction in algebraic topology.</p> <p>Let’s break down the construction of a 2-sphere $S²$ from two 2-disks $D²$ by gluing their boundaries. This is a pushout in the category of topological spaces (Top).</p> <p>The Construction: The pushout $P$ is constructed in two steps:</p> <p>Step 1: Disjoint Union: Take the coproduct $B \sqcup C$. This is a space consisting of two separate, non-touching disks.</p> <p>Step 2: Quotient: Define an equivalence relation $\sim$ on $B \sqcup C$. For any point $a \in A$, we declare its image in $B$ to be equivalent to its image in $C$. That is, for every $a \in S¹$, we enforce $f(a) \sim g(a)$. This is the “gluing” instruction.</p> <p>The Result: The pushout $P$ is the quotient space $(B \sqcup C) / \sim$. $P$ is homeomorphic to the 2-sphere, $S²$, is formally the set of points in $\mathbb{R}³$ equidistant from the origin, defined as:</p> \[S² = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \},\] <p>because the quotient map effectively “glues” two hemispheres along their equators. </p> <p>$S²$ is a subspace of Euclidean 3-space $\mathbb{R}³$. It inherits its topology as a subspace of $\mathbb{R}³$.</p> <p>Define the spaces:</p> \[B = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \text{ and } z ≥ 0 \}\] <p>(the closed northern hemisphere).</p> \[C = \{ (x, y, z) \in \mathbb{R}³ | x² + y² + z² = 1 \text{ and } z ≤ 0 \}\] <p>(the closed southern hemisphere).</p> <p>Both $B$ and $C$ are homeomorphic to the disk $D²$.</p> <p>The intersection</p> \[A = B \cap C = \{ (x, y, 0) \in \mathbb{R}³ | x² + y² = 1 \}\] <p>is the equator, which is homeomorphic to the circle $S¹$.</p> <p>Define the pushout: Let $f: A → B$ and $g: A → C$ be the standard inclusion maps.</p> <p>The pushout is the quotient space $P = (B \sqcup C) / \sim$, where $(b, 1) \sim (c, 2)$ if and only if $b = c$ and $b, c \in A$. This formally identifies the points on the equator of $B$ with the corresponding points on the equator of $C$.</p> <p>Define the Homeomorphism: We need a continuous map $h: P → S²$ with a continuous inverse.</p> <p>Let $q: B \sqcup C → P$ be the quotient map.</p> <p>Define a map $ĥ: B \sqcup C → S²$ that acts as the identity on each hemisphere. This map is continuous.</p> <p>Because $ĥ$ identifies the same points as the equivalence relation $\sim$ (i.e., if $x \sim y$, then $ĥ(x) = ĥ(y)$), the universal property of quotient spaces guarantees that there is a unique continuous map $h: P → S²$ such that $h \circ q = ĥ$.</p> <p>This map $h$ is a bijection because it maps the two identified hemispheres to the whole sphere. Since $B \sqcup C$ is compact (as the union of two compact sets) and $S²$ is Hausdorff, the continuous bijection $h$ is a homeomorphism.</p> <p>Therefore, the abstract pushout construction formally yields a space that is topologically identical to $S²$. The maps from $B$ and $C$ into $S²$ are just the natural projections from the disjoint union into the quotient space.</p> <h3 id="colimits-in-different-categories">Colimits in Different Categories</h3> <table> <thead> <tr> <th style="text-align: left">Category</th> <th style="text-align: left">Initial Object</th> <th style="text-align: left">Coproduct ($A \sqcup B$)</th> <th style="text-align: left">Pushout ($B \sqcup_A C$)</th> </tr> </thead> <tbody> <tr> <td style="text-align: left"> <strong>Set</strong> (Sets)</td> <td style="text-align: left">Empty set $\emptyset$</td> <td style="text-align: left"> <strong>Disjoint Union</strong>: $A$ and $B$ combined, keeping elements distinct.</td> <td style="text-align: left"> <strong>Gluing Sets</strong>: The disjoint union of $B$ and $C$, where for each $a \in A$, we identify its image in $B$ with its image in $C$.</td> </tr> <tr> <td style="text-align: left"> <strong>Grp</strong> (Groups)</td> <td style="text-align: left">Trivial group ${e}$</td> <td style="text-align: left"> <strong>Free Product</strong>: $A * B$, words of alternating elements.</td> <td style="text-align: left"> <strong>Amalgamated Product</strong>: $B *_A C$, the free product $B * C$ quotiented by relations identifying the images of $A$.</td> </tr> <tr> <td style="text-align: left"> <strong>Top</strong> (Spaces)</td> <td style="text-align: left">Empty space $\emptyset$</td> <td style="text-align: left"> <strong>Disjoint Union</strong>: The disjoint union of the sets with a topology where a set is open if its intersection with $A$ and $B$ is open.</td> <td style="text-align: left"> <strong>Gluing Spaces</strong>: The most intuitive pushout. $B$ and $C$ are “glued together” along $A$.</td> </tr> <tr> <td style="text-align: left"> <strong>Vect</strong> (Vector Spaces)</td> <td style="text-align: left">Zero space ${0}$</td> <td style="text-align: left"> <strong>Direct Sum</strong>: $A \oplus B$. Its elements are pairs (a, b).</td> <td style="text-align: left"> <strong>Gluing Vector Spaces</strong>: The direct sum $B \oplus C$ quotiented by the subspace of elements $(f(a), -g(a))$ for $a \in A$.</td> </tr> </tbody> </table> <h3 id="example-4-coequalizers">Example 4: Coequalizers</h3> <p>The coequalizer is the dual of the equalizer. It takes two parallel arrows and “forces” them to be equal in the most efficient way.</p> <p>Definition: The coequalizer of two morphisms $f, g: A → B$ is an object $Q$ with a morphism $q: B → Q$ such that $q \circ f = q \circ g$. Furthermore, for any other object $Q’$ with a map $q’: B → Q’$ where $q’ \circ f = q’ \circ g$, there’s a unique map $u: Q → Q’$ making the diagram commute.</p> <p>Example in Set: Let $A = {a}$ and $B = {1, 2, 3}$.</p> <p>Let $f: A → B$ be the function $f(a) = 1$.</p> <p>Let $g: A → B$ be the function $g(a) = 2$.</p> <p>The coequalizer $q: B → Q$ must make $q(f(a)) = q(g(a))$, which means $q(1) = q(2)$. The most general way to do this is to take the quotient of $B$ by the equivalence relation generated by $1 \sim 2$.</p> <p>The equivalence classes are ${[1] = {1, 2}, [3] = {3}}$.</p> <p>The coequalizer object is the quotient set $Q = {{1, 2}, {3}}$.</p> <p>The map $q$ sends each element of $B$ to its equivalence class: $q(1) = {1, 2}$, $q(2) = {1, 2}$, and $q(3) = {3}$.</p> <h4 id="in-grp-group-presentation">In Grp: Group Presentation</h4> <p>In group theory, coequalizers are used to define groups via presentations. The group defined by</p> \[⟨S | R⟩\] <p>is the coequalizer of maps from the free group on relations $R$ to the free group on generators $S$.</p> <p>A group presentation</p> \[\langle S \mid R\rangle.\] <p>is a way to define a group by specifying its generators ($S$) and the relations the generators must satisfy ($R$). Let’s use a concrete example: the dihedral group $D₃$ (the symmetries of an equilateral triangle), which has the presentation</p> \[⟨r, s | r³ = e, s² = e, srs = r⁻¹⟩.\] <p>The last relation is equivalent to $srsr = e$.</p> <p>The Objects and Maps:</p> <p>Let $F(S)$ be the free group on the set of generators $S = {r, s}$. Its elements are all possible strings of $r, s, r⁻¹, s⁻¹$, like $rsr⁻¹s$, with no relations other than $rr⁻¹ = e$, etc.</p> <p>Let $F(R)$ be the free group on the set of “relations” $R = {r³, s², srsr}$. (We treat the relations themselves as generators of another free group).</p> <p>Now we define two homomorphisms, $f$ and $g$, from $F(R)$ to $F(S)$:</p> <p>$f: F(R) → F(S)$ is the map that formally includes the relations. $f(r³) = r³$, $f(s²) = s²$, $f(srsr) = srsr$.</p> <p>$g: F(R) → F(S)$ is the map that sends every generator of $F(R)$ to the identity element $e$ in $F(S)$. $g(r³) = e$, $g(s²) = e$, $g(srsr) = e$.</p> <p>The Coequalizer: The group $D₃$ is the coequalizer of $f$ and $g$. This is a group $G$ with a homomorphism $q: F(S) → G$ such that $q \circ f = q \circ g$.</p> <p>The condition $q(f(x)) = q(g(x))$ for all $x \in F(R)$ means that $q(r³) = q(e)$, $q(s²) = q(e)$, and $q(srsr) = q(e)$.</p> <p>In a group homomorphism, $q(e)$ must be the identity element in $G$.</p> <p>Therefore, the map $q$ must “kill” the relations; it must send $r³$, $s²$, and $srsr$ to the identity.</p> <p>The most universal way to do this is to let $G$ be the quotient group of $F(S)$ by the normal closure of the relations. This is exactly the definition of the group given by the presentation</p> <p>\(\langle S \mid R\rangle.\) </p> <p>The normal closure is necessary in group presentations because the kernel of any group homomorphism must be a normal subgroup, and the normal closure is the smallest normal subgroup containing the relations.</p> <p>Why the Normal Closure? When we form a quotient group $G / N$, the denominator $N$ must be a normal subgroup. This is a fundamental requirement for the set of cosets $G / N$ to have a well-defined group structure.</p> <p>A subgroup $N$ of $G$ is normal if for every $g \in G$ and $n \in N$, the conjugate $gng⁻¹$ is also in $N$.</p> <p>This ensures that the left coset $gN$ is the same as the right coset $Ng$.</p> <p>Now, consider a group presentation $\langle S \mid R\rangle.$</p> <p>We start with the free group $F(S)$ and a set of relations $R’ = {r₁, r₂, …}$ which are elements of $F(S)$. We want to force all these relations to become the identity element.</p> <p>The Problem: The subgroup generated by $R’$, let’s call it $H$, is generally not normal. For example, in</p> \[D₃ = ⟨r, s | r³ = e, ...⟩,\] <p>the subgroup generated by $r³$ is</p> \[\{e, r³, r⁶, ...\}.\] <p>But its conjugate $s(r³)s⁻¹$ is not in that subgroup. If we only quotiented by $H$, the resulting structure wouldn’t be a group.</p> <p>The Solution: We need to quotient $F(S)$ by the smallest normal subgroup that contains all our relations. This is precisely the normal closure of $R’$, denoted $N = ⟨⟨R’⟩⟩$. The normal closure $N$ consists of all elements that can be formed by multiplying conjugates of the relations. For example, it contains $r³$, $s(r³)s⁻¹$, $(rs)(r³) (rs)⁻¹$, and all products of such elements. By construction, $N$ is normal.</p> <p>Because the kernel of any homomorphism $\phi: G → K$ is always a normal subgroup of $G$, the coequalizer construction $q: F(S) → G$ must have a normal subgroup as its kernel. By taking the normal closure of the relations as the kernel, we are creating the most general (or “freest”) group that satisfies the relations, which is the essence of the coequalizer’s universal property.</p> <h4 id="coequalizers-in-top-in-topology-the-coequalizer-is-also-a-gluing-construction">Coequalizers in Top: In topology, the coequalizer is also a “gluing” construction.</h4> <p>Example: Making a Circle:</p> <p>Let $A$ be a single-point space ${*}$ and $B$ be the interval $[0, 1]$.</p> <p>Let $f, g: A → B$ be two maps where $f(*) = 0$ and $g(*) = 1$. The coequalizer identifies the images of $f$ and $g$. It quotients the interval $[0,1]$ by the relation $0 \sim 1$.</p> <p>The result is a line segment whose two endpoints have been glued together: a circle, $S¹$.</p> <p>Coequalizers in Vect: In vector spaces, the coequalizer is a quotient space.</p> <p>Example: Let $V = \mathbb{R}$ and $W = \mathbb{R}²$. Consider two linear maps $f, g: V → W$.</p> <p>$f(x) = (x, x)$</p> <p>$g(x) = (x, -x)$</p> <p>The coequalizer is a space $Q$ with a map $q: W → Q$ such that $q(f(x)) = q(g(x))$ for all $x$.</p> <p>This means $q(x, x) = q(x, -x)$. By linearity, $q((x, x) - (x, -x)) = 0$, which simplifies to $q(0, 2x) = 0$ for all $x$.</p> <p>This tells us that the entire $y$-axis</p> \[\{(0, y) | y \in \mathbb{R}\}\] <p>must be in the kernel of $q$.</p> <p>The universal solution is to let $Q$ be the quotient space $W / U$, where $U$ is the subspace spanned by all vectors of the form $f(x) - g(x)$. In our case, $U$ is the $y$-axis.</p> <p>The quotient $\mathbb{R}² / U$ is the space of cosets $(a, b) + U$, which are the horizontal lines in the plane. This space is isomorphic to $\mathbb{R}$, where each horizontal line is identified with its $x$-intercept.</p> <h3 id="example-5-direct-limits">Example 5: Direct Limits</h3> <p>The dual of an inverse limit is a direct limit (or inductive limit). While inverse limits deal with maps going “inward” (like $… → X₂ → X₁$), direct limits deal with maps going “outward.”</p> <p>Definition: A direct system is a diagram $X₀ → X₁ → X₂ → ….$ The direct limit, $\lim→ Xᵢ$, is an object that receives maps from all $Xᵢ$ in a consistent way.</p> <p>Construction: The direct limit is often constructed as the disjoint union of all the $Xᵢ$, quotiented by an equivalence relation where we identify $xᵢ \in Xᵢ$ with its image $fᵢ(xᵢ) \in Xᵢ₊₁$.</p> <p>Example in Top: Let’s build the real line $\mathbb{R}$.</p> <p>Let $Xₙ$ be the closed interval $[-n, n]$ for $n = 1, 2, 3, ….$</p> <p>Let the maps $fₙ: Xₙ → Xₙ₊₁$ be the standard inclusion maps, e.g., mapping $[-1, 1]$ into $[-2, 2]$.</p> <p>Our direct system is $[-1, 1] \hookrightarrow [-2, 2] \hookrightarrow [-3, 3] \hookrightarrow ….$ The direct limit is the union of all these sets: $\bigcup [-n, n] = \mathbb{R}$. Intuitively, the limit of this expanding sequence of intervals is the entire real line. Each interval is included in the final object $\mathbb{R}$ in a way that respects all the intermediate inclusion maps.</p> <p><br><br></p> <script async="" src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script> <p><span id="busuanzi_container_site_pv">PageView: <span id="busuanzi_value_site_pv"></span> times</span>      <span id="busuanzi_container_site_uv">UniqueVisitor: <span id="busuanzi_value_site_uv"></span></span>     </p> <div id="vcomments"></div> <script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'Rl0XrPgpK2Dfhp1ffLTvcrsD-gzGzoHsz',
+        appKey: '6fXawARU0PuxwAYgRUP9gPMl'
+    })
+</script> </div> </article> <br> <hr> <br> <h2 class="text-3xl font-semibold mb-4 mt-12">Enjoy Reading This Article?</h2> <p class="mb-2">Here are some more articles you might like to read next:</p> <ul class="list-disc pl-7 my-3 space-y-2 marker:text-[var(--global-theme-color)]"> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/" target="_blank" rel="noopener noreferrer">Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra</a> <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"> <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2" target="_blank" rel="noopener noreferrer">Displaying External Posts on Your al-folio Blog</a> <svg width="1rem" height="1rem" viewbox="0 0 30 30" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"> <path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path> </svg> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/marimo/">a post with marimo snippets</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2025/plotly/">a post with plotly.js</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/photo-gallery/">a post with image galleries</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/tabs/">a post with tabs</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/typograms/">a post with typograms</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/post-citation/">a post that can be cited</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/pseudocode/">a post with pseudo code</a> </li> <li class="leading-relaxed"> <a class="underline decoration-1 hover:text-[var(--global-hover-color)]" href="/blog/2024/code-diff/">a post with code diff</a> </li> </ul> </div> </div> <footer class="fixed-bottom" role="contentinfo"> <div class="container mt-0"> © Copyright 2026 Qianli Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>. Photos from <a href="https://unsplash.com" target="_blank" rel="external nofollow noopener">Unsplash</a>. </div> </footer> <script>
+  window.alFolio = {
+    compatBootstrap: false
+  };
+</script> <script src="/assets/js/nav-toggle.js?v=141bd79a73ebc0f0b6ea58e440ae79fc"></script> <script defer src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" integrity="sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI=" crossorigin="anonymous"></script> <script defer src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js" integrity="sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc=" crossorigin="anonymous"></script> <script defer src="/assets/js/masonry.js?v=e49affc7bd2646f6acdad1dbe02c2359" type="text/javascript"></script> <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js" integrity="sha256-MASABpB4tYktI2Oitl4t+78w/lyA+D7b/s9GEP0JOGI=" crossorigin="anonymous"></script> <script src="/assets/al_math/js/mathjax-setup.js"></script> <script src="/assets/js/tooltips-setup.js?v=fe487e99db6c43751e6e7bdb2d6a0611"></script> <script src="/assets/js/no_defer.js?v=53b1b1a645525975c963ce8bf8bfefcf"></script> <script defer src="/assets/js/common.js?v=87baac90f765f2f3362dcf6aaf312a8a"></script> <script defer src="/assets/js/copy_code.js?v=c8a01c11a92744d44b093fc3bda915df" type="text/javascript"></script> <script defer src="/assets/js/jupyter_new_tab.js?v=896d254890d9b47f0281f63bfccf0dee"></script> <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script> <script async src="https://badge.dimensions.ai/badge.js"></script> <script defer src="https://cdn.jsdelivr.net/npm/medium-zoom@1.1.0/dist/medium-zoom.min.js" integrity="sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc=" crossorigin="anonymous"></script> <script defer src="/assets/al_img_tools/js/zoom.js"></script> <script defer src="/assets/js/progress-bar.js?v=499464c5c63ced6cf7ad62509f1e2610" type="text/javascript"></script> <script src="https://cdn.jsdelivr.net/npm/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js" integrity="sha256-uMJJ3EoTyfRBoTbR+lrfu1uRQ87RZG8AR3cVNuQVeFg=" crossorigin="anonymous"></script> <script>
+    addBackToTop();
+  </script> <script type="module" src="/assets/al_search/js/search/ninja-keys.min.js"></script> <ninja-keys hidebreadcrumbs noautoloadmdicons placeholder="Type to start searching"></ninja-keys> <script src="/assets/al_search/js/search-setup.js"></script> <script>
+// get the ninja-keys element
+const ninja = document.querySelector('ninja-keys');
+
+// add the home and posts menu items
+ninja.data = [{
+    id: "nav-about",
+    title: "about",
+    section: "Navigation",
+    handler: () => {
+      window.location.href = "/";
+    },
+  },{id: "nav-blog",
+          title: "blog",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/blog/";
+          },
+        },{id: "nav-publications",
+          title: "publications",
+          description: "publications by categories in reversed chronological order. generated by jekyll-scholar.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/publications/";
+          },
+        },{id: "nav-talks",
+          title: "talks",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/talks/";
+          },
+        },{id: "nav-cv",
+          title: "CV",
+          description: "Academic curriculum vitae of Qianli Zeng.",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/cv/";
+          },
+        },{id: "nav-academic-service",
+          title: "academic service",
+          description: "",
+          section: "Navigation",
+          handler: () => {
+            window.location.href = "/service/";
+          },
+        },{id: "post-limits-and-colimits-part-4-colimits",
+        
+          title: "Limits and Colimits, Part 4 Colimits",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/Limits_and_Colimits_Part_4_Examples_Colimits/";
+          
+        },
+      },{id: "post-a-post-with-marimo-snippets",
+        
+          title: "a post with marimo snippets",
+        
+        description: "running Python in the browser with marimo",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/marimo/";
+          
+        },
+      },{id: "post-a-post-with-plotly-js",
+        
+          title: "a post with plotly.js",
+        
+        description: "this is what included plotly.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2025/plotly/";
+          
+        },
+      },{id: "post-a-post-with-image-galleries",
+        
+          title: "a post with image galleries",
+        
+        description: "this is what included image galleries could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/photo-gallery/";
+          
+        },
+      },{id: "post-google-gemini-updates-flash-1-5-gemma-2-and-project-astra",
+        
+          title: 'Google Gemini updates: Flash 1.5, Gemma 2 and Project Astra <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "We’re sharing updates across our Gemini family of models and a glimpse of Project Astra, our vision for the future of AI assistants.",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
+          
+        },
+      },{id: "post-a-post-with-tabs",
+        
+          title: "a post with tabs",
+        
+        description: "this is what included tabs in a post could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/tabs/";
+          
+        },
+      },{id: "post-a-post-with-typograms",
+        
+          title: "a post with typograms",
+        
+        description: "this is what included typograms code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/typograms/";
+          
+        },
+      },{id: "post-a-post-that-can-be-cited",
+        
+          title: "a post that can be cited",
+        
+        description: "this is what a post that can be cited looks like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/post-citation/";
+          
+        },
+      },{id: "post-a-post-with-pseudo-code",
+        
+          title: "a post with pseudo code",
+        
+        description: "this is what included pseudo code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/pseudocode/";
+          
+        },
+      },{id: "post-a-post-with-code-diff",
+        
+          title: "a post with code diff",
+        
+        description: "this is how you can display code diffs",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/code-diff/";
+          
+        },
+      },{id: "post-a-post-with-advanced-image-components",
+        
+          title: "a post with advanced image components",
+        
+        description: "this is what advanced image components could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/advanced-images/";
+          
+        },
+      },{id: "post-a-post-with-vega-lite",
+        
+          title: "a post with vega lite",
+        
+        description: "this is what included vega lite code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/vega-lite/";
+          
+        },
+      },{id: "post-a-post-with-geojson",
+        
+          title: "a post with geojson",
+        
+        description: "this is what included geojson code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/geojson-map/";
+          
+        },
+      },{id: "post-a-post-with-echarts",
+        
+          title: "a post with echarts",
+        
+        description: "this is what included echarts code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/echarts/";
+          
+        },
+      },{id: "post-a-post-with-chart-js",
+        
+          title: "a post with chart.js",
+        
+        description: "this is what included chart.js code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2024/chartjs/";
+          
+        },
+      },{id: "post-a-post-with-tikzjax",
+        
+          title: "a post with TikZJax",
+        
+        description: "this is what included TikZ code could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tikzjax/";
+          
+        },
+      },{id: "post-a-post-with-bibliography",
+        
+          title: "a post with bibliography",
+        
+        description: "an example of a blog post with bibliography",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/post-bibliography/";
+          
+        },
+      },{id: "post-a-post-with-jupyter-notebook",
+        
+          title: "a post with jupyter notebook",
+        
+        description: "an example of a blog post with jupyter notebook",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/jupyter-notebook/";
+          
+        },
+      },{id: "post-a-post-with-custom-blockquotes",
+        
+          title: "a post with custom blockquotes",
+        
+        description: "an example of a blog post with custom blockquotes",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/custom-blockquotes/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents-on-a-sidebar",
+        
+          title: "a post with table of contents on a sidebar",
+        
+        description: "an example of a blog post with table of contents on a sidebar",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/sidebar-table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-audios",
+        
+          title: "a post with audios",
+        
+        description: "this is what included audios could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/audios/";
+          
+        },
+      },{id: "post-a-post-with-videos",
+        
+          title: "a post with videos",
+        
+        description: "this is what included videos could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/videos/";
+          
+        },
+      },{id: "post-displaying-beautiful-interactive-tables",
+        
+          title: "displaying beautiful interactive tables",
+        
+        description: "an example of how to use interactive tables in al-folio",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/tables/";
+          
+        },
+      },{id: "post-a-post-with-table-of-contents",
+        
+          title: "a post with table of contents",
+        
+        description: "an example of a blog post with table of contents",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2023/table-of-contents/";
+          
+        },
+      },{id: "post-a-post-with-giscus-comments",
+        
+          title: "a post with giscus comments",
+        
+        description: "an example of a blog post with giscus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/giscus-comments/";
+          
+        },
+      },{id: "post-یک-نوشتهٔ-راست-چین",
+        
+          title: "یک نوشتهٔ راست‌چین",
+        
+        description: "نمونه‌ای از پشتیبانی زبان‌های راست‌چین",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/rtl/";
+          
+        },
+      },{id: "post-remark-on-applications-of-zeng-und-husing-to-boolean-equations-and-graph-theoretic-problem",
+        
+          title: "Remark on applications of Zeng und Husing to boolean equations and graph theoretic...",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2022/Remark_on_applications_of_Zeng_und_Husing_to_boolean_equations_and_graph_theoretic_problem/";
+          
+        },
+      },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+        
+          title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+          
+        },
+      },{id: "post-a-post-with-redirect",
+        
+          title: "a post with redirect",
+        
+        description: "you can also redirect to assets like pdf",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/assets/pdf/example_pdf.pdf";
+          
+        },
+      },{id: "post-haowang-and-russell-on-philosophy",
+        
+          title: "HaoWang and Russell on Philosophy",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/HaoWang-and-Russell-on-Philosophy/";
+          
+        },
+      },{id: "post-how-not-to-prove-tennenbaum-39-s-theorem",
+        
+          title: "How not to prove Tennenbaum&#39;s Theorem",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/how-not-to-prove/";
+          
+        },
+      },{id: "post-hilbert-39-s-tenth-problem-gödel-39-s-incompleteness-theorem",
+        
+          title: "Hilbert&#39;s tenth problem, Gödel&#39;s incompleteness theorem",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/Hilbert-tenth-problem-Godel-incompleteness-theorem/";
+          
+        },
+      },{id: "post-a-post-with-diagrams",
+        
+          title: "a post with diagrams",
+        
+        description: "an example of a blog post with diagrams",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/diagrams/";
+          
+        },
+      },{id: "post-poets-can-make-anything-start-with-n",
+        
+          title: "poets can make anything start with n",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/poets-can-make/";
+          
+        },
+      },{id: "post-mr-basile",
+        
+          title: "Mr.Basile",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/Mr_Basile/";
+          
+        },
+      },{id: "post-a-distill-style-blog-post",
+        
+          title: "a distill-style blog post",
+        
+        description: "an example of a distill-style blog post and main elements",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/distill/";
+          
+        },
+      },{id: "post-golden-times",
+        
+          title: "Golden Times",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/Golden_Times/";
+          
+        },
+      },{id: "post-執事と嬢様",
+        
+          title: "執事と嬢様",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2021/%E5%9F%B7%E4%BA%8B%E3%81%A8%E5%AC%A2%E6%A7%98/";
+          
+        },
+      },{id: "post-a-post-with-twitter",
+        
+          title: "a post with twitter",
+        
+        description: "an example of a blog post with twitter",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/twitter/";
+          
+        },
+      },{id: "post-shepherd-boy",
+        
+          title: "Shepherd Boy",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/Shepherd-Boy/";
+          
+        },
+      },{id: "post-caver",
+        
+          title: "Caver",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/Caver/";
+          
+        },
+      },{id: "post-miracle-i-in-the-confessional",
+        
+          title: "Miracle I - In the Confessional",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2020/Miracle-I-In-the-Confessional/";
+          
+        },
+      },{id: "post-maupassant",
+        
+          title: "Maupassant",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2019/Maupassant/";
+          
+        },
+      },{id: "post-beckett",
+        
+          title: "Beckett",
+        
+        description: "",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2019/Beckett/";
+          
+        },
+      },{id: "post-a-post-with-disqus-comments",
+        
+          title: "a post with disqus comments",
+        
+        description: "an example of a blog post with disqus comments",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/disqus-comments/";
+          
+        },
+      },{id: "post-a-post-with-math",
+        
+          title: "a post with math",
+        
+        description: "an example of a blog post with some math",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/math/";
+          
+        },
+      },{id: "post-a-post-with-code",
+        
+          title: "a post with code",
+        
+        description: "an example of a blog post with some code",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/code/";
+          
+        },
+      },{id: "post-a-post-with-images",
+        
+          title: "a post with images",
+        
+        description: "this is what included images could look like",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/images/";
+          
+        },
+      },{id: "post-a-post-with-formatting-and-links",
+        
+          title: "a post with formatting and links",
+        
+        description: "march &amp; april, looking forward to summer",
+        section: "Posts",
+        handler: () => {
+          
+            window.location.href = "/blog/2015/formatting-and-links/";
+          
+        },
+      },{id: "books-the-godfather",
+          title: 'The Godfather',
+          description: "",
+          section: "Books",handler: () => {
+              window.location.href = "/books/the_godfather/";
+            },},{id: "projects-project-1",
+          title: 'project 1',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/1_project/";
+            },},{id: "projects-project-2",
+          title: 'project 2',
+          description: "a project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/2_project/";
+            },},{id: "projects-project-3-with-very-long-name",
+          title: 'project 3 with very long name',
+          description: "a project that redirects to another website",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/3_project/";
+            },},{id: "projects-project-4",
+          title: 'project 4',
+          description: "another without an image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/4_project/";
+            },},{id: "projects-project-5",
+          title: 'project 5',
+          description: "a project with a background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/5_project/";
+            },},{id: "projects-project-6",
+          title: 'project 6',
+          description: "a project with no image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/6_project/";
+            },},{id: "projects-project-7",
+          title: 'project 7',
+          description: "with background image",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/7_project/";
+            },},{id: "projects-project-8",
+          title: 'project 8',
+          description: "an other project with a background image and giscus comments",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/8_project/";
+            },},{id: "projects-project-9",
+          title: 'project 9',
+          description: "another project with an image 🎉",
+          section: "Projects",handler: () => {
+              window.location.href = "/projects/9_project/";
+            },},{id: "talks-a-jónsson-tarski-goldblatt-representation-and-frame-definability-for-noncontingency-logic",
+          title: 'A Jónsson-Tarski-Goldblatt Representation and Frame Definability for Noncontingency Logic',
+          description: "",
+          section: "Talks",handler: () => {
+              window.location.href = "/talks/2026-09-04-noncontingency-logic/";
+            },},{id: "teachings-data-science-fundamentals",
+          title: 'Data Science Fundamentals',
+          description: "This course covers the foundational aspects of data science, including data collection, cleaning, analysis, and visualization. Students will learn practical skills for working with real-world datasets.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/data-science-fundamentals/";
+            },},{id: "teachings-introduction-to-machine-learning",
+          title: 'Introduction to Machine Learning',
+          description: "This course provides an introduction to machine learning concepts, algorithms, and applications. Students will learn about supervised and unsupervised learning, model evaluation, and practical implementations.",
+          section: "Teachings",handler: () => {
+              window.location.href = "/teachings/introduction-to-machine-learning/";
+            },},{
+        id: 'social-cv',
+        title: 'CV',
+        section: 'Socials',
+        handler: () => {
+          window.open("/assets/pdf/CV.pdf", "_blank");
+        },
+      },{
+        id: 'social-email',
+        title: 'email',
+        section: 'Socials',
+        handler: () => {
+          window.open("mailto:%53%6B%6F%6C%65%6D%69%7A%61%74%69%6F%6E@%31%36%33.%63%6F%6D", "_blank");
+        },
+      },{
+        id: 'social-rss',
+        title: 'RSS Feed',
+        section: 'Socials',
+        handler: () => {
+          window.open("/feed.xml", "_blank");
+        },
+      },{
+        id: 'social-scholar',
+        title: 'Google Scholar',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://scholar.google.com/citations?user=", "_blank");
+        },
+      },{
+        id: 'social-github',
+        title: 'GitHub',
+        section: 'Socials',
+        handler: () => {
+          window.open("https://github.com/FinalFantasy27", "_blank");
+        },
+      },{
+      id: 'light-theme',
+      title: 'Change theme to light',
+      description: 'Change the theme of the site to Light',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("light");
+      },
+    },
+    {
+      id: 'dark-theme',
+      title: 'Change theme to dark',
+      description: 'Change the theme of the site to Dark',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("dark");
+      },
+    },
+    {
+      id: 'system-theme',
+      title: 'Use system default theme',
+      description: 'Change the theme of the site to System Default',
+      section: 'Theme',
+      handler: () => {
+        setThemeSetting("system");
+      },
+    },];
+
+</script> <script src="/assets/al_search/js/shortcut-key.js"></script> </body> </html>
