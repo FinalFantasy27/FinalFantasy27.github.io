@@ -2,7 +2,7 @@ cv:
   name: Qianli Zeng
   headline: PhD Student in Philosophy
   email: Skolemization@163.com
-  location: St Andrews, United Kingdom
+  # location: St Andrews, United Kingdom
   summary: >
     My primary philosophical interests are logic (especially mathematical and philosophical logic), formal epistemology, and metaphysics. I also have general interests in philosophy of science.
 
@@ -12,14 +12,15 @@ cv:
 
   sections:
     Education:
-      - institution: University of St Andrews
-        location: St Andrews
-        area: Philosophy
-        studyType: PhD Student in Philosophy
-        start_date: "2026-09"
-        end_date: "2030-09"
-        highlights:
-          - "Supervisor: Prof. Franz Berto"
+      # Temporarily hidden St Andrews PhD information:
+      # - institution: University of St Andrews
+      #   location: St Andrews
+      #   area: Philosophy
+      #   studyType: PhD Student in Philosophy
+      #   start_date: "2026-09"
+      #   end_date: "2030-09"
+      #   highlights:
+      #     - "Supervisor: Prof. Franz Berto"
 
       - institution: Ludwig-Maximilians-Universität München
         location: Munich

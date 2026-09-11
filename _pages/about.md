@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: PhD Student in Philosophy, University of St Andrews
+# subtitle: PhD Student in Philosophy, University of St Andrews
 
 profile:
   align: right
@@ -23,7 +23,9 @@ latest_posts:
   limit: 3 # leave blank to include all the blog posts
 ---
 
+<!-- Temporarily hidden St Andrews information:
 I am a PhD student in Philosophy at the University of St Andrews. Before beginning my PhD at the University of St Andrews, I completed an MA in Logic and Philosophy of Science at the Munich Center for Mathematical Philosophy, Ludwig-Maximilians-Universität München.
+-->
 
 My primary philosophical interests are logic (especially mathematical and philosophical logic), formal epistemology, and metaphysics. I also have general interests in philosophy of science. My current work focuses on modal logic, especially bundled fragments of modal logic, e.g., noncontingency logic, together with their algebra, representation, and model theory, as well as on the philosophical applications of formal methods.
 
