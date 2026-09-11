@@ -17,11 +17,11 @@ nav_order: 3
 </p>
 
 {% if talk.event_url %}
-<a href="{{ talk.event_url }}">Event page</a>
+<a class="talk-link" href="{{ talk.event_url }}">Event page</a>
 {% endif %}
 
 {% if talk.program_url %}
-<a href="{{ talk.program_url }}">Programme</a>
+<a class="talk-link" href="{{ talk.program_url }}">Programme</a>
 {% endif %}
 
 {% if talk.abstract %}
