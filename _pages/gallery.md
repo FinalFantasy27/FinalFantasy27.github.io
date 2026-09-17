@@ -18,3 +18,10 @@ nav_order: 7
     </figure>
   {% endfor %}
 </div>
+
+<h2 id="nijisanji-favorites">推荐收藏夹</h2>
+
+- 彩虹GTA：[https://b23.tv/KEJYiYz](https://b23.tv/KEJYiYz)
+- 3D精彩大杂烩：[https://b23.tv/G9Tb60d](https://b23.tv/G9Tb60d)
+- 莉泽安（CP）：[https://b23.tv/Pvn7BXQ](https://b23.tv/Pvn7BXQ)、[https://b23.tv/JWzeRSZ](https://b23.tv/JWzeRSZ)
+- 德龙莎拉（CP）：[https://b23.tv/Ijp8av7](https://b23.tv/Ijp8av7)、[https://b23.tv/dskXgAv](https://b23.tv/dskXgAv)、[https://b23.tv/DipZd9l](https://b23.tv/DipZd9l)
