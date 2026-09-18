@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "A Jónsson-Tarski-Goldblatt Representation and Frame Definability for Noncontingency Logic"
+title: "Goldblatt-Thomason Theorems of Bundled Fragments"
 date: 2026-09-22
 event: "Colloquium Logicum 2026"
 location: "Institute of Mathematics, University of Würzburg"

@@ -19,7 +19,7 @@ nav_order: 7
   {% endfor %}
 </div>
 
-<h2 id="nijisanji-favorites">推荐收藏夹</h2>
+<h2 id="nijisanji-favorites">彩虹社（Nijisanji）推荐收藏夹</h2>
 
 - 彩虹GTA：[https://b23.tv/KEJYiYz](https://b23.tv/KEJYiYz)
 - 3D精彩大杂烩：[https://b23.tv/G9Tb60d](https://b23.tv/G9Tb60d)
