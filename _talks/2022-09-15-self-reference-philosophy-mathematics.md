@@ -7,3 +7,5 @@ location: "Sun Yat-sen University"
 type: conference
 event_url: https://logic.fudan.edu.cn/event2022/acpomc#Program
 ---
+
+Joint presentation with Prof. Ming Hsiung.
