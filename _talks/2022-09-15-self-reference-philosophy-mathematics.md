@@ -8,4 +8,4 @@ type: conference
 event_url: https://logic.fudan.edu.cn/event2022/acpomc#Program
 ---
 
-Joint presentation with Prof. Ming Hsiung.
+<p class="joint-presentation"><strong>Joint presentation with Prof. Ming Hsiung.</strong></p>

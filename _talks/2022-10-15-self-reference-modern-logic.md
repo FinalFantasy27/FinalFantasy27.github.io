@@ -9,4 +9,4 @@ event_url: https://www.sps.sdu.edu.cn/ncml2022/lylw.htm
 program_url: https://www.sps.sdu.edu.cn/ncml2022/zlxz.htm
 ---
 
-Joint presentation with Prof. Ming Hsiung.
+<p class="joint-presentation"><strong>Joint presentation with Prof. Ming Hsiung.</strong></p>

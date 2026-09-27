@@ -7,4 +7,6 @@ location: "Institute of Science Tokyo (東京科学大学), online"
 type: seminar
 ---
 
-Joint presentation with Dr. Youan Su. Joint work with Dr. Youan Su and Dr. Huaqing Cheng.
+<p class="joint-presentation"><strong>Joint presentation with Dr. Youan Su.</strong></p>
+
+Joint work with Dr. Youan Su and Dr. Huaqing Cheng.
