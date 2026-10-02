@@ -34,7 +34,7 @@ I am also mainly interested in VTubers (especially Nijisanji), cinema (especiall
 我的兴趣包括数理逻辑和哲学逻辑、虚拟主播（尤其是[彩虹社](/gallery/#nijisanji-favorites)）、哲学、电影（尤其是电影史，[我的豆瓣](https://www.douban.com/people/150548369/)）、动漫与漫画、文学，以及日本喜剧（漫才、短剧等）。交流大欢迎 🥹
 
 <p class="site-badge">
-  <a href="https://destroy.spritefusion.com/?from=badge" target="_blank" rel="noopener noreferrer">
+  <a href="https://destroy.spritefusion.com/?from=badge&amp;url=https%3A%2F%2Ffinalfantasy27.github.io%2F" target="_blank" rel="noopener noreferrer">
     <img src="https://destroy.spritefusion.com/badge-light.svg" alt="Destroy this website" width="180" height="40" loading="lazy">
   </a>
 </p>
