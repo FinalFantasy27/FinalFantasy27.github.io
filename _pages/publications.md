@@ -18,3 +18,11 @@ nav_order: 2
 {% bibliography %}
 
 </div>
+
+<style>
+  #haishang2026darkforest::after {
+    content: " [Popular-science writing]";
+    font-size: 0.9em;
+    font-style: italic;
+  }
+</style>
