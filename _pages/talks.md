@@ -12,7 +12,9 @@ nav_order: 3
 ## {{ talk.title }}
 
 <p>
+  {% if talk.event %}
   <strong>{{ talk.event }}</strong><br>
+  {% endif %}
   {{ talk.location }} · {{ talk.date | date: "%-d %B %Y" }}
 </p>
 
