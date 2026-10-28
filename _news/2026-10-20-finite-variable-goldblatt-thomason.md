@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-I presented a **finite-variable** version of **Goldblatt-Thomason Theorems** at the [Center for Logic, Language and Cognition at Peking University](https://logic.pku.edu.cn/xzdt/zxtz/7357b3647c9b4577b3ac99943eff05ab.htm).
+I presented a **finite-variable** version of **Goldblatt-Thomason Theorems** at the Center for Logic, Language and Cognition, Peking University, on 20 October 2026.

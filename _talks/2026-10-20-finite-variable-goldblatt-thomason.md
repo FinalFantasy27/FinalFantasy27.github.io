@@ -2,8 +2,8 @@
 layout: page
 title: "Finite-variable Goldblatt-Thomason Theorems"
 date: 2026-10-20
-event: "Oct. 20th Talks by Haiting Wang and Qianli Zeng"
-location: "Center for Logic, Language and Cognition, Peking University · Teaching Building No. 2, Room 411"
+event: ""
+location: "Center for Logic, Language and Cognition, Peking University"
 type: seminar
 event_url: https://logic.pku.edu.cn/xzdt/zxtz/7357b3647c9b4577b3ac99943eff05ab.htm
 abstract: >-
