@@ -5,4 +5,5 @@ inline: true
 related_posts: false
 ---
 
-I presented **“A Goldblatt-Thomason Theorem for Non-contingency Logic on Finite Frames”** (with Jie Fan) at the [20th National Conference on Modern Logic in China](https://www.ncml.org.cn/sites/2026/%E4%BC%9A%E8%AE%AE%E8%AE%BA%E6%96%87/) on 24 October 2026.
+| I presented **“A Goldblatt-Thomason Theorem for Non-contingency Logic on Finite Frames”** (with Prof. Jie Fan, [***20th National Conference on Modern Logic in China (NCML 2026)***](https://www.ncml.org.cn/sites/2026/%E4%BC%9A%E8%AE%AE%E8%AE%BA%E6%96%87/), ***2026.10.24***). |
+| ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
