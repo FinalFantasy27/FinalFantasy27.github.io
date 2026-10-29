@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quine Bond Notation · 一階邏輯連線記法</title>
+<style>
+:root{--bg:#f6f4ef;--card:#fffefa;--text:#252720;--muted:#73756d;--line:#dedfd7;--accent:#574daf;--soft:#eeebfb;--bad:#a63645;--good:#257156;--shadow:0 14px 45px #21271d0b}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:Inter,-apple-system,BlinkMacSystemFont,"Noto Sans TC","Microsoft JhengHei",sans-serif;color:var(--text);background:radial-gradient(circle at 93% 6%,#e8e5f6 0,transparent 27%),radial-gradient(circle at 0 95%,#e6eadf 0,transparent 33%),var(--bg)}
+.container{max-width:1260px;margin:auto;padding:45px 30px 65px}
+.eyebrow{font-size:12px;letter-spacing:.19em;font-weight:750;text-transform:uppercase;color:var(--accent);display:flex;align-items:center;gap:10px}.eyebrow:before{content:"";height:2px;width:25px;background:var(--accent)}
+header{display:flex;justify-content:space-between;gap:20px;align-items:flex-end;margin:15px 0 30px}
+h1{font-size:clamp(28px,4.1vw,52px);font-weight:740;letter-spacing:-.05em;line-height:1.15;margin:10px 0 15px}
+.subtitle{max-width:710px;color:var(--muted);font-size:15px;line-height:1.85;margin:0}
+.tag{align-self:flex-start;border:1px solid #ccc7ec;border-radius:100px;padding:9px 15px;color:var(--accent);font-size:12px;font-weight:700;white-space:nowrap;background:#ffffffaa}
+.layout{display:grid;grid-template-columns:minmax(300px,390px) minmax(0,1fr);gap:22px;align-items:stretch}
+.panel{border:1px solid var(--line);background:var(--card);border-radius:20px;box-shadow:var(--shadow);min-width:0;overflow:hidden}
+.panel-head{display:flex;justify-content:space-between;align-items:center;padding:22px 22px 0;gap:10px}.panel-head h2{font-size:15px;letter-spacing:-.025em;margin:0;font-weight:730}.panel-head .tiny{font-size:11px;color:var(--muted)}
+.editor-content{padding:17px 22px 22px}
+textarea{display:block;resize:vertical;width:100%;min-height:184px;border:1.5px solid #d7d6dd;border-radius:13px;background:#fbfaf8;padding:18px 17px;color:#282831;line-height:1.65;font-size:19px;font-family:"Cambria Math","STIX Two Text","DejaVu Serif",serif;outline:0;transition:border-color .2s,box-shadow .2s}textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px #655bbc20}
+.symbols{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.symbol{font-family:"Cambria Math",serif;border:1px solid #dedde2;background:#f9f9f7;color:#31332e;border-radius:7px;cursor:pointer;min-width:35px;height:33px;font-size:17px}.symbol:hover{background:var(--soft);border-color:#b3ace1}
+.labelrow{display:flex;align-items:center;justify-content:space-between;margin:24px 0 11px}.labelrow label{font-size:12px;font-weight:700;color:#565a53}.labelrow span{font-size:11px;color:#91958b}
+.examples{display:flex;flex-direction:column;gap:8px}.example{display:flex;text-align:left;align-items:center;gap:10px;border:1px solid #e5e4df;border-radius:9px;background:#fff;padding:12px;cursor:pointer;color:#4e504b;font-size:12px}.example:hover,.example.active{background:#f3f1fe;border-color:#c7c1eb;color:#493fa0}.example .exicon{display:grid;place-items:center;flex:none;width:24px;height:24px;border-radius:6px;background:#ebe9f4;color:var(--accent);font-weight:bold}.example .name{font-weight:670;display:block;margin-bottom:3px}.example .formula{font-family:"Cambria Math",serif;color:#808177;font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;display:block;max-width:265px}
+.helper{margin:18px 0 0;font-size:12px;line-height:1.85;color:#8a8b86}.helper code{font-family:ui-monospace,Consolas,monospace;background:#f1efeb;border-radius:4px;padding:2px 4px;color:#5b5961}
+.viewer-head{padding:21px 24px 18px;display:flex;flex-wrap:wrap;gap:15px;align-items:center;justify-content:space-between;border-bottom:1px solid #ebebe5}.viewer-head h2{font-size:15px;margin:0 0 4px}.viewer-head p{color:var(--muted);font-size:11px;margin:0}.status{font-size:11px;font-weight:690;color:var(--good);background:#e8f5ed;padding:6px 10px;border-radius:100px}.status.error{color:var(--bad);background:#fbecef}
+.viewer-body{padding:15px 0 12px;position:relative;min-height:360px;display:flex;flex-direction:column}.formula-title{font-size:11px;color:#9a9b94;letter-spacing:.08em;margin:4px 25px 0}.svg-scroll{overflow-x:auto;overflow-y:hidden;padding:5px 14px 8px;scrollbar-width:thin;flex:1;display:flex;align-items:center}.svg-scroll svg{display:block;max-width:none;flex:none}.svg-scroll::-webkit-scrollbar{height:8px}.svg-scroll::-webkit-scrollbar-thumb{background:#dad9df;border-radius:10px}.hint{font-size:11px;color:#a0a19a;text-align:center;padding:0 12px 16px}
+.error-message{padding:13px 16px;border-radius:9px;background:#fff1f0;border:1px solid #f0c8cb;color:var(--bad);font-size:13px;margin:15px 22px;line-height:1.6;display:none;white-space:pre-wrap}
+.viewer-footer{border-top:1px solid #ebeae3;padding:15px 22px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;align-items:center}.switcher{display:flex;gap:4px;background:#f0f0ec;padding:4px;border-radius:9px}.switcher button{border:0;background:none;padding:8px 11px;font-size:12px;border-radius:7px;color:#7b7c76;cursor:pointer;font-weight:650}.switcher button.active{background:white;box-shadow:0 1px 5px #00000014;color:var(--accent)}
+.buttons{display:flex;gap:9px}.btn{border:1px solid #dcdce0;background:#fff;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:12px;font-weight:650;padding:10px 13px;cursor:pointer;color:#5b5c58}.btn:hover{border-color:#a29bd5;color:#4940a3}.btn.primary{background:var(--accent);border-color:var(--accent);color:white}.btn.primary:hover{background:#443991}
+.below{margin-top:22px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px}.small-panel{padding:21px 23px;min-height:150px}.small-panel h3{margin:0 0 11px;font-size:14px}.small-panel p{margin:0;font-size:12px;line-height:1.9;color:#777a72}.chips{display:flex;flex-wrap:wrap;gap:8px;align-items:center}.chip{border-radius:99px;border:1px solid #e1e2dd;background:#fff;padding:8px 10px;cursor:pointer;font-size:12px;color:#53554e;display:flex;gap:9px;align-items:center}.chip:hover,.chip.active{background:#eeecff;border-color:#aaa1df}.dot{width:9px;height:9px;display:inline-block;border-radius:50%;background:#333}.chip strong{font-size:12px;color:#333}.count{opacity:.75}
+footer{margin-top:24px;font-size:11px;line-height:1.8;color:#92958f}footer a{color:var(--accent)}.empty{font-size:12px;color:#9a9d96}
+@media(max-width:860px){.layout{grid-template-columns:1fr}.viewer-body{min-height:290px}header{align-items:flex-start}.tag{display:none}}
+@media(max-width:580px){.container{padding:28px 14px 44px}.panel-head,.editor-content{padding-left:17px;padding-right:17px}.viewer-head{padding:18px}.viewer-footer{padding:15px}.below{grid-template-columns:1fr;gap:13px}.buttons{width:100%}.btn{flex:1}.example .formula{max-width:250px}header{margin-bottom:22px}}
+</style>
+</head>
+<body>
+<main class="container">
+ <div class="eyebrow">QUINE · GRAPHICAL LOGIC</div>
+ <header><div><h1>让变量之间的关系，<br>成为看得见的线条。</h1><p class="subtitle">输入一阶逻辑公式，自动生成 Quine 的 <em>bond notation</em>：量词保留，受约束变量变成黑点，并通过弧线连接到所对应的量词。</p></div><span class="tag">交互式逻辑记号实验室</span></header>
+ <section class="layout">
+  <article class="panel"><div class="panel-head"><h2>01 / 输入公式</h2><span class="tiny">一阶谓词逻辑</span></div><div class="editor-content">
+   <textarea id="formulaInput" aria-label="一阶逻辑公式" spellcheck="false">∃x∀y((φ(x,y) ∧ ∃zφ(x,z)) → φ(y,x))</textarea>
+   <div class="symbols" id="symbols" aria-label="插入逻辑符号"></div>
+   <div class="labelrow"><label>快速示例</label><span>点击填入</span></div>
+   <div class="examples" id="examples"></div>
+   <p class="helper">支持 <code>∀</code> <code>∃</code> <code>¬</code> <code>∧</code> <code>∨</code> <code>→</code> <code>↔</code>、等式、谓词及函数项。也可输入 <code>forall</code>、<code>exists</code>、<code>-></code>、<code>&</code>、<code>|</code>。复杂的量词辖域请显式加括号。</p>
+  </div></article>
+  <article class="panel"><div class="viewer-head"><div><h2>02 / 连线记法</h2><p>量词通过曲线与其约束的每一个变量位置连接</p></div><span class="status" id="status" role="status">解析成功</span></div>
+    <div id="errorMessage" class="error-message" role="alert"></div>
+    <div class="viewer-body"><div class="formula-title">QUANTIFICATION BONDS</div><div class="svg-scroll" id="scroll"><svg id="diagram" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Quine 连线记法图示"></svg></div><div class="hint">悬停在量词或黑点上，可高亮对应的全部连线 · 公式过长时可横向滚动</div></div>
+    <div class="viewer-footer"><div class="switcher" aria-label="显示模式"><button id="mono" class="active" type="button">经典黑白</button><button id="color" type="button">彩色区分</button></div><div class="buttons"><button class="btn" id="svgSave" type="button">↓ 导出 SVG</button><button class="btn primary" id="pngSave" type="button">↓ 导出 PNG</button></div></div>
+  </article>
+ </section>
+ <section class="below"><article class="panel small-panel"><h3>03 / 绑定关系</h3><div class="chips" id="legend" aria-live="polite"></div></article><article class="panel small-panel"><h3>记号说明</h3><p>每个 <strong>●</strong> 表示一个被量词约束的变量出现；曲线从对应的 ∀ / ∃ 延伸至该位置。同名变量被内层量词重新约束时，连线会自动分组。自由变量仍以字母显示，未使用的量词不会凭空产生连线。</p></article></section>
+ <footer>这是按照 Quine 的图形变量绑定思想制作的交互式可视化。为保持浏览器解析明确，无括号量词默认仅约束紧随其后的原子式或一元公式；若要约束合取、蕴含等整个复合公式，请使用括号。所有计算在浏览器本地进行，不上传公式。</footer>
+</main>
+<script>
+(()=>{'use strict';
+const $=id=>document.getElementById(id), NS='http://www.w3.org/2000/svg';
+const source=$('formulaInput'), diagram=$('diagram'), legend=$('legend');
+const palette=['#6356b6','#d28134','#248f82','#c45383','#557cb5','#84704d','#bd5e42'];
+const samples=[
+ {name:'图中原例 · 三重量词',formula:'∃x∀y((φ(x,y) ∧ ∃zφ(x,z)) → φ(y,x))'},
+ {name:'量词遮蔽 · 同名变元',formula:'∀x(P(x) → ∃x(Q(x) ∧ R(x)))'},
+ {name:'自由变量 · 等式',formula:'∀x((R(x,y) ∧ ∃yR(y,x)) → x = y)'},
+];
+const examples=$('examples');
+samples.forEach((s,i)=>{const b=document.createElement('button');b.type='button';b.className='example';const icon=document.createElement('span');icon.className='exicon';icon.textContent=String(i+1);const info=document.createElement('span');info.style.minWidth='0';const name=document.createElement('span');name.className='name';name.textContent=s.name;const form=document.createElement('span');form.className='formula';form.textContent=s.formula;info.append(name,form);b.append(icon,info);b.addEventListener('click',()=>{source.value=s.formula;source.focus();refresh();});examples.append(b);});
+'∀∃¬∧∨→↔()=φ'.split('').forEach(ch=>{const b=document.createElement('button');b.type='button';b.className='symbol';b.textContent=ch;b.title=`插入 ${ch}`;b.addEventListener('click',()=>{const a=source.selectionStart,z=source.selectionEnd;source.setRangeText(ch,a,z,'end');source.focus();refresh();});$('symbols').append(b);});
+const canonical=new Map([['forall','∀'],['exists','∃'],['not','¬'],['and','∧'],['or','∨'],['implies','→'],['iff','↔'],['~','¬'],['!','¬'],['&','∧'],['&&','∧'],['|','∨'],['||','∨'],['->','→'],['=>','→'],['<->','↔'],['<=>','↔'],['⊃','→'],['≡','↔'],['!=','≠'],['\u2200','∀'],['\u2203','∃']]);
+const lexer=/\s+|<=>|<->|->|=>|!=|&&|\|\||[∀∃¬∧∨→↔⊃≡~!&|=≠<>(),.:\[\]]|[\p{L}_][\p{L}\p{N}_'′]*|\d+(?:\.\d+)?/gu;
+function tokenize(s){const tokens=[];let p=0;lexer.lastIndex=0;while(p<s.length){lexer.lastIndex=p;const m=lexer.exec(s);if(!m||m.index!==p){throw new Error(`第 ${p+1} 个字符「${s[p]}」无法识别。`);}const raw=m[0];p=lexer.lastIndex;if(/^\s+$/u.test(raw))continue;const lower=raw.toLowerCase();let symbol=canonical.get(lower)??raw;
+ if(symbol==='[')symbol='(';if(symbol===']')symbol=')';
+ const type=['∀','∃'].includes(symbol)?'quant':['¬'].includes(symbol)?'not':['∧','∨','→','↔'].includes(symbol)?'binary':['(',')',',','.',';',':'].includes(symbol)?'punct':['=','≠','<','>','≤','≥'].includes(symbol)?'relation':/^[\p{L}_]/u.test(raw)?'ident':'number';
+ // In conventional compact syntax ∃zφ(x,z) means ∃z φ(x,z).
+ // A lowercase Latin variable immediately followed by an uppercase/Greek predicate
+ // is split here; multi-character variables otherwise require whitespace/delimiter.
+ const preceding=tokens[tokens.length-1];
+ const isAfterQuant=preceding?.type==='quant'&&preceding.offset+preceding.raw.length===m.index;
+ const compact=isAfterQuant&&type==='ident'?raw.match(/^([a-z])([A-Z\p{Script=Greek}].*)$/u):null;
+ if(compact){
+   tokens.push({raw:compact[1],symbol:compact[1],type:'ident',offset:m.index,hidden:false,binder:null,role:null});
+   tokens.push({raw:compact[2],symbol:compact[2],type:'ident',offset:m.index+compact[1].length,hidden:false,binder:null,role:null});
+ }else tokens.push({raw,symbol,type,offset:m.index,hidden:false,binder:null,role:null});
+ }return tokens;}
+function parse(input){const ts=tokenize(input),bs=[];let i=0;const peek=()=>ts[i];const consume=()=>ts[i++];
+ function fail(message,t=peek()){throw new Error(`${message}${t?`（第 ${t.offset+1} 个字符「${t.raw}」）`:'（公式末尾）'}`);}
+ function expect(sym){if(!peek()||peek().symbol!==sym)fail(`期待「${sym}」`);return consume();}
+ function bind(t,env){if(t.type==='ident'&&env.has(t.raw)){t.binder=env.get(t.raw);t.role='dot';bs[t.binder].occur.push(t);}}
+ function term(env){const t=peek();if(!t||!['ident','number'].includes(t.type))fail('这里应当是一个项');consume();
+ if(peek()?.symbol==='('){consume();if(peek()?.symbol!==')'){term(env);while(peek()?.symbol===','){consume();term(env);}}expect(')');}
+ else bind(t,env);
+ }
+ function atomic(env){const t=peek();if(!t||!['ident','number'].includes(t.type))fail('这里应当是谓词、等式或括号内公式');
+ term(env);if(['=','≠','<','>','≤','≥'].includes(peek()?.symbol)){consume();term(env);}
+ }
+ const prec={'↔':1,'→':2,'∨':3,'∧':4};
+ function expr(min,env){const t=peek();if(!t)fail('公式尚未完成');
+ if(t.type==='quant'){
+   consume();const v=peek();if(!v||v.type!=='ident')fail('量词后应有变量名');consume();v.hidden=true;
+   if(peek()?.symbol==='.'||peek()?.symbol===':'){consume().hidden=true;}
+   const id=bs.length;bs.push({id,quant:t,variable:v.raw,occur:[]});t.binder=id;t.role='quant';
+   const nextEnv=new Map(env);nextEnv.set(v.raw,id);expr(5,nextEnv);
+ }else if(t.type==='not'){consume();expr(5,env);
+ }else if(t.symbol==='('){consume();expr(0,env);expect(')');
+ }else{atomic(env);}
+ while(peek()&&peek().type==='binary'&&prec[peek().symbol]>=min){const op=consume(),p=prec[op.symbol];expr(p+(op.symbol==='→'?0:1),env);}
+ }
+ if(!ts.length)throw new Error('请输入一阶逻辑公式。');expr(0,new Map());if(peek())fail('公式中出现未预期的符号');return {tokens:ts,binders:bs};}
+let active=-1,mode='mono',last=null,renderTimer;
+const svgNode=(name,attrs={})=>{const el=document.createElementNS(NS,name);for(const [k,v] of Object.entries(attrs))el.setAttribute(k,String(v));return el;};
+function showError(msg){$('status').textContent='语法错误';$('status').className='status error';$('errorMessage').textContent=msg;$('errorMessage').style.display='block';diagram.replaceChildren();legend.replaceChildren();const p=document.createElement('span');p.className='empty';p.textContent='请修正公式后查看绑定关系';legend.append(p);last=null;}
+function updateActive(id){active=id;document.querySelectorAll('#diagram [data-binder]').forEach(e=>{const same=Number(e.getAttribute('data-binder'))===id;e.style.opacity=id<0?'1':same?'1':'.13';if(e.tagName.toLowerCase()==='path'){e.setAttribute('stroke-width',id>=0&&same?'2.25':'1.25');}});document.querySelectorAll('.chip').forEach(e=>e.classList.toggle('active',Number(e.dataset.binder)===id));}
+function draw(parsed){last=parsed;const {tokens,binders}=parsed,mono=mode==='mono';$('status').textContent='解析成功';$('status').className='status';$('errorMessage').style.display='none';
+ const size=30;const font='"Cambria Math", "STIX Two Text", "DejaVu Serif", "Noto Serif", serif';const canvas=document.createElement('canvas'),ctx=canvas.getContext('2d');ctx.font=`${size}px ${font}`;
+ let x=48;const items=[];let prev=null;
+ for(const t of tokens){if(t.hidden)continue;const label=t.role==='dot'?'•':t.symbol;const width=t.role==='dot'?15:ctx.measureText(label).width;const mathop=t.type==='binary';const before=prev&&(mathop||prev.type==='binary')?12:0;const pad=prev&&(prev.symbol===','||prev.symbol===':')?6:0;x+=before+pad;items.push({t,label,x,w:width,cx:x+width/2});x+=width+1.5;prev=t;}
+ const W=Math.max(440,Math.ceil(x+49));
+ // Alternate sides to separate the two longest overlapping groups, then use narrower local arcs for nested binders.
+ binders.forEach((b,k)=>{b.side=(k%2===0)?-1:1;b.color=mono?'#282924':palette[k%palette.length];});
+ const lookup=new Map(items.map(p=>[p.t,p]));const spans=[];for(const b of binders){const q=lookup.get(b.quant);if(!q)continue;for(const token of b.occur){const p=lookup.get(token);if(!p)continue;const dx=Math.abs(q.cx-p.cx);const h=Math.max(19,Math.min(116,13+Math.sqrt(dx)*4.4));spans.push({binder:b,from:q.cx,to:p.cx,height:h});}}
+ const above=Math.max(40,...spans.filter(s=>s.binder.side===-1).map(s=>s.height)),below=Math.max(40,...spans.filter(s=>s.binder.side===1).map(s=>s.height));const baseline=58+above+19,mid=baseline-12.5;
+ const H=Math.ceil(baseline+below+72);diagram.setAttribute('width',W);diagram.setAttribute('height',H);diagram.setAttribute('viewBox',`0 0 ${W} ${H}`);diagram.replaceChildren();
+ diagram.append(svgNode('rect',{x:0,y:0,width:W,height:H,fill:'#fffefa'}));
+ const arcs=svgNode('g',{'aria-label':'变量绑定弧线',fill:'none'});
+ // Draw longest arcs first, keeping short arcs legible in front.
+ spans.sort((a,b)=>b.height-a.height);
+ for(const s of spans){const yEnd=mid,sgn=s.binder.side,dy=sgn*s.height;
+ const p=svgNode('path',{d:`M ${s.from.toFixed(2)} ${yEnd.toFixed(2)} Q ${((s.from+s.to)/2).toFixed(2)} ${(yEnd+2*dy).toFixed(2)} ${s.to.toFixed(2)} ${yEnd.toFixed(2)}`,stroke:s.binder.color,'stroke-width':'1.25','stroke-linecap':'round','stroke-linejoin':'round','vector-effect':'non-scaling-stroke','data-binder':s.binder.id});p.style.transition='opacity .13s';arcs.append(p);
+ }diagram.append(arcs);
+ const words=svgNode('g');
+ for(const item of items){const {t,cx}=item;
+ if(t.role==='dot'){
+   const b=binders[t.binder];const dot=svgNode('circle',{cx:cx,cy:mid,r:'5.1',fill:mono?'#21231f':b.color,'data-binder':b.id});dot.style.cursor='pointer';dot.addEventListener('mouseenter',()=>updateActive(b.id));dot.addEventListener('mouseleave',()=>updateActive(-1));words.append(dot);
+ }else{
+   const attrs={x:item.x,y:baseline,'font-size':size,'font-family':font,fill:'#23241e'};
+   if(t.role==='quant'){attrs['data-binder']=t.binder;attrs.fill=mono?'#23241e':binders[t.binder].color;}
+   const text=svgNode('text',attrs);text.textContent=item.label;
+   if(t.role==='quant'){text.style.cursor='pointer';text.addEventListener('mouseenter',()=>updateActive(t.binder));text.addEventListener('mouseleave',()=>updateActive(-1));}words.append(text);
+ }
+ }diagram.append(words);diagram.setAttribute('aria-label',`Quine 连线公式，共 ${binders.length} 个量词，${spans.length} 条变量绑定线`);
+ legend.replaceChildren();
+ if(!binders.length){const p=document.createElement('span');p.className='empty';p.textContent='此公式没有量词。';legend.append(p);}
+ for(const b of binders){const chip=document.createElement('button');chip.type='button';chip.className='chip';chip.dataset.binder=b.id;const circle=document.createElement('i');circle.className='dot';circle.style.background=mono?'#333':b.color;const label=document.createElement('strong');label.textContent=`${b.quant.symbol}${b.variable}`;const count=document.createElement('span');count.className='count';count.textContent=`${b.occur.length} 处`;chip.append(circle,label,count);chip.addEventListener('mouseenter',()=>updateActive(b.id));chip.addEventListener('mouseleave',()=>updateActive(-1));chip.addEventListener('focus',()=>updateActive(b.id));chip.addEventListener('blur',()=>updateActive(-1));chip.addEventListener('click',()=>updateActive(active===b.id?-1:b.id));legend.append(chip);}
+ }
+function refresh(){try{draw(parse(source.value));}catch(e){showError(e.message);}}
+source.addEventListener('input',()=>{clearTimeout(renderTimer);renderTimer=setTimeout(refresh,110);});
+$('mono').addEventListener('click',()=>{mode='mono';$('mono').classList.add('active');$('color').classList.remove('active');refresh();});
+$('color').addEventListener('click',()=>{mode='color';$('color').classList.add('active');$('mono').classList.remove('active');refresh();});
+function xml(){if(!last)throw new Error('请先输入合法公式');updateActive(-1);const clone=diagram.cloneNode(true);clone.setAttribute('xmlns',NS);clone.setAttribute('xmlns:xlink','http://www.w3.org/1999/xlink');return new XMLSerializer().serializeToString(clone);}
+function download(data,name){const url=URL.createObjectURL(data),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);}
+$('svgSave').addEventListener('click',()=>{try{download(new Blob([xml()],{type:'image/svg+xml;charset=utf-8'}),'quine-bond-notation.svg');}catch(e){alert(e.message);}});
+$('pngSave').addEventListener('click',()=>{try{const raw=xml(),url=URL.createObjectURL(new Blob([raw],{type:'image/svg+xml;charset=utf-8'})),img=new Image();img.onload=()=>{const scale=2,c=document.createElement('canvas');c.width=Math.ceil(Number(diagram.getAttribute('width'))*scale);c.height=Math.ceil(Number(diagram.getAttribute('height'))*scale);const g=c.getContext('2d');g.scale(scale,scale);g.drawImage(img,0,0);c.toBlob(blob=>{if(blob)download(blob,'quine-bond-notation.png');else alert('PNG 生成失败');URL.revokeObjectURL(url);},'image/png');};img.onerror=()=>{URL.revokeObjectURL(url);alert('PNG 生成失败，仍可下载 SVG。');};img.src=url;}catch(e){alert(e.message);}});
+refresh();
+})();
+</script>
+</body>
+</html>
