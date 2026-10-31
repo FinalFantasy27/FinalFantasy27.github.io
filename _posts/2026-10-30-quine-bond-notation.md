@@ -12,7 +12,7 @@ categories: logic philosophy
 
 Quine 在《*数理逻辑*》（*Mathematical Logic*, 1940）中介绍过这种量化图示，但认为它繁琐、实用性有限。但它的优点是更可视化、互动性更强，也有趣味性。我们做了一个 Quine 记号的交互式体验网页。欢迎大家探索和操作：
 
-<p style="margin:1.6rem 0 2rem;"><a href="{{ '/quine-bond-notation.html' | relative_url }}" style="color:#2457c5;text-decoration:underline;text-underline-offset:0.18em;font-weight:600;">https://finalfantasy27.github.io/quine-bond-notation.html</a></p>
+<p style="margin:1.6rem 0 2rem;"><a href="https://finalfantasy27.github.io/quine-bond-notation.html" style="color:#2457c5 !important;text-decoration:underline #2457c5 !important;text-underline-offset:0.18em;font-weight:600;">https://finalfantasy27.github.io/quine-bond-notation.html</a></p>
 
 一个例子是：
 
@@ -34,7 +34,7 @@ The philosopher and logician W. V. Quine introduced **bond notation** as an alte
 
 Quine presented this kind of quantificational diagram in *Mathematical Logic* (1940), while judging it cumbersome and impractical. Its advantages, however, are visual clarity, interactivity, and a certain playfulness. We made an interactive page for exploring Quine’s notation. Give it a try:
 
-<p style="margin:1.6rem 0 2rem;"><a href="{{ '/quine-bond-notation.html' | relative_url }}" style="color:#2457c5;text-decoration:underline;text-underline-offset:0.18em;font-weight:600;">https://finalfantasy27.github.io/quine-bond-notation.html</a></p>
+<p style="margin:1.6rem 0 2rem;"><a href="https://finalfantasy27.github.io/quine-bond-notation.html" style="color:#2457c5 !important;text-decoration:underline #2457c5 !important;text-underline-offset:0.18em;font-weight:600;">https://finalfantasy27.github.io/quine-bond-notation.html</a></p>
 
 Here is a simple example:
 
