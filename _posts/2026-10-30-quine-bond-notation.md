@@ -3,7 +3,7 @@ layout: post
 title: "Seeing Quantifier Scope: Quine’s Bond Notation"
 date: 2026-10-30
 description: "A short introduction to Quine’s bond notation and an interactive browser tool for visualizing variable binding in first-order logic."
-tags: logic philosophy
+categories: logic philosophy
 ---
 
 在一阶逻辑公式中，变量字母常被重复书写，用来标明哪些论元位置由同一个量词约束。例如，在 `∃x (P(x) ∧ R(x,y))` 中，两个 `x` 都由 `∃x` 约束，而 `y` 是自由变量。
