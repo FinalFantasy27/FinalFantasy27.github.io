@@ -14,6 +14,8 @@ Quine 在《*数理逻辑*》（*Mathematical Logic*, 1940）中介绍过这种�
 
 <p style="margin:1.6rem 0 2rem;"><a href="https://finalfantasy27.github.io/quine-bond-notation.html" style="color:#2457c5 !important;text-decoration:underline #2457c5 !important;text-underline-offset:0.18em;font-weight:600;">https://finalfantasy27.github.io/quine-bond-notation.html</a></p>
 
+另一个有趣的网站是 Dr. Gottschall 的 [Logic Gate](https://www.erpelstolz.at/gateway/formular-uk-zentral.html)。它可以把逻辑公式转换为弗雷格记号、波兰记号和皮尔士图等形式。
+
 一个例子是：
 
 <img src="{{ '/assets/img/blog/quine-simple-formula-crop.svg' | relative_url }}" alt="较简单公式的输入区" style="display:block;width:min(100%, 560px);height:auto;margin:1rem auto;">
@@ -35,6 +37,8 @@ The philosopher and logician W. V. Quine introduced **bond notation** as an alte
 Quine presented this kind of quantificational diagram in *Mathematical Logic* (1940), while judging it cumbersome and impractical. Its advantages, however, are visual clarity, interactivity, and a certain playfulness. We made an interactive page for exploring Quine’s notation. Give it a try:
 
 <p style="margin:1.6rem 0 2rem;"><a href="https://finalfantasy27.github.io/quine-bond-notation.html" style="color:#2457c5 !important;text-decoration:underline #2457c5 !important;text-underline-offset:0.18em;font-weight:600;">https://finalfantasy27.github.io/quine-bond-notation.html</a></p>
+
+Another interesting website is Dr. Gottschall’s [Logic Gate](https://www.erpelstolz.at/gateway/formular-uk-zentral.html). It can convert logical formulas into Frege notation, Polish notation, Peirce’s Alpha graphs, and other forms.
 
 Here is a simple example:
 
