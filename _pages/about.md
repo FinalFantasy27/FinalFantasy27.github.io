@@ -39,7 +39,7 @@ I am also mainly interested in VTubers (especially Nijisanji), cinema (especiall
   </a>
 </p>
 
-> *Doing justice to what we know.*
+> _Doing justice to what we know._
 > — Hao Wang
 
 For publications, see the [publications page](/publications/). A complete curriculum vitae is available [as a PDF](/assets/pdf/CV.pdf).

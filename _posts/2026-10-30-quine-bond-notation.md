@@ -10,7 +10,7 @@ categories: logic philosophy
 
 哲学家、逻辑学家蒯因（W. V. Quine）的 **bond notation（连线记法）**提供了另一种表示方式：保留量词，但不在受约束的位置重复写变量字母，而是用弧线将量词连接到它所约束的论元位置。绑定关系由连线表示，不必依靠相同的变量名。
 
-Quine 在《*数理逻辑*》（*Mathematical Logic*, 1940）中介绍过这种量化图示，但认为它繁琐、实用性有限。但它的优点是更可视化、互动性更强，也有趣味性。我们做了一个 Quine 记号的交互式体验网页。欢迎大家探索和操作：
+Quine 在《_数理逻辑_》（_Mathematical Logic_, 1940）中介绍过这种量化图示，但认为它繁琐、实用性有限。但它的优点是更可视化、互动性更强，也有趣味性。我们做了一个 Quine 记号的交互式体验网页。欢迎大家探索和操作：
 
 <p style="margin:1.6rem 0 2rem;"><a href="https://finalfantasy27.github.io/quine-bond-notation.html" style="color:#2457c5 !important;text-decoration:underline #2457c5 !important;text-underline-offset:0.18em;font-weight:600;">https://finalfantasy27.github.io/quine-bond-notation.html</a></p>
 
@@ -38,7 +38,7 @@ In first-order formulas, variable letters are often repeated to indicate which a
 
 The philosopher and logician W. V. Quine introduced **bond notation** as an alternative: quantifiers remain, but arcs connect them to the argument positions they bind, instead of repeating bound-variable letters at those positions. The binding relation is shown by the bonds rather than by repeated variable names.
 
-Quine presented this kind of quantificational diagram in *Mathematical Logic* (1940), while judging it cumbersome and impractical. Its advantages, however, are visual clarity, interactivity, and a certain playfulness. We made an interactive page for exploring Quine’s notation. Give it a try:
+Quine presented this kind of quantificational diagram in _Mathematical Logic_ (1940), while judging it cumbersome and impractical. Its advantages, however, are visual clarity, interactivity, and a certain playfulness. We made an interactive page for exploring Quine’s notation. Give it a try:
 
 <p style="margin:1.6rem 0 2rem;"><a href="https://finalfantasy27.github.io/quine-bond-notation.html" style="color:#2457c5 !important;text-decoration:underline #2457c5 !important;text-underline-offset:0.18em;font-weight:600;">https://finalfantasy27.github.io/quine-bond-notation.html</a></p>
 
