@@ -18,15 +18,19 @@ Quine 在《*数理逻辑*》（*Mathematical Logic*, 1940）中介绍过这种�
 
 一个例子是：
 
-<img src="{{ '/assets/img/blog/quine-simple-formula-crop.svg' | relative_url }}" alt="较简单公式的输入区" style="display:block;width:min(100%, 560px);height:auto;margin:1rem auto;">
+<svg viewBox="0 0 480 300" role="img" aria-label="较简单公式的输入区" style="display:block;width:min(100%, 560px);height:auto;margin:1rem auto;"><image href="{{ '/assets/img/blog/quine-bonds-simple-monochrome.png' | relative_url }}" width="1492" height="827" /></svg>
 
 公式对应的连线效果：
 
-<img src="{{ '/assets/img/blog/quine-simple-diagram-crop.svg' | relative_url }}" alt="较简单公式的黑白 Quine 连线图" style="display:block;width:min(100%, 760px);height:auto;margin:1rem auto;">
+<svg viewBox="500 75 990 580" role="img" aria-label="较简单公式的黑白 Quine 连线图" style="display:block;width:min(100%, 760px);height:auto;margin:1rem auto;"><image href="{{ '/assets/img/blog/quine-bonds-simple-monochrome.png' | relative_url }}" width="1492" height="827" /></svg>
 
 下面是一个较复杂的公式。我的网页也提供彩色模式：
 
 <img src="{{ '/assets/img/blog/quine-bonds-complex-color.png' | relative_url }}" alt="复杂公式的彩色 Quine 连线记法示例" style="display:block;width:min(100%, 900px);height:auto;margin:1rem auto;">
+
+还可以在网页上用 Quine 连线记法制作表情或颜文字。欢迎大家试试看，一起来看看谁做得最有趣！
+
+<img src="{{ '/assets/img/blog/quine-kaomoji.png' | relative_url }}" alt="用 Quine 连线记法制作的表情" style="display:block;width:min(100%, 277px);height:auto;margin:1rem auto;">
 
 <hr style="margin:3rem 0; border:0; border-top:1px solid #d8d8d8;">
 
@@ -42,12 +46,16 @@ Another interesting website is Dr. Gottschall’s [Logic Gate](https://www.erpel
 
 Here is a simple example:
 
-<img src="{{ '/assets/img/blog/quine-simple-formula-crop.svg' | relative_url }}" alt="Input field showing a simple formula" style="display:block;width:min(100%, 560px);height:auto;margin:1rem auto;">
+<svg viewBox="0 0 480 300" role="img" aria-label="Input field showing a simple formula" style="display:block;width:min(100%, 560px);height:auto;margin:1rem auto;"><image href="{{ '/assets/img/blog/quine-bonds-simple-monochrome.png' | relative_url }}" width="1492" height="827" /></svg>
 
 The corresponding bond diagram:
 
-<img src="{{ '/assets/img/blog/quine-simple-diagram-crop.svg' | relative_url }}" alt="The simple formula visualized with Quine’s bonds" style="display:block;width:min(100%, 760px);height:auto;margin:1rem auto;">
+<svg viewBox="500 75 990 580" role="img" aria-label="The simple formula visualized with Quine’s bonds" style="display:block;width:min(100%, 760px);height:auto;margin:1rem auto;"><image href="{{ '/assets/img/blog/quine-bonds-simple-monochrome.png' | relative_url }}" width="1492" height="827" /></svg>
 
 Here is a more complex formula. The page also offers a color mode:
 
 <img src="{{ '/assets/img/blog/quine-bonds-complex-color.png' | relative_url }}" alt="A complex formula visualized in color with Quine’s bond notation" style="display:block;width:min(100%, 900px);height:auto;margin:1rem auto;">
+
+One could also make emoticons or kaomoji out of Quine's bond notation on the website. Everyone could give it a try—we can see who comes up with the funniest ones!
+
+<img src="{{ '/assets/img/blog/quine-kaomoji.png' | relative_url }}" alt="An emoticon made with Quine’s bond notation" style="display:block;width:min(100%, 277px);height:auto;margin:1rem auto;">
